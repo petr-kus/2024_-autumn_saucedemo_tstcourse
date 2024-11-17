@@ -45,8 +45,7 @@ driver.find_element(By.ID, "continue").click()
 
 #--->2nd checkout step
 #check for items in order
-checkoutItems = driver.find_elements(By.CLASS_NAME, "cart_item")
-assert len(checkoutItems) > 0
+assert len(cartItems) > 0
 #finish the checkout
 driver.find_element(By.ID, "finish").click()
 
