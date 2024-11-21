@@ -12,6 +12,7 @@
 # Aktualizace requirements.txt (uložení nainstalovaných balíčků)
 # python3 -m pip freeze > requirements.txt
 
+# TODO Lektor: okej ale tohle nenio pripravny script :-)
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
