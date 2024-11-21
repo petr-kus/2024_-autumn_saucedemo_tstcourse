@@ -5,6 +5,6 @@ python.exe -m pip install --upgrade pip
 # doplnuji... probereme na lekci
 python -m venv venv
 
-./venv/Scripts/Activate.ps1
+.\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 pip freeze > requirements.txt
