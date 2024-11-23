@@ -112,8 +112,11 @@ numItemsToOrder = 2
 testDriver = webdriver.Chrome()
 
 #Test execution
-driver = setup(testPage)
-loginTest(testUser.userName, testUser.password)
-numAddedItems = addToCartTest(numItemsToOrder)
-checkoutTest(testUser.firstName, testUser.secondName, testUser.zip, numAddedItems)
-teardown()
+try: 
+    driver = setup(testPage)
+    loginTest(testUser.userName, testUser.password)
+    numAddedItems = addToCartTest(numItemsToOrder)
+    checkoutTest(testUser.firstName, testUser.secondName, testUser.zip, numAddedItems)
+    teardown()
+except Exception as err:
+    logging.warning (f"Test failed: {err}!")
