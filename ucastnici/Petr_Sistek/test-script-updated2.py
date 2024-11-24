@@ -5,42 +5,51 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.chrome.options import Options
 
-Option = Options()
-Option.add_argument("start-maximized")
-driver = webdriver.Chrome()
-driver.get("https://www.saucedemo.com/")
-username = driver.find_element(By.ID,'user-name')
-username = driver.find_element(By.ID,'user-name')
-username.send_keys('standard_user') 
-password = driver.find_element(By.ID,'password')
-password.send_keys('secret_sauce')
-login_button = driver.find_element(By.ID, 'login-button')
-login_button.click()
-assert driver.current_url == "https://www.saucedemo.com/inventory.html", "Špatná URL"
-time.sleep(3)
+class Test:
+  def __init__(self):
+    Option = Options()
+    Option.add_argument("start-maximized")
+    self.driver = webdriver.Chrome()
+    self.driver.get("https://www.saucedemo.com/")
 
-# Kliknutí na ikonu košíku (vpravo nahoře)
-cart_button = driver.find_element(By.ID, "shopping_cart_container")
-cart_button.click()
-time.sleep(3)
+  def test_login(self, user:str, password_user:str):
+    username = self.driver.find_element(By.ID,'user-name')
+    username.send_keys(user) 
+    password = self.driver.find_element(By.ID,'password')
+    password.send_keys(password_user)
+    login_button = self.driver.find_element(By.ID, 'login-button')
+    login_button.click()
+    assert self.driver.current_url == "https://www.saucedemo.com/inventory.html", "Špatná URL"
+    time.sleep(3)
 
-# Kliknutí na burger menu
-burger_menu = driver.find_element(By.ID, "react-burger-menu-btn")
-burger_menu.click()
-time.sleep(3)
+  def test_cart(self):
+    # Kliknutí na ikonu košíku (vpravo nahoře)
+    cart_button = self.driver.find_element(By.ID, "shopping_cart_container")
+    cart_button.click()
+    time.sleep(3)
 
-# Kliknutí na Logout v burger menu
-logout = driver.find_element(By.ID, "logout_sidebar_link")
-logout.click()
-time.sleep(3)
+  def test_burger_menu(self):
+    # Kliknutí na burger menu
+    burger_menu = self.driver.find_element(By.ID, "react-burger-menu-btn")
+    burger_menu.click()
+    time.sleep(3)
 
-# Přihlášení jako problem_user
-username = driver.find_element(By.ID, "user-name")
-username.send_keys("problem_user")
-password = driver.find_element(By.ID, "password")
-password.send_keys("secret_sauce")
-login_button = driver.find_element(By.ID, "login-button")
-login_button.click()
-time.sleep(3)
+  def test_logout(self):
+    # Kliknutí na Logout v burger menu
+    logout = self.driver.find_element(By.ID, "logout_sidebar_link")
+    logout.click()
+    time.sleep(3)
 
-driver.close()
+  def close_driver(self):
+    self.driver.close()
+
+test = Test()
+
+test.test_login("standard_user", "secret_sauce")
+test.test_cart()
+test.test_burger_menu()
+test.test_logout()
+test.test_login("problem_user", "secret_sauce")
+test.test_burger_menu()
+test.test_logout()
+test.close_driver()
