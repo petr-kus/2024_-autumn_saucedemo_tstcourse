@@ -11,6 +11,8 @@ logging.info('This is an info message.')
 
 test_page = "https://www.saucedemo.com/"
 
+# xxxxxxxxxxxxxxxxxxxxxxx
+
 # =========================================
 # Níže příklady strukturovani identifiaktorů prvků
 # proč? - Vy pracujete s webem sucedemo.com - tam jsou ID, attributy atd. krasně pojmenované... 
