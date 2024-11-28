@@ -5,8 +5,12 @@ from selenium.webdriver.chrome.options import Options
 from PageObejct.burger_menu import burger_menu
 
 import logging
+
+#merge conf
 logging.basicConfig(filename='my_log.log', level=logging.DEBUG)
 logging.info('This is an info message.')
+
+#Sad Story merge conflict
 
 
 test_page = "https://www.saucedemo.com/"
