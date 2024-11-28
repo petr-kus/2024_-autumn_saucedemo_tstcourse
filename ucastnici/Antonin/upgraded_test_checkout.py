@@ -7,8 +7,8 @@ logging.basicConfig(filename="my_log.log", level=logging.DEBUG)
 logging.info(f"Test executed on {datetime.datetime.now()}.")
 
 class User: #Create test user obj
-    def __init__(self, serName, password, firstName, secondName, zip):
-        self.userName = serName
+    def __init__(self, userName, password, firstName, secondName, zip):
+        self.userName = userName
         self.password = password
         self.firstName = firstName
         self.secondName = secondName
@@ -55,7 +55,7 @@ def loginTest(userName, password):
 def addToCartTest(additions):
     numAddedItems = 0 #Keeps track of products added during the test
     for x in range(additions): 
-        AtCs=driver.find_elements(By.CLASS_NAME, "btn_primary")
+        AtCs=driver.find_elements(*Navigation.Btns.addToCartBtn)
         randomAtC = AtCs[random.randrange(0,len(AtCs))]
         try:
             randomAtC.click()
