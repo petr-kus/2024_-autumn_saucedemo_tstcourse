@@ -6,7 +6,7 @@ from PageObejct.burger_menu import burger_menu
 
 import logging
 
-#merge conf
+#AHOJ
 logging.basicConfig(filename='my_log.log', level=logging.DEBUG)
 logging.info('This is an info message.')
 
