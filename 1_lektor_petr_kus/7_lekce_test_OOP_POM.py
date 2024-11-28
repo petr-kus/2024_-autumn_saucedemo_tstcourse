@@ -28,13 +28,10 @@ LoginPage = {'username':(By.ID,'user-name')}
 field_password = 'password'
 
 class login_page():
+      #TODO Lektor - missing methods and should be in POM files not here
       login_button = (By.ID,'login-button')
       password = (By.ID,'password')
       username = (By.ID,'user-name')
-
-# základ myšlenky pro použití POM - page object modelu:
-# (všimněte si nápovědy přes tečku při použití!)
-
 # =========================================
 
 def slowdown(seconds=2):
@@ -63,10 +60,9 @@ def login_test(username,password):
 def logout_test():
     slowdown()
     menu = burger_menu(driver)
+    #TODO Lektor - could be improved use only 'burger_menu.'
     menu.open()
-    slowdown()
-    driver.find_element(*burger_menu.logout).click()
-    slowdown()
+    menu.loggingout()
 
 def teardown():
     driver.close()
