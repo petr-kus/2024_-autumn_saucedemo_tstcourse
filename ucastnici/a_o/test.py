@@ -71,7 +71,7 @@ for option in filter_options:
         else:
             print(f"Po kliknutí na '{option.text}' se položky nezměnily.")
 
-# Zavření prohlížeče po dokončení testu
+# Zavření prohlížeče po dokončení testuu
 driver.quit()
 
 
