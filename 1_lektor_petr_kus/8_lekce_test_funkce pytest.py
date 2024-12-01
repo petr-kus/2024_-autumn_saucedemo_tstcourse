@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
+import pytest
 logging.basicConfig(filename='my_log.log', level=logging.DEBUG)
 logging.info('This is an info message.')
 
@@ -48,16 +49,20 @@ class burger_menu():
 def slowdown(seconds=2):
         time.sleep(seconds)
 
-def setup(test_page):
+def test_setup():
+    test_page = "https://www.saucedemo.com/"
     Option = Options()
     Option.add_argument("start-maximized")
+    global driver
     driver = webdriver.Chrome()
     #driver.implicitly_wait(2)
-    logging.debug(f"Starting browser chrome...")
+    logging.info(f"Starting browser chrome...")
     driver.get(test_page)
     return driver
 
-def login_test(username,password):
+def test_login():
+    username = "standard_user"
+    password = "secret_sauce"
     user = driver.find_element(*LoginPage['username'])
     user.send_keys(username)
     slowdown()
@@ -67,18 +72,13 @@ def login_test(username,password):
     login_button = driver.find_element(*login_btn)
     login_button.click()
 
-def logout_test():
+def test_logout():
     slowdown()
     burger_menu.open()
     slowdown()
     driver.find_element(*burger_menu.logout).click()
     slowdown()
 
-def teardown():
+def test_teardown():
     driver.close()
     driver.quit()
-
-driver = setup(test_page)
-login_test('standard_user','secret_sauce')
-logout_test()
-teardown()
