@@ -1,0 +1,214 @@
+2024-12-02 22:55:23,637 - WebDriver - INFO - Driver was set to Chrome.
+2024-12-02 22:55:23,644 - LoginPage - INFO - Login process initiated.
+2024-12-02 22:55:23,644 - LoginPage - INFO - Attempting to open page URL: https://www.saucedemo.com/ .
+2024-12-02 22:55:24,113 - LoginPage - INFO - Opening URL: https://www.saucedemo.com/
+2024-12-02 22:55:24,113 - LoginPage - INFO - Login page was opened.
+2024-12-02 22:55:24,113 - LoginPage - INFO - Login page was opened on url: /
+2024-12-02 22:55:24,114 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'user-name')
+2024-12-02 22:55:24,148 - LoginPage - DEBUG - Element found with locator: '('id', 'user-name')'
+2024-12-02 22:55:24,354 - LoginPage - DEBUG - Sent keys 'standard_user' to element with locator: '('id', 'user-name')'
+2024-12-02 22:55:24,383 - LoginPage - INFO - Login username entered: 'standard_user'
+2024-12-02 22:55:24,384 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'password')
+2024-12-02 22:55:24,410 - LoginPage - DEBUG - Element found with locator: '('id', 'password')'
+2024-12-02 22:55:24,551 - LoginPage - DEBUG - Sent keys 'secret_sauce' to element with locator: '('id', 'password')'
+2024-12-02 22:55:24,552 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'login-button')
+2024-12-02 22:55:24,568 - LoginPage - DEBUG - Element found with locator: '('id', 'login-button')'
+2024-12-02 22:55:24,698 - LoginPage - DEBUG - Clicked on element with locator: '('id', 'login-button')'
+2024-12-02 22:55:24,699 - LoginPage - INFO - Login password entered: 'secret_sauce'
+2024-12-02 22:55:24,700 - LoginPage - INFO - User 'standard_user' attempted to log in.
+2024-12-02 22:55:24,701 - ProductCategoryPage - INFO - Process of showing product detail initiated.
+2024-12-02 22:55:24,702 - ProductCategoryPage - DEBUG - Waiting for presence of the element: ('class name', 'inventory_item_img')
+2024-12-02 22:55:24,736 - ProductCategoryPage - DEBUG - Element found with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:55:24,865 - ProductCategoryPage - DEBUG - Clicked on element with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:55:24,866 - ProductCategoryPage - INFO - Clicked on the product image.
+2024-12-02 22:55:24,867 - ProductDetailPage - INFO - Process of adding the product to the cart initiated.
+2024-12-02 22:55:24,868 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('id', 'add-to-cart')
+2024-12-02 22:55:24,882 - ProductDetailPage - DEBUG - Element found with locator: '('id', 'add-to-cart')'
+2024-12-02 22:55:24,975 - ProductDetailPage - DEBUG - Clicked on element with locator: '('id', 'add-to-cart')'
+2024-12-02 22:55:24,975 - ProductDetailPage - INFO - Clicked on the 'Add to cart' button.
+2024-12-02 22:55:24,976 - ProductDetailPage - INFO - Navigating to the shopping cart.
+2024-12-02 22:55:24,976 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('class name', 'shopping_cart_link')
+2024-12-02 22:55:24,991 - ProductDetailPage - DEBUG - Element found with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:55:25,073 - ProductDetailPage - DEBUG - Clicked on element with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:55:25,074 - ProductDetailPage - INFO - Clicked on the shopping cart icon.
+2024-12-02 22:55:25,074 - CartPage - INFO - Process of removing the item from the cart initiated.
+2024-12-02 22:55:25,075 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'remove-sauce-labs-backpack')
+2024-12-02 22:55:25,095 - CartPage - DEBUG - Element found with locator: '('id', 'remove-sauce-labs-backpack')'
+2024-12-02 22:55:25,155 - CartPage - DEBUG - Clicked on element with locator: '('id', 'remove-sauce-labs-backpack')'
+2024-12-02 22:55:25,156 - CartPage - INFO - Clicked on the 'Remove' button.
+2024-12-02 22:55:25,156 - CartPage - INFO - Continue shopping process initiated.
+2024-12-02 22:55:25,157 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'continue-shopping')
+2024-12-02 22:55:25,169 - CartPage - DEBUG - Element found with locator: '('id', 'continue-shopping')'
+2024-12-02 22:55:25,249 - CartPage - DEBUG - Clicked on element with locator: '('id', 'continue-shopping')'
+2024-12-02 22:55:25,250 - CartPage - INFO - Clicked on the 'Continue Shopping' button.
+2024-12-02 22:55:25,251 - ProductCategoryPage - INFO - Process of showing product detail initiated.
+2024-12-02 22:55:25,254 - ProductCategoryPage - DEBUG - Waiting for presence of the element: ('class name', 'inventory_item_img')
+2024-12-02 22:55:25,267 - ProductCategoryPage - DEBUG - Element found with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:55:25,349 - ProductCategoryPage - DEBUG - Clicked on element with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:55:25,350 - ProductCategoryPage - INFO - Clicked on the product image.
+2024-12-02 22:55:25,350 - ProductDetailPage - INFO - Process of adding the product to the cart initiated.
+2024-12-02 22:55:25,351 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('id', 'add-to-cart')
+2024-12-02 22:55:25,365 - ProductDetailPage - DEBUG - Element found with locator: '('id', 'add-to-cart')'
+2024-12-02 22:55:25,424 - ProductDetailPage - DEBUG - Clicked on element with locator: '('id', 'add-to-cart')'
+2024-12-02 22:55:25,424 - ProductDetailPage - INFO - Clicked on the 'Add to cart' button.
+2024-12-02 22:55:25,425 - ProductDetailPage - INFO - Navigating to the shopping cart.
+2024-12-02 22:55:25,425 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('class name', 'shopping_cart_link')
+2024-12-02 22:55:25,436 - ProductDetailPage - DEBUG - Element found with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:55:25,505 - ProductDetailPage - DEBUG - Clicked on element with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:55:25,506 - ProductDetailPage - INFO - Clicked on the shopping cart icon.
+2024-12-02 22:55:25,506 - CartPage - INFO - Process of proceeding to the checkout initiated.
+2024-12-02 22:55:25,506 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'checkout')
+2024-12-02 22:55:25,523 - CartPage - DEBUG - Element found with locator: '('id', 'checkout')'
+2024-12-02 22:55:25,599 - CartPage - DEBUG - Clicked on element with locator: '('id', 'checkout')'
+2024-12-02 22:55:25,600 - CartPage - INFO - Clicked on the 'Checkout' button.
+2024-12-02 22:55:25,600 - CheckoutPage - INFO - Filling in customer information.
+2024-12-02 22:55:25,601 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'first-name')
+2024-12-02 22:55:25,623 - CheckoutPage - DEBUG - Element found with locator: '('id', 'first-name')'
+2024-12-02 22:55:25,720 - CheckoutPage - DEBUG - Sent keys 'Daniel' to element with locator: '('id', 'first-name')'
+2024-12-02 22:55:25,721 - CheckoutPage - INFO - First name entered: Daniel
+2024-12-02 22:55:25,721 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'last-name')
+2024-12-02 22:55:25,733 - CheckoutPage - DEBUG - Element found with locator: '('id', 'last-name')'
+2024-12-02 22:55:25,829 - CheckoutPage - DEBUG - Sent keys 'Hladík' to element with locator: '('id', 'last-name')'
+2024-12-02 22:55:25,830 - CheckoutPage - INFO - Last name entered: Hladík
+2024-12-02 22:55:25,830 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'postal-code')
+2024-12-02 22:55:25,841 - CheckoutPage - DEBUG - Element found with locator: '('id', 'postal-code')'
+2024-12-02 22:55:25,948 - CheckoutPage - DEBUG - Sent keys 'Praha 6' to element with locator: '('id', 'postal-code')'
+2024-12-02 22:55:25,949 - CheckoutPage - INFO - Address entered: Praha 6
+2024-12-02 22:55:25,949 - CheckoutPage - INFO - Attempting to take a screenshot.
+2024-12-02 22:55:26,082 - CheckoutPage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-55-25_checkout-step-one.html.png'
+2024-12-02 22:55:26,083 - CheckoutPage - INFO - Clicking 'Continue' button.
+2024-12-02 22:55:26,083 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'continue')
+2024-12-02 22:55:26,097 - CheckoutPage - DEBUG - Element found with locator: '('id', 'continue')'
+2024-12-02 22:55:26,204 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'continue')'
+2024-12-02 22:55:26,205 - CheckoutPage - INFO - Attempted to proceed to the next checkout step.
+2024-12-02 22:55:26,205 - CheckoutPage - INFO - Attempting to take a screenshot.
+2024-12-02 22:55:26,366 - CheckoutPage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-55-26_checkout-step-two.html.png'
+2024-12-02 22:55:26,367 - CheckoutPage - INFO - Finishing the checkout process.
+2024-12-02 22:55:26,367 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'finish')
+2024-12-02 22:55:26,380 - CheckoutPage - DEBUG - Element found with locator: '('id', 'finish')'
+2024-12-02 22:55:26,462 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'finish')'
+2024-12-02 22:55:26,462 - CheckoutPage - INFO - Checkout process completed.
+2024-12-02 22:55:26,463 - HomePage - INFO - Attempting to take a screenshot.
+2024-12-02 22:55:26,618 - HomePage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-55-26_checkout-complete.html.png'
+2024-12-02 22:55:26,619 - CheckoutPage - INFO - Clicking 'Back Home' button.
+2024-12-02 22:55:26,620 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'back-to-products')
+2024-12-02 22:55:26,636 - CheckoutPage - DEBUG - Element found with locator: '('id', 'back-to-products')'
+2024-12-02 22:55:26,727 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'back-to-products')'
+2024-12-02 22:55:26,728 - CheckoutPage - INFO - Returned to the home page.
+2024-12-02 22:55:26,728 - HomePage - INFO - Logout process initiated.
+2024-12-02 22:55:26,729 - HomePage - INFO - Opening the navigation menu.
+2024-12-02 22:55:26,730 - HomePage - DEBUG - Waiting for presence of the element: ('id', 'react-burger-menu-btn')
+2024-12-02 22:55:26,746 - HomePage - DEBUG - Element found with locator: '('id', 'react-burger-menu-btn')'
+2024-12-02 22:55:26,826 - HomePage - DEBUG - Clicked on element with locator: '('id', 'react-burger-menu-btn')'
+2024-12-02 22:55:26,970 - HomePage - INFO - Navigation menu opened.
+2024-12-02 22:55:26,971 - HomePage - DEBUG - Waiting for presence of the element: ('id', 'logout_sidebar_link')
+2024-12-02 22:55:26,984 - HomePage - DEBUG - Element found with locator: '('id', 'logout_sidebar_link')'
+2024-12-02 22:55:27,081 - HomePage - DEBUG - Clicked on element with locator: '('id', 'logout_sidebar_link')'
+2024-12-02 22:55:27,082 - HomePage - INFO - User attempted to logout.
+2024-12-02 22:56:39,602 - WebDriver - INFO - Driver was set to Chrome.
+2024-12-02 22:56:39,611 - LoginPage - INFO - Login process initiated.
+2024-12-02 22:56:39,612 - LoginPage - INFO - Attempting to open page URL: https://www.saucedemo.com/ .
+2024-12-02 22:56:40,150 - LoginPage - INFO - Opening URL: https://www.saucedemo.com/
+2024-12-02 22:56:40,151 - LoginPage - INFO - Login page was opened.
+2024-12-02 22:56:40,152 - LoginPage - INFO - Login page was opened on url: /
+2024-12-02 22:56:40,153 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'user-name')
+2024-12-02 22:56:40,185 - LoginPage - DEBUG - Element found with locator: '('id', 'user-name')'
+2024-12-02 22:56:40,366 - LoginPage - DEBUG - Sent keys 'standard_user' to element with locator: '('id', 'user-name')'
+2024-12-02 22:56:40,366 - LoginPage - INFO - Login username entered: 'standard_user'
+2024-12-02 22:56:40,368 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'password')
+2024-12-02 22:56:40,386 - LoginPage - DEBUG - Element found with locator: '('id', 'password')'
+2024-12-02 22:56:40,543 - LoginPage - DEBUG - Sent keys 'secret_sauce' to element with locator: '('id', 'password')'
+2024-12-02 22:56:40,543 - LoginPage - DEBUG - Waiting for presence of the element: ('id', 'login-button')
+2024-12-02 22:56:40,555 - LoginPage - DEBUG - Element found with locator: '('id', 'login-button')'
+2024-12-02 22:56:40,687 - LoginPage - DEBUG - Clicked on element with locator: '('id', 'login-button')'
+2024-12-02 22:56:40,687 - LoginPage - INFO - Login password entered: 'secret_sauce'
+2024-12-02 22:56:40,688 - LoginPage - INFO - User 'standard_user' attempted to log in.
+2024-12-02 22:56:40,688 - ProductCategoryPage - INFO - Process of showing product detail initiated.
+2024-12-02 22:56:40,689 - ProductCategoryPage - DEBUG - Waiting for presence of the element: ('class name', 'inventory_item_img')
+2024-12-02 22:56:40,707 - ProductCategoryPage - DEBUG - Element found with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:56:40,807 - ProductCategoryPage - DEBUG - Clicked on element with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:56:40,807 - ProductCategoryPage - INFO - Clicked on the product image.
+2024-12-02 22:56:40,809 - ProductDetailPage - INFO - Process of adding the product to the cart initiated.
+2024-12-02 22:56:40,809 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('id', 'add-to-cart')
+2024-12-02 22:56:40,828 - ProductDetailPage - DEBUG - Element found with locator: '('id', 'add-to-cart')'
+2024-12-02 22:56:40,914 - ProductDetailPage - DEBUG - Clicked on element with locator: '('id', 'add-to-cart')'
+2024-12-02 22:56:40,914 - ProductDetailPage - INFO - Clicked on the 'Add to cart' button.
+2024-12-02 22:56:40,915 - ProductDetailPage - INFO - Navigating to the shopping cart.
+2024-12-02 22:56:40,915 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('class name', 'shopping_cart_link')
+2024-12-02 22:56:40,935 - ProductDetailPage - DEBUG - Element found with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:56:41,021 - ProductDetailPage - DEBUG - Clicked on element with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:56:41,021 - ProductDetailPage - INFO - Clicked on the shopping cart icon.
+2024-12-02 22:56:41,022 - CartPage - INFO - Process of removing the item from the cart initiated.
+2024-12-02 22:56:41,022 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'remove-sauce-labs-backpack')
+2024-12-02 22:56:41,036 - CartPage - DEBUG - Element found with locator: '('id', 'remove-sauce-labs-backpack')'
+2024-12-02 22:56:41,104 - CartPage - DEBUG - Clicked on element with locator: '('id', 'remove-sauce-labs-backpack')'
+2024-12-02 22:56:41,104 - CartPage - INFO - Clicked on the 'Remove' button.
+2024-12-02 22:56:41,104 - CartPage - INFO - Continue shopping process initiated.
+2024-12-02 22:56:41,105 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'continue-shopping')
+2024-12-02 22:56:41,120 - CartPage - DEBUG - Element found with locator: '('id', 'continue-shopping')'
+2024-12-02 22:56:41,191 - CartPage - DEBUG - Clicked on element with locator: '('id', 'continue-shopping')'
+2024-12-02 22:56:41,191 - CartPage - INFO - Clicked on the 'Continue Shopping' button.
+2024-12-02 22:56:41,192 - ProductCategoryPage - INFO - Process of showing product detail initiated.
+2024-12-02 22:56:41,192 - ProductCategoryPage - DEBUG - Waiting for presence of the element: ('class name', 'inventory_item_img')
+2024-12-02 22:56:41,207 - ProductCategoryPage - DEBUG - Element found with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:56:41,277 - ProductCategoryPage - DEBUG - Clicked on element with locator: '('class name', 'inventory_item_img')'
+2024-12-02 22:56:41,277 - ProductCategoryPage - INFO - Clicked on the product image.
+2024-12-02 22:56:41,278 - ProductDetailPage - INFO - Process of adding the product to the cart initiated.
+2024-12-02 22:56:41,278 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('id', 'add-to-cart')
+2024-12-02 22:56:41,296 - ProductDetailPage - DEBUG - Element found with locator: '('id', 'add-to-cart')'
+2024-12-02 22:56:41,360 - ProductDetailPage - DEBUG - Clicked on element with locator: '('id', 'add-to-cart')'
+2024-12-02 22:56:41,360 - ProductDetailPage - INFO - Clicked on the 'Add to cart' button.
+2024-12-02 22:56:41,360 - ProductDetailPage - INFO - Navigating to the shopping cart.
+2024-12-02 22:56:41,361 - ProductDetailPage - DEBUG - Waiting for presence of the element: ('class name', 'shopping_cart_link')
+2024-12-02 22:56:41,370 - ProductDetailPage - DEBUG - Element found with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:56:41,438 - ProductDetailPage - DEBUG - Clicked on element with locator: '('class name', 'shopping_cart_link')'
+2024-12-02 22:56:41,438 - ProductDetailPage - INFO - Clicked on the shopping cart icon.
+2024-12-02 22:56:41,439 - CartPage - INFO - Process of proceeding to the checkout initiated.
+2024-12-02 22:56:41,439 - CartPage - DEBUG - Waiting for presence of the element: ('id', 'checkout')
+2024-12-02 22:56:41,453 - CartPage - DEBUG - Element found with locator: '('id', 'checkout')'
+2024-12-02 22:56:41,521 - CartPage - DEBUG - Clicked on element with locator: '('id', 'checkout')'
+2024-12-02 22:56:41,522 - CartPage - INFO - Clicked on the 'Checkout' button.
+2024-12-02 22:56:41,522 - CheckoutPage - INFO - Filling in customer information.
+2024-12-02 22:56:41,522 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'first-name')
+2024-12-02 22:56:41,538 - CheckoutPage - DEBUG - Element found with locator: '('id', 'first-name')'
+2024-12-02 22:56:41,637 - CheckoutPage - DEBUG - Sent keys 'Daniel' to element with locator: '('id', 'first-name')'
+2024-12-02 22:56:41,637 - CheckoutPage - INFO - First name entered: Daniel
+2024-12-02 22:56:41,637 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'last-name')
+2024-12-02 22:56:41,651 - CheckoutPage - DEBUG - Element found with locator: '('id', 'last-name')'
+2024-12-02 22:56:41,749 - CheckoutPage - DEBUG - Sent keys 'Hladík' to element with locator: '('id', 'last-name')'
+2024-12-02 22:56:41,750 - CheckoutPage - INFO - Last name entered: Hladík
+2024-12-02 22:56:41,750 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'postal-code')
+2024-12-02 22:56:41,764 - CheckoutPage - DEBUG - Element found with locator: '('id', 'postal-code')'
+2024-12-02 22:56:41,861 - CheckoutPage - DEBUG - Sent keys 'Praha 6' to element with locator: '('id', 'postal-code')'
+2024-12-02 22:56:41,861 - CheckoutPage - INFO - Address entered: Praha 6
+2024-12-02 22:56:41,861 - CheckoutPage - INFO - Attempting to take a screenshot.
+2024-12-02 22:56:42,004 - CheckoutPage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-56-41_checkout-step-one.html.png'
+2024-12-02 22:56:42,005 - CheckoutPage - INFO - Clicking 'Continue' button.
+2024-12-02 22:56:42,005 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'continue')
+2024-12-02 22:56:42,019 - CheckoutPage - DEBUG - Element found with locator: '('id', 'continue')'
+2024-12-02 22:56:42,117 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'continue')'
+2024-12-02 22:56:42,117 - CheckoutPage - INFO - Attempted to proceed to the next checkout step.
+2024-12-02 22:56:42,119 - CheckoutPage - INFO - Attempting to take a screenshot.
+2024-12-02 22:56:42,262 - CheckoutPage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-56-42_checkout-step-two.html.png'
+2024-12-02 22:56:42,263 - CheckoutPage - INFO - Finishing the checkout process.
+2024-12-02 22:56:42,263 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'finish')
+2024-12-02 22:56:42,275 - CheckoutPage - DEBUG - Element found with locator: '('id', 'finish')'
+2024-12-02 22:56:42,361 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'finish')'
+2024-12-02 22:56:42,361 - CheckoutPage - INFO - Checkout process completed.
+2024-12-02 22:56:42,361 - HomePage - INFO - Attempting to take a screenshot.
+2024-12-02 22:56:42,510 - HomePage - INFO - Screenshot saved to 'screenshots\2024-12-02_22-56-42_checkout-complete.html.png'
+2024-12-02 22:56:42,510 - CheckoutPage - INFO - Clicking 'Back Home' button.
+2024-12-02 22:56:42,511 - CheckoutPage - DEBUG - Waiting for presence of the element: ('id', 'back-to-products')
+2024-12-02 22:56:42,523 - CheckoutPage - DEBUG - Element found with locator: '('id', 'back-to-products')'
+2024-12-02 22:56:42,604 - CheckoutPage - DEBUG - Clicked on element with locator: '('id', 'back-to-products')'
+2024-12-02 22:56:42,604 - CheckoutPage - INFO - Returned to the home page.
+2024-12-02 22:56:42,605 - HomePage - INFO - Logout process initiated.
+2024-12-02 22:56:42,605 - HomePage - INFO - Opening the navigation menu.
+2024-12-02 22:56:42,605 - HomePage - DEBUG - Waiting for presence of the element: ('id', 'react-burger-menu-btn')
+2024-12-02 22:56:42,624 - HomePage - DEBUG - Element found with locator: '('id', 'react-burger-menu-btn')'
+2024-12-02 22:56:42,696 - HomePage - DEBUG - Clicked on element with locator: '('id', 'react-burger-menu-btn')'
+2024-12-02 22:56:43,237 - HomePage - INFO - Navigation menu opened.
+2024-12-02 22:56:43,238 - HomePage - DEBUG - Waiting for presence of the element: ('id', 'logout_sidebar_link')
+2024-12-02 22:56:43,249 - HomePage - DEBUG - Element found with locator: '('id', 'logout_sidebar_link')'
+2024-12-02 22:56:43,328 - HomePage - DEBUG - Clicked on element with locator: '('id', 'logout_sidebar_link')'
+2024-12-02 22:56:43,328 - HomePage - INFO - User attempted to logout.
