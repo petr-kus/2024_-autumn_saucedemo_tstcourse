@@ -15,12 +15,12 @@ driver=webdriver.Chrome()
 driver.get("https://www.saucedemo.com/")
 
 #Přihlašovací jméno
-username_field = driver.find_element(By.ID, 'user-name')  
-username_field.send_keys('problem_user')  
+username = driver.find_element(By.ID, 'user-name')  
+username.send_keys('problem_user')  
 
 #Heslo
-password_field = driver.find_element(By.ID, 'password')  
-password_field.send_keys('secret_sauce') 
+password = driver.find_element(By.ID, 'password')  
+password.send_keys('secret_sauce') 
 
 #Tlačítko pro přihlášení
 login_button = driver.find_element(By.ID, 'login-button')  
@@ -28,12 +28,6 @@ login_button.click()
 
 # Čekání, aby se stránka načetla po přihlášení
 time.sleep(3)
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
 
 # Kliknutí na dropdown
 filter_dropdown = driver.find_element(By.CLASS_NAME, "product_sort_container")
