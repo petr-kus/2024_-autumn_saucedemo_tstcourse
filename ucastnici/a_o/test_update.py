@@ -65,3 +65,4 @@ try:
     filter_test(driver)
 finally:
     teardown(driver)
+teardown(driver)
