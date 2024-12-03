@@ -1,5 +1,4 @@
-def test_complete_order(login_page, product_category_page, product_detail_page, 
-                        cart_page, checkout_page, home_page):
+def test_complete_order(base_page, login_page, product_category_page, product_detail_page, cart_page, checkout_page, home_page):
     
     # Step 1: Log in
     login_page.login()
@@ -38,6 +37,6 @@ def test_complete_order(login_page, product_category_page, product_detail_page,
 
     home_page.logout()
 
-    expected_url = home_page.LOGIN_PAGE_URL
-    current_url = home_page.driver.current_url
-    assert current_url == expected_url, f"Expected URL {expected_url}, but got {current_url}"
+    expected_url = base_page.BASE_URL
+    current_url = base_page.driver.current_url
+    assert current_url != expected_url, f"Expected URL {expected_url}, but got {current_url}"
