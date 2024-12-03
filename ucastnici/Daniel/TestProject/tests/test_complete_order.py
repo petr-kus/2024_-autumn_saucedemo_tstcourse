@@ -39,4 +39,4 @@ def test_complete_order(base_page, login_page, product_category_page, product_de
 
     expected_url = base_page.BASE_URL
     current_url = base_page.driver.current_url
-    assert current_url != expected_url, f"Expected URL {expected_url}, but got {current_url}"
+    assert current_url == expected_url, f"Expected URL {expected_url}, but got {current_url}"

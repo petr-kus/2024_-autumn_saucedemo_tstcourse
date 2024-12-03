@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class CheckoutPage(BasePage):
 
     #Checkout step one page
-    CHECKOUT_STEP_ONE_URL = "/checkout-step-one.html"
+    CHECKOUT_STEP_ONE_URL = "checkout-step-one.html"
     CANCEL_BUTTON = (By.ID, "cancel")
     CONTINUE_BUTTON = (By.ID, "continue")
 
@@ -22,7 +22,7 @@ class CheckoutPage(BasePage):
     FINISH_BUTTON = (By.ID, "finish")
 
     #Checkout complete page
-    CHECKOUT_COMPLETE_URL = "/checkout-complete.html"
+    CHECKOUT_COMPLETE_URL = "checkout-complete.html"
     BACK_HOME_BUTTON = (By.ID, "back-to-products")
 
     def __init__(self, driver):

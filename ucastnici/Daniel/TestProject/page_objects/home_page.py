@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class HomePage(BasePage):
 
-    HOME_PAGE_URL = "/inventory.html"
+    HOME_PAGE_URL = "inventory.html"
 
     NAVIGATION_MENU_OPEN = (By.ID, "react-burger-menu-btn")
     NAVIGATION_MENU_ALL_ITEMS = (By.ID, "inventory_sidebar_link")

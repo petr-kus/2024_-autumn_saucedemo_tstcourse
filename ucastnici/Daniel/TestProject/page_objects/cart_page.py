@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class CartPage(BasePage):
 
-    CART_PAGE_URL = "/cart.html"
+    CART_PAGE_URL = "cart.html"
     
     REMOVE_BUTTON = (By.ID, "remove-sauce-labs-backpack")
     ADD_BUTTON = (By.ID, "add-to-cart_button")

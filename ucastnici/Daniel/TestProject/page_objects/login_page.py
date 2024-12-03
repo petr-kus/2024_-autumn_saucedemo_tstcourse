@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class LoginPage(BasePage):
 
-    LOGIN_PAGE_URL = "/"
+    LOGIN_PAGE_URL = ""
 
     LOGIN_USERNAME_FIELD = (By.ID, "user-name")
     LOGIN_PASSWORD_FIELD = (By.ID, "password")

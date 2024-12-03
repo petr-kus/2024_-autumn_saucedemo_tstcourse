@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 
 class SearchPage(BasePage):
 
-    SEARCH_PAGE_URL = "/index.html"
+    SEARCH_PAGE_URL = "index.html"
     
     SEARCH_QUERY = "product name"
-    SEARCH_PAGE_RESULT_URL = f"/search.html?id={SEARCH_QUERY}"
+    SEARCH_PAGE_RESULT_URL = f"search.html?id={SEARCH_QUERY}"
     
     SEARCH_FIELD = (By.ID, "search-field")
     SEARCH_BUTTON = (By.ID, "search-button")

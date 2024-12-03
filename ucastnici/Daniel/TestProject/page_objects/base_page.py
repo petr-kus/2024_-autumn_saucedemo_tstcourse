@@ -11,8 +11,8 @@ from utilities.logger import get_logger # For logging
 
 class BasePage():
 
-    BASE_URL = "https://www.saucedemo.com"
-    
+    BASE_URL = "https://www.saucedemo.com/"
+
     CART_ICON = (By.CLASS_NAME, "shopping_cart_link")
 
     def __init__(self, driver):

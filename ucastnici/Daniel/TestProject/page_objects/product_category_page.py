@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class ProductCategoryPage(BasePage):
 
-    PRODUCT_CATEGORY_PAGE_URL = "/inventory.html"
+    PRODUCT_CATEGORY_PAGE_URL = "inventory.html"
 
     PRODUCT_IMAGE = (By.CLASS_NAME, "inventory_item_img")
     PRODUCT_ADD_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")

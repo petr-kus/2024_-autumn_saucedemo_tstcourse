@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class ProductDetailPage(BasePage):
 
     PRODUCT_ID = 4
-    PRODUCT_DETAIL_PAGE_URL = f"/inventory-item.html?id={PRODUCT_ID}"
+    PRODUCT_DETAIL_PAGE_URL = f"inventory-item.html?id={PRODUCT_ID}"
     
     PRODUCT_ADD_CART_BUTTON = (By.ID, "add-to-cart")
 
