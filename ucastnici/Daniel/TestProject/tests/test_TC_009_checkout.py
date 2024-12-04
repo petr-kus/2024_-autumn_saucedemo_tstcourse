@@ -37,6 +37,8 @@ def test_complete_order(base_page, login_page, product_category_page, product_de
 
     home_page.logout()
 
+    # Verify, if the expected url is the same as the current url.
     expected_url = base_page.BASE_URL
-    current_url = base_page.driver.current_url
+    current_url = base_page.get_current_url()
+
     assert current_url == expected_url, f"Expected URL {expected_url}, but got {current_url}"
