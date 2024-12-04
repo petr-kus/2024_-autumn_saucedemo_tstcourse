@@ -56,7 +56,7 @@ def addToCartTest(additions):
     numAddedItems = 0 #Keeps track of products added during the test
     for x in range(additions): 
         AtCs=driver.find_elements(*Navigation.Btns.addToCartBtn)
-        randomAtC = AtCs[random.randrange(0,len(AtCs))]
+        randomAtC = AtCs[random.randrange(0,len(AtCs)-1)] if len(AtCs) > 1 else AtCs[0]
         try:
             randomAtC.click()
         except Exception as err:
