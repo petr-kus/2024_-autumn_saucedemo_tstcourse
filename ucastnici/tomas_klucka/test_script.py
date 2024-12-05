@@ -1,5 +1,3 @@
-
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -23,7 +21,7 @@ login_button.click()
 menu_button = driver.find_element(By.ID, 'react-burger-menu-btn')
 menu_button.click()
 
-time.sleep(2)
+driver.implicitly_wait(2)
 about_page = driver.find_element(By.ID, 'about_sidebar_link')
 about_page.click()
 
