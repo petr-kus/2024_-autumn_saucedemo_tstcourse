@@ -10,14 +10,13 @@ class AddToBackpack:
             "Sauce Labs Bolt T-Shirt": (By.XPATH, "//a[@id='item_1_title_link']/div"),
             "Sauce Labs Fleece Jacket": (By.XPATH, "//a[@id='item_5_title_link']/div"),
             "Sauce Labs Onesie": (By.XPATH, "//a[@id='item_2_title_link']/div"),
-            "Test.allTheThings() T-Shirt (Red)": (By.XPATH, "//a[@id='item_3_title_link']/div"),
+            "Sauce Labs Red T-Shirt": (By.XPATH, "//a[@id='item_3_title_link']/div"),
         }
         self.add_to_cart_button = (By.XPATH, "//button[text()='Add to cart']")
         self.cart_icon = (By.XPATH, "//div[@id='shopping_cart_container']/a/span")
         self.cart_item_name = (By.XPATH, "//div[@class='inventory_item_name']")
 
     def add_product(self, product_name):
-        """Add a product to the cart by its name."""
         logging.info(f"Adding product: {product_name}")
         if product_name not in self.product_locators:
             raise ValueError(f"Locator for product '{product_name}' not found.")

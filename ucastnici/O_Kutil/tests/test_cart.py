@@ -13,7 +13,7 @@ class TestCart(Setup):
         "Sauce Labs Bolt T-Shirt",
         "Sauce Labs Fleece Jacket",
         "Sauce Labs Onesie",
-        "Test.allTheThings() T-Shirt (Red)",
+        "Sauce Labs Red T-Shirt",
     ])
     def test_add_backpack_to_cart(self, driver,product_name):
         driver.get("https://www.saucedemo.com")
