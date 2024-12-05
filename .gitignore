@@ -1,5 +1,7 @@
 /ucastnici/O_Kutil/.venv/*
 /ucastnici/O_Kutil/okutil_log.log
+/ucastnici/O_Kutil/__pycache__/
+/ucastnici/O_Kutil/tests/__pycache__/
 ucastnici/Antonin/my_log.log
 /ucastnici/zu_pri/test_logs.log
 /ucastnici/Antonin/Assets/__pycache__
