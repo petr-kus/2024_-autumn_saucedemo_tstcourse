@@ -16,10 +16,11 @@ logging.basicConfig(filename="./HW_07/test_logs.log",
 logging.info("Starting the execution:")
 
 ########################  SETUP -------------------------------------------------------
-
+#TODO: ukazat priklad jak si predat driver bez toho abych musel pouzivat jeden objekt
 def test_run():
     base_page = Base()
     driver = base_page.driver
+
     if base_page.check_landing_page_loaded():
         try:
             tests = Tests(driver)
