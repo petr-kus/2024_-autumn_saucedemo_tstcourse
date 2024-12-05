@@ -13,7 +13,7 @@ def get_element_by_id(driver, id, str_name):
 
 def get_elements_by_xpath(driver, xpath_str, str_name):
     try:
-        elements=driver.find_element(By.XPATH, xpath_str)
+        elements=driver.find_elements(By.XPATH, xpath_str)
         return elements
     
     except NoSuchElementException:
@@ -28,6 +28,16 @@ def get_element_by_css_selector(driver, css_selector, str_name, logger):
     
     except NoSuchElementException:
         logger.error(f'{str_name} element not found by CSS selector')
+        raise
+
+
+def get_element_by_class_name(driver, class_name, logger):
+    try:
+        element=driver.find_element(By.CLASS_NAME, class_name)
+        return element
+    
+    except NoSuchElementException:
+        logger.error(f'{str_name} element not found by class name.')
         raise
 
 def click_on_element(driver, elements, element_index):

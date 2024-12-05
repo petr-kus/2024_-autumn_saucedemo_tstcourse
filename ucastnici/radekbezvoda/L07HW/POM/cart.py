@@ -1,11 +1,13 @@
-from common import HamburgerMenu
-from common import get_element_by_id
+from .common import get_element_by_id
+from .base import LoggedInPage
 
-class Cart():
-    page_url = ''
-    def __init__(self, driver) -> None:
-        self.driver = driver
-        self.hamburger_menu = HamburgerMenu(self.driver)
+class Cart(LoggedInPage):
+    page_url = 'cart.html'
+    checkout_id = 'checkout'
+    def __init__(self, driver, screenshot_folder, logger) -> None:
+        logger.info('at the cart page')
+        super().__init__(driver, screenshot_folder, logger)
 
-    def get_number_items(self):
-        pass
+
+    def click_checkout(self):
+        get_element_by_id(self.driver, self.checkout_id, "checkout button").click()
