@@ -1,5 +1,4 @@
 from .base import LoggedInPage
-from .common import get_element_by_id
 
 class CheckoutComplete(LoggedInPage):
     page_url = 'checkout-step-two.html'
@@ -10,4 +9,4 @@ class CheckoutComplete(LoggedInPage):
         super().__init__(driver, screenshot_folder, logger)
 
     def click_back(self):
-        get_element_by_id(self.driver, self.btn_id, "finish button").click()
+        self.get_elements_by('ID', self.btn_id, "finish button").click()

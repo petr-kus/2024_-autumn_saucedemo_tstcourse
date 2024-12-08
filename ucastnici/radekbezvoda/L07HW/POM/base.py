@@ -1,6 +1,8 @@
 import os
-from .common import get_element_by_id
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
 import time
+import datetime
 
 class BasePage():
     def __init__(self, driver, screenshot_folder, logger):
@@ -12,7 +14,10 @@ class BasePage():
     def take_screenshot(self):
         url = self.driver.current_url
         page_name = os.path.basename(url)
-        file_name = f"{page_name}_screenshot.png"
+        now = datetime.datetime.now()
+        if not page_name:
+            page_name = 'root'
+        file_name = f"{page_name}_{now.isoformat().replace(':', '-')}screenshot.png"
         full_path = os.path.join(self.screenshot_folder, file_name)
         self.driver.save_screenshot(full_path)
     
@@ -29,6 +34,24 @@ class BasePage():
             raise
         else:
             return True
+    
+    def get_elements_by(self, by_type:str, identifier, str_name, multiple=False):
+        by = getattr(By, by_type.upper())
+        try:
+            if multiple:
+                elements = self.driver.find_elements(by, identifier)
+            else:
+                elements = self.driver.find_element(by, identifier)            
+            return elements
+        except NoSuchElementException:
+            self.logger.error(f'{str_name} element not found')
+            raise
+
+    def click_on_element(self, elements, element_index):
+        if element_index < len(elements):
+            elements[element_index].click()
+        else:
+            self.logger.error(f"No element found at index {element_index}. Total elements found: {len(elements)}")
 
 class LoggedInPage(BasePage):
     hamburger_menu_btn_id = 'react-burger-menu-btn'
@@ -38,7 +61,7 @@ class LoggedInPage(BasePage):
         super().__init__(driver, screenshot_folder, logger)
 
     def get_hamburger_icon(self):
-        return get_element_by_id(self.driver, self.hamburger_menu_btn_id, "Hamburger menu icon")
+        return self.get_elements_by('ID',self.hamburger_menu_btn_id, "Hamburger menu icon")
     
     def click_hamburger_icon(self):
         self.get_hamburger_icon().click()
@@ -47,4 +70,4 @@ class LoggedInPage(BasePage):
         self.logger.info('trying to log out through hamburger menu link')
         self.click_hamburger_icon()
         time.sleep(1)
-        get_element_by_id(self.driver, self.logout_link_id, "Logout link").click()
+        self.get_elements_by('ID',self.logout_link_id,  "Logout link").click()

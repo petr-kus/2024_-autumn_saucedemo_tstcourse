@@ -90,6 +90,13 @@ def test_cart_checkout(driver, credentials, screenshot_folder, logger):
     items_added_to_cart = inventory_page.add_to_cart_random()
     inventory_page.click_cart_icon()
     cart_page = POM.cart.Cart(driver, screenshot_folder, logger)
+    try:
+        assert items_added_to_cart == len(cart_page.get_cart_items())
+    except AssertionError as err:
+        logger.error(f'The cart item number is wrong, {err}')
+        raise
+    else:
+        logger.info(f'Cart item number check passed.')    
     cart_page.click_checkout()
     checkout_first_page = POM.checkout_step_one.CheckoutStepOne(driver, screenshot_folder, logger)
     checkout_first_page.fill_out_personal_data(test_data.personal_data)

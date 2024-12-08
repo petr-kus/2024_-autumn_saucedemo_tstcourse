@@ -1,7 +1,5 @@
 from selenium.webdriver.common.keys import Keys
-import logging
 import random
-from .common import get_element_by_id, get_element_by_css_selector
 from .base import BasePage
 
 class LoginPage(BasePage):
@@ -20,16 +18,18 @@ class LoginPage(BasePage):
 
     def login(self,credentials):
         self.logger.info(f'LoginPage.login: Attempting to login with username {credentials.username} and password {credentials.password}')
-        get_element_by_id(self.driver, self.username_id, 'username').send_keys(credentials.username)
-        get_element_by_id(self.driver, self.password_id, 'password').send_keys(credentials.password)
+        self.get_elements_by('ID', self.username_id, 'username').send_keys(credentials.username)
+        self.get_elements_by('ID', self.password_id, 'password').send_keys(credentials.password)
+
         choice = random.choice((0,1))
         if choice:
-            get_element_by_id(self.driver, self.login_button_id, 'Login button').click()
+            self.get_elements_by('ID', self.login_button_id, 'Login button').click()
+
         else:
-            get_element_by_id(self.driver, self.password_id, 'password').send_keys(Keys.ENTER)
+            self.get_elements_by('ID', self.password_id, 'Login button').send_keys(Keys.ENTER)
     
     def check_failed_login_state(self):
-        container = get_element_by_css_selector(self.driver, self.error_message_container_css, "error message box", self.logger)
+        container = self.get_elements_by('CSS_SELECTOR', self.error_message_container_css, "error message box")
         if self.error_message in container.text:
             return True
         else:
