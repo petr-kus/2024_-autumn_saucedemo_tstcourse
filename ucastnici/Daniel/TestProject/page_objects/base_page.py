@@ -20,7 +20,10 @@ class BasePage():
         self.logger = get_logger(self.__class__.__name__)
 
     def open_url(self, url_path=""):
-        """Opens a full URL by combining BASE_URL and given URL_PATH."""
+        """Opens a full URL by combining BASE_URL and given URL_PATH.
+        
+        :param url_path: URL path without symbol "/" in the beginning of the URL path. To combine BASE_URL and URL_PATH, BASE_URL should be specified first (should contain "/" in the end).
+        """
         full_url = f"{self.BASE_URL}{url_path}"
         self.logger.info(f"Attempting to open page URL: {full_url} .")
         try:
@@ -31,7 +34,14 @@ class BasePage():
             raise
     
     def find_element(self, locator, timeout=10, wait_for="presence"):
-        """Finds an element with an explicit wait."""
+        """Finds an element with an explicit wait.
+
+        :param locator: Tuple (By.<METHOD>, "value") for locating the element.
+        :param timeout: Maximum time to wait for the element to appear.
+        :param wait_for: Specify "presence" or "visibility" of elements to wait for.
+        :return: WebElement object if element is found.
+        :raises: Exception if element is not found within the timeout.
+        """
         try:
             if wait_for == "visibility":
                 self.logger.debug(f"Waiting for visibility of the element: {locator}")
@@ -46,6 +56,30 @@ class BasePage():
             self.logger.error(f"Element with locator '{locator}' not found within {timeout} seconds. Error: {str(e)}")
             raise Exception(f"Element with locator '{locator}' not found. Error: {str(e)}")
 
+    def find_elements(self, locator, timeout=10, wait_for="presence"):
+        """
+        Finds multiple elements with an explicit wait.
+
+        :param locator: Tuple (By.<METHOD>, "value") for locating the elements.
+        :param timeout: Maximum time to wait for the elements to appear.
+        :param wait_for: Specify "presence" or "visibility" of elements to wait for.
+        :return: List of WebElement objects if elements are found.
+        :raises: Exception if elements are not found within the timeout.
+        """
+        try:
+            if wait_for == "visibility":
+                self.logger.debug(f"Waiting for visibility of elements: {locator}")
+                elements = WebDriverWait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
+            else:
+                self.logger.debug(f"Waiting for presence of elements: {locator}")
+                elements = WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located(locator))
+
+            self.logger.debug(f"Found {len(elements)} elements with locator: '{locator}'")
+            return elements
+        except Exception as e:
+            self.logger.error(f"Elements with locator '{locator}' not found within {timeout} seconds. Error: {str(e)}")
+            raise Exception(f"Elements with locator '{locator}' not found. Error: {str(e)}")
+        
     def click(self, locator, timeout=10):
         """Clicks on the element."""
         try:
@@ -98,3 +132,42 @@ class BasePage():
         self.logger.info(f"Navigating to the shopping cart.")
         self.click(self.CART_ICON)
         self.logger.info(f"Clicked on the shopping cart icon.")
+
+    def is_element_visible(self, locator, timeout=10):
+        """
+        Checks if an element is visible on the page.
+
+        :param locator: Tuple (By.<METHOD>, "value") for locating the element.
+        :param timeout: Maximum time to wait for the element to become visible.
+        :return: True if the element is visible, False otherwise.
+        """
+        try:
+            self.find_element(locator, timeout=timeout, wait_for="visibility")
+            self.logger.debug(f"Element with locator '{locator}' is visible.")
+            return True
+        except Exception as e:
+            self.logger.debug(f"Element with locator '{locator}' is not visible. Error: {str(e)}")
+            return False
+
+    def is_page_displayed(self):
+        """
+        Verifies that the page is displayed correctly.
+
+        :return: True if the page is displayed, False otherwise.
+        """
+        try:
+            self.find_element(self.PRODUCT_TITLE)  # Key element to verify the page
+            return True
+        except Exception as e:
+            self.logger.error(f"Product Detail Page is not displayed. Error: {str(e)}")
+            return False
+    
+    def get_current_url(self):
+        """
+        Returns the current URL of the page.
+
+        :return: The current URL as a string.
+        """
+        current_url = self.driver.current_url
+        self.logger.info(f"Current URL is: {current_url}")
+        return current_url

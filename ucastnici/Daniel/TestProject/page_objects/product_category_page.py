@@ -6,6 +6,7 @@ class ProductCategoryPage(BasePage):
     PRODUCT_CATEGORY_PAGE_URL = "inventory.html"
 
     PRODUCT_IMAGE = (By.CLASS_NAME, "inventory_item_img")
+    PRODUCT_NAME = (By.CLASS_NAME, "inventory_item_name ")
     PRODUCT_ADD_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")
 
     def __init__(self, driver):

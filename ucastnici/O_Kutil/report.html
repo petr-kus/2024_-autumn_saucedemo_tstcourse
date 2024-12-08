@@ -3,332 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <title id="head-title">report.html</title>
-      <style type="text/css">body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  /* do not increase min-width as some may use split screens */
-  min-width: 800px;
-  color: #999;
-}
-
-h1 {
-  font-size: 24px;
-  color: black;
-}
-
-h2 {
-  font-size: 16px;
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-a {
-  color: #999;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-#environment td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  vertical-align: top;
-}
-#environment tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-#environment ul {
-  margin: 0;
-  padding: 0 20px;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed,
-.passed .col-result {
-  color: green;
-}
-
-span.skipped,
-span.xfailed,
-span.rerun,
-.skipped .col-result,
-.xfailed .col-result,
-.rerun .col-result {
-  color: orange;
-}
-
-span.error,
-span.failed,
-span.xpassed,
-.error .col-result,
-.failed .col-result,
-.xpassed .col-result {
-  color: red;
-}
-
-.col-links__extra {
-  margin-right: 3px;
-}
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-/*------------------
- * 1. Table Layout
- *------------------*/
-#results-table {
-  border: 1px solid #e6e6e6;
-  color: #999;
-  font-size: 12px;
-  width: 100%;
-}
-#results-table th,
-#results-table td {
-  padding: 5px;
-  border: 1px solid #e6e6e6;
-  text-align: left;
-}
-#results-table th {
-  font-weight: bold;
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-.logwrapper {
-  max-height: 230px;
-  overflow-y: scroll;
-  background-color: #e6e6e6;
-}
-.logwrapper.expanded {
-  max-height: none;
-}
-.logwrapper.expanded .logexpander:after {
-  content: "collapse [-]";
-}
-.logwrapper .logexpander {
-  z-index: 1;
-  position: sticky;
-  top: 10px;
-  width: max-content;
-  border: 1px solid;
-  border-radius: 3px;
-  padding: 5px 7px;
-  margin: 10px 0 10px calc(100% - 80px);
-  cursor: pointer;
-  background-color: #e6e6e6;
-}
-.logwrapper .logexpander:after {
-  content: "expand [+]";
-}
-.logwrapper .logexpander:hover {
-  color: #000;
-  border-color: #000;
-}
-.logwrapper .log {
-  min-height: 40px;
-  position: relative;
-  top: -50px;
-  height: calc(100% + 50px);
-  border: 1px solid #e6e6e6;
-  color: black;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  padding: 5px;
-  padding-right: 80px;
-  white-space: pre-wrap;
-}
-
-div.media {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin: 0 5px;
-  overflow: hidden;
-  width: 320px;
-}
-
-.media-container {
-  display: grid;
-  grid-template-columns: 25px auto 25px;
-  align-items: center;
-  flex: 1 1;
-  overflow: hidden;
-  height: 200px;
-}
-
-.media-container--fullscreen {
-  grid-template-columns: 0px auto 0px;
-}
-
-.media-container__nav--right,
-.media-container__nav--left {
-  text-align: center;
-  cursor: pointer;
-}
-
-.media-container__viewport {
-  cursor: pointer;
-  text-align: center;
-  height: inherit;
-}
-.media-container__viewport img,
-.media-container__viewport video {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-}
-
-.media__name,
-.media__counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex: 0 0 25px;
-  align-items: center;
-}
-
-.collapsible td:not(.col-links) {
-  cursor: pointer;
-}
-.collapsible td:not(.col-links):hover::after {
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.col-result {
-  width: 130px;
-}
-.col-result:hover::after {
-  content: " (hide details)";
-}
-
-.col-result.collapsed:hover::after {
-  content: " (show details)";
-}
-
-#environment-header h2:hover::after {
-  content: " (hide details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-#environment-header.collapsed h2:hover::after {
-  content: " (show details)";
-  color: #bbb;
-  font-style: italic;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-  cursor: pointer;
-}
-.sortable.desc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: -12.5px;
-  border: 10px solid #4caf50;
-  border-bottom: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-.sortable.asc:after {
-  content: " ";
-  position: relative;
-  left: 5px;
-  bottom: 12.5px;
-  border: 10px solid #4caf50;
-  border-top: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.hidden, .summary__reload__button.hidden {
-  display: none;
-}
-
-.summary__data {
-  flex: 0 0 550px;
-}
-.summary__reload {
-  flex: 1 1;
-  display: flex;
-  justify-content: center;
-}
-.summary__reload__button {
-  flex: 0 0 300px;
-  display: flex;
-  color: white;
-  font-weight: bold;
-  background-color: #4caf50;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.summary__reload__button:hover {
-  background-color: #46a049;
-}
-.summary__spacer {
-  flex: 0 0 550px;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-}
-
-.filters,
-.collapse {
-  display: flex;
-  align-items: center;
-}
-.filters button,
-.collapse button {
-  color: #999;
-  border: none;
-  background: none;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.filters button:hover,
-.collapse button:hover {
-  color: #ccc;
-}
-
-.filter__label {
-  margin-right: 10px;
-}
-
-      </style>
-    
+      <link href="assets/style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <h1 id="title">report.html</h1>
-    <p>Report generated on 04-Dec-2024 at 17:49:52 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+    <p>Report generated on 05-Dec-2024 at 17:40:39 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
         v4.1.1</p>
     <div id="environment-header">
       <h2>Environment</h2>
@@ -382,7 +61,7 @@ div.media {
         <h2>Summary</h2>
         <div class="additional-summary prefix">
         </div>
-        <p class="run-count">1 test took 00:00:06.</p>
+        <p class="run-count">6 tests took 00:00:12.</p>
         <p class="filter">(Un)check the boxes to filter the results.</p>
         <div class="summary__reload">
           <div class="summary__reload__button hidden" onclick="location.reload()">
@@ -392,10 +71,10 @@ div.media {
         <div class="summary__spacer"></div>
         <div class="controls">
           <div class="filters">
-            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
-            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">1 Failed,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
-            <span class="passed">1 Passed,</span>
+            <span class="passed">5 Passed,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
             <span class="skipped">0 Skipped,</span>
             <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
@@ -429,7 +108,7 @@ div.media {
     </table>
   </body>
   <footer>
-    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.13.0&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.22631-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.3&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_TC_003_product.py::test_view_product_detail&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_TC_003_product.py::test_view_product_detail&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_TC_003_product.py::test_view_product_detail&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     WebDriver:driver_factory.py:16 Driver was set to Chrome.\n\n------------------------------ Captured log call -------------------------------\nINFO     LoginPage:login_page.py:29 Login process initiated.\nINFO     LoginPage:base_page.py:28 Attempting to open page URL: https://www.saucedemo.com/ .\nINFO     LoginPage:base_page.py:31 Opening URL: https://www.saucedemo.com/\nINFO     LoginPage:login_page.py:21 Login page was opened.\nINFO     LoginPage:login_page.py:31 Login page was opened on url: \nINFO     LoginPage:login_page.py:34 Login username entered: &amp;#x27;standard_user&amp;#x27;\nINFO     LoginPage:login_page.py:38 Login password entered: &amp;#x27;secret_sauce&amp;#x27;\nINFO     LoginPage:login_page.py:40 User &amp;#x27;standard_user&amp;#x27; attempted to log in.\nINFO     ProductCategoryPage:product_category_page.py:22 Process of showing product detail initiated.\nINFO     ProductCategoryPage:product_category_page.py:24 Clicked on the product image.\nINFO     ProductDetailPage:base_page.py:172 Current URL is: https://www.saucedemo.com/inventory-item.html?id=4\nINFO     ProductDetailPage:product_detail_page.py:39 Verifying if URL contains the product ID &amp;#x27;4&amp;#x27;.\nINFO     ProductDetailPage:product_detail_page.py:44 Product ID &amp;#x27;4&amp;#x27; is correctly reflected in the URL.\nINFO     ProductDetailPage:test_TC_003_product.py:16 Product details page is displayed correctly.\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.9.6&#34;, &#34;Platform&#34;: &#34;macOS-14.3-arm64-arm-64bit&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.3&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Backpack]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Backpack]&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Backpack]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Sauce Labs Backpack\nINFO     root:add_to_backpack.py:36 Product &amp;#x27;Sauce Labs Backpack&amp;#x27; successfully added to cart.\nINFO     root:teardown.py:8 Zav\u00edr\u00e1m browser - teardown\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c460&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/c59744319d53036a1dfe213923751586\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c6d0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/c59744319d53036a1dfe213923751586\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c7c0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/c59744319d53036a1dfe213923751586&#34;}], &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bike Light]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bike Light]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bike Light]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Sauce Labs Bike Light\nINFO     root:add_to_backpack.py:36 Product &amp;#x27;Sauce Labs Bike Light&amp;#x27; successfully added to cart.\nINFO     root:teardown.py:8 Zav\u00edr\u00e1m browser - teardown\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6400&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/32fc775674e9c14e735cccb2e25e0443\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6100&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/32fc775674e9c14e735cccb2e25e0443\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039166d0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/32fc775674e9c14e735cccb2e25e0443&#34;}], &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bolt T-Shirt]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bolt T-Shirt]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Bolt T-Shirt]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Sauce Labs Bolt T-Shirt\nINFO     root:add_to_backpack.py:36 Product &amp;#x27;Sauce Labs Bolt T-Shirt&amp;#x27; successfully added to cart.\nINFO     root:teardown.py:8 Zav\u00edr\u00e1m browser - teardown\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c670&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/0426d08c103fd7f09cf10ee6f58c6655\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6550&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/0426d08c103fd7f09cf10ee6f58c6655\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6160&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/0426d08c103fd7f09cf10ee6f58c6655&#34;}], &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Fleece Jacket]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Fleece Jacket]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Fleece Jacket]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Sauce Labs Fleece Jacket\nINFO     root:add_to_backpack.py:36 Product &amp;#x27;Sauce Labs Fleece Jacket&amp;#x27; successfully added to cart.\nINFO     root:teardown.py:8 Zav\u00edr\u00e1m browser - teardown\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6b50&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/466304dd856a38a2c984e0d0bf61b136\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e6d90&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/466304dd856a38a2c984e0d0bf61b136\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039fd0a0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/466304dd856a38a2c984e0d0bf61b136&#34;}], &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Onesie]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Onesie]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Sauce Labs Onesie]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Sauce Labs Onesie\nINFO     root:add_to_backpack.py:36 Product &amp;#x27;Sauce Labs Onesie&amp;#x27; successfully added to cart.\nINFO     root:teardown.py:8 Zav\u00edr\u00e1m browser - teardown\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c4f0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/11817190c71ba4fa997a663827882fdb\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x10397c400&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/11817190c71ba4fa997a663827882fdb\nWARNING  urllib3.connectionpool:connectionpool.py:827 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &amp;#x27;NewConnectionError(&amp;#x27;&amp;lt;urllib3.connection.HTTPConnection object at 0x1039e67f0&amp;gt;: Failed to establish a new connection: [Errno 61] Connection refused&amp;#x27;)&amp;#x27;: /session/11817190c71ba4fa997a663827882fdb&#34;}], &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Test.allTheThings() T-Shirt (Red)]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Test.allTheThings() T-Shirt (Red)]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_cart.py::TestCart::test_add_backpack_to_cart[Test.allTheThings() T-Shirt (Red)]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_cart.TestCart object at 0x103916550&amp;gt;\ndriver = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&amp;quot;1861371425f4c1cc6c467141c4eeaddd&amp;quot;)&amp;gt;\nproduct_name = &amp;#x27;Test.allTheThings() T-Shirt (Red)&amp;#x27;\n\n    @pytest.mark.parametrize(&amp;quot;product_name&amp;quot;, [\n        &amp;quot;Sauce Labs Backpack&amp;quot;,\n        &amp;quot;Sauce Labs Bike Light&amp;quot;,\n        &amp;quot;Sauce Labs Bolt T-Shirt&amp;quot;,\n        &amp;quot;Sauce Labs Fleece Jacket&amp;quot;,\n        &amp;quot;Sauce Labs Onesie&amp;quot;,\n        &amp;quot;Test.allTheThings() T-Shirt (Red)&amp;quot;,\n    ])\n    def test_add_backpack_to_cart(self, driver,product_name):\n        driver.get(&amp;quot;https://www.saucedemo.com&amp;quot;)\n    \n        login_page = Login(driver)\n        login_page.perform_login(&amp;quot;standard_user&amp;quot;, &amp;quot;secret_sauce&amp;quot;)\n    \n        product_page = AddToBackpack(driver)\n&amp;gt;       product_page.add_product(product_name)\n\ntests/test_cart.py:25: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = &amp;lt;OOP.add_to_backpack.AddToBackpack object at 0x1039e63a0&amp;gt;, product_name = &amp;#x27;Test.allTheThings() T-Shirt (Red)&amp;#x27;\n\n    def add_product(self, product_name):\n        logging.info(f&amp;quot;Adding product: {product_name}&amp;quot;)\n        if product_name not in self.product_locators:\n&amp;gt;           raise ValueError(f&amp;quot;Locator for product &amp;#x27;{product_name}&amp;#x27; not found.&amp;quot;)\nE           ValueError: Locator for product &amp;#x27;Test.allTheThings() T-Shirt (Red)&amp;#x27; not found.\n\nOOP/add_to_backpack.py:22: ValueError\n\n------------------------------ Captured log setup ------------------------------\nINFO     root:setup.py:8 Starting WebDriver\n\n------------------------------ Captured log call -------------------------------\nINFO     root:login.py:12 P\u0159ihla\u0161ov\u00e1n\u00ed u\u017eivatele\nINFO     root:add_to_backpack.py:20 Adding product: Test.allTheThings() T-Shirt (Red)\n\n---------------------------- Captured log teardown -----------------------------\nINFO     root:setup.py:12 Closing WebDriver&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
     <script>
       (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
