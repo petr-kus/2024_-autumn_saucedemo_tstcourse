@@ -1,0 +1,426 @@
+2024-12-12 13:13:40 - INFO - creating the chromedriver
+2024-12-12 13:21:30 - INFO - creating the chromedriver
+2024-12-12 13:21:32 - INFO - folder screenshots does not exist yet, attempting to create it
+2024-12-12 13:21:32 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:21:34 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:21:35 - INFO - starting unhappy login test with invalid credentials Credentials(username='?kOx;cBwMI9uV?', password='-G<2uvuSq{`2x|').
+2024-12-12 13:21:36 - INFO - LoginPage.login: Attempting to login with username ?kOx;cBwMI9uV? and password -G<2uvuSq{`2x|
+2024-12-12 13:21:36 - INFO - starting login test with random data
+2024-12-12 13:21:37 - INFO - LoginPage.login: Attempting to login with username }UJ and password ,vY^GV
+2024-12-12 13:21:38 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:21:38 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:21:38 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:21:39 - INFO - At Inventory page
+2024-12-12 13:21:39 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:21:40 - INFO - Happy login test succeeded.
+2024-12-12 13:21:40 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:21:40 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:21:41 - INFO - At Inventory page
+2024-12-12 13:21:41 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:21:43 - INFO - Happy login test succeeded.
+2024-12-12 13:21:43 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:21:43 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:21:49 - INFO - At Inventory page
+2024-12-12 13:21:49 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:21:52 - INFO - Happy login test succeeded.
+2024-12-12 13:22:40 - INFO - creating the chromedriver
+2024-12-12 13:22:42 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:22:42 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:22:43 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:22:45 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:22:45 - INFO - starting unhappy login test with invalid credentials Credentials(username='hi760=n]:k+~b', password='ocJ').
+2024-12-12 13:22:45 - INFO - LoginPage.login: Attempting to login with username hi760=n]:k+~b and password ocJ
+2024-12-12 13:22:46 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:22:46 - INFO - starting login test with random data
+2024-12-12 13:22:47 - INFO - LoginPage.login: Attempting to login with username 67w and password Jlth2WG;S?>j\
+2024-12-12 13:22:48 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:22:48 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:22:49 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:22:50 - INFO - At Inventory page
+2024-12-12 13:22:50 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:22:51 - INFO - Happy login test succeeded.
+2024-12-12 13:22:51 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:22:51 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:22:52 - INFO - At Inventory page
+2024-12-12 13:22:52 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:22:54 - INFO - Happy login test succeeded.
+2024-12-12 13:22:54 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:22:54 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:23:00 - INFO - At Inventory page
+2024-12-12 13:23:00 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:23:01 - INFO - Happy login test succeeded.
+2024-12-12 13:24:21 - INFO - creating the chromedriver
+2024-12-12 13:24:24 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:24:24 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:24:25 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:24:26 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:24:26 - INFO - starting unhappy login test with invalid credentials Credentials(username='6r4.6Uiz^O', password="E'C2g7p0P.").
+2024-12-12 13:24:26 - INFO - LoginPage.login: Attempting to login with username 6r4.6Uiz^O and password E'C2g7p0P.
+2024-12-12 13:24:28 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:24:28 - INFO - starting login test with random data
+2024-12-12 13:24:28 - INFO - LoginPage.login: Attempting to login with username rXL,83 and password KTV~W~tn
+2024-12-12 13:24:29 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:24:29 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:24:29 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:24:30 - INFO - At Inventory page
+2024-12-12 13:24:30 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:24:32 - INFO - Happy login test succeeded.
+2024-12-12 13:24:32 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:24:32 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:24:33 - INFO - At Inventory page
+2024-12-12 13:24:33 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:24:34 - INFO - Happy login test succeeded.
+2024-12-12 13:24:34 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:24:35 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:24:41 - INFO - At Inventory page
+2024-12-12 13:24:41 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:24:43 - INFO - Happy login test succeeded.
+2024-12-12 13:24:43 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:24:43 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:24:44 - INFO - At Inventory page
+2024-12-12 13:24:44 - INFO - trying to add 3 of elements to cart at random indexes
+2024-12-12 13:24:45 - INFO - at the cart page
+2024-12-12 13:24:45 - INFO - Cart item number check passed.
+2024-12-12 13:24:45 - INFO - at the checkout first page.
+2024-12-12 13:24:46 - INFO - at the checkout second page.
+2024-12-12 13:24:46 - INFO - at the checkout complete page.
+2024-12-12 13:24:47 - INFO - At Inventory page
+2024-12-12 13:24:47 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:24:48 - INFO - Checkout test passed..
+2024-12-12 13:24:48 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:24:49 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:24:49 - INFO - At Inventory page
+2024-12-12 13:24:49 - INFO - trying to add 3 of elements to cart at random indexes
+2024-12-12 13:24:50 - INFO - at the cart page
+2024-12-12 13:24:50 - ERROR - The cart item number is wrong, assert 3 == 1
+ +  where 1 = len([<selenium.webdriver.remote.webelement.WebElement (session="a1a8f5d806f9b969288e1291c8834d2d", element="f.EF6C2DFFBCF9950E7BFFC62D49D60DDE.d.E63A5A8CC90C5AE2E904026C75706581.e.221")>])
+ +    where [<selenium.webdriver.remote.webelement.WebElement (session="a1a8f5d806f9b969288e1291c8834d2d", element="f.EF6C2DFFBCF9950E7BFFC62D49D60DDE.d.E63A5A8CC90C5AE2E904026C75706581.e.221")>] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x0000024A58E8DEB0>.get_cart_items
+2024-12-12 13:24:51 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:24:51 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:24:57 - INFO - At Inventory page
+2024-12-12 13:24:57 - INFO - trying to add 5 of elements to cart at random indexes
+2024-12-12 13:24:57 - ERROR - No element found at index 5. Total elements found: 5
+2024-12-12 13:24:57 - INFO - at the cart page
+2024-12-12 13:24:58 - INFO - Cart item number check passed.
+2024-12-12 13:24:58 - INFO - at the checkout first page.
+2024-12-12 13:24:58 - INFO - at the checkout second page.
+2024-12-12 13:24:59 - INFO - at the checkout complete page.
+2024-12-12 13:25:04 - INFO - At Inventory page
+2024-12-12 13:25:04 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:25:06 - INFO - Checkout test passed..
+2024-12-12 13:27:13 - INFO - creating the chromedriver
+2024-12-12 13:27:16 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:27:16 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:27:18 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:27:19 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:27:19 - INFO - starting unhappy login test with invalid credentials Credentials(username='8tfhKNK`', password='Fyc68a_KX^X').
+2024-12-12 13:27:19 - INFO - LoginPage.login: Attempting to login with username 8tfhKNK` and password Fyc68a_KX^X
+2024-12-12 13:27:20 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:27:20 - INFO - starting login test with random data
+2024-12-12 13:27:20 - INFO - LoginPage.login: Attempting to login with username QK and password {aPsA~
+2024-12-12 13:27:21 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:27:21 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:27:21 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:27:22 - INFO - At Inventory page
+2024-12-12 13:27:22 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:27:24 - INFO - Happy login test succeeded.
+2024-12-12 13:27:24 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:27:24 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:27:25 - INFO - At Inventory page
+2024-12-12 13:27:25 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:27:26 - INFO - Happy login test succeeded.
+2024-12-12 13:27:26 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:27:27 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:27:32 - INFO - At Inventory page
+2024-12-12 13:27:32 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:27:34 - INFO - Happy login test succeeded.
+2024-12-12 13:27:34 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:27:34 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:27:35 - INFO - At Inventory page
+2024-12-12 13:27:35 - INFO - trying to add 1 of elements to cart at random indexes
+2024-12-12 13:27:35 - INFO - at the cart page
+2024-12-12 13:27:36 - INFO - Cart item number check passed.
+2024-12-12 13:27:36 - INFO - at the checkout first page.
+2024-12-12 13:27:37 - INFO - at the checkout second page.
+2024-12-12 13:27:37 - INFO - at the checkout complete page.
+2024-12-12 13:27:37 - INFO - At Inventory page
+2024-12-12 13:27:37 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:27:39 - INFO - Checkout test passed..
+2024-12-12 13:27:39 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:27:39 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:27:40 - INFO - At Inventory page
+2024-12-12 13:27:40 - INFO - trying to add 5 of elements to cart at random indexes
+2024-12-12 13:27:41 - INFO - at the cart page
+2024-12-12 13:27:42 - ERROR - The cart item number is wrong, assert 5 == 3
+ +  where 3 = len([<selenium.webdriver.remote.webelement.WebElement (session="b11afe0127160256041c141810175d0a", element="f.68C515887DD0...fe0127160256041c141810175d0a", element="f.68C515887DD091791EBC033F511FE75D.d.1F3CE3E588B2F67EDADF675E6A62BB38.e.218")>])
+ +    where [<selenium.webdriver.remote.webelement.WebElement (session="b11afe0127160256041c141810175d0a", element="f.68C515887DD0...fe0127160256041c141810175d0a", element="f.68C515887DD091791EBC033F511FE75D.d.1F3CE3E588B2F67EDADF675E6A62BB38.e.218")>] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x0000014A7EFEE0F0>.get_cart_items
+2024-12-12 13:27:42 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:27:42 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:27:48 - INFO - At Inventory page
+2024-12-12 13:27:48 - INFO - trying to add 4 of elements to cart at random indexes
+2024-12-12 13:27:48 - ERROR - No element found at index 5. Total elements found: 3
+2024-12-12 13:27:48 - ERROR - No element found at index 4. Total elements found: 3
+2024-12-12 13:27:49 - INFO - at the cart page
+2024-12-12 13:27:49 - ERROR - The cart item number is wrong, assert 4 == 5
+ +  where 5 = len([<selenium.webdriver.remote.webelement.WebElement (session="b11afe0127160256041c141810175d0a", element="f.68C515887DD0...fe0127160256041c141810175d0a", element="f.68C515887DD091791EBC033F511FE75D.d.8AC360064AB2A1C7C4150A42AC130BAB.e.247")>])
+ +    where [<selenium.webdriver.remote.webelement.WebElement (session="b11afe0127160256041c141810175d0a", element="f.68C515887DD0...fe0127160256041c141810175d0a", element="f.68C515887DD091791EBC033F511FE75D.d.8AC360064AB2A1C7C4150A42AC130BAB.e.247")>] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x0000014A7EFEE9C0>.get_cart_items
+2024-12-12 13:41:07 - INFO - creating the chromedriver
+2024-12-12 13:41:11 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:41:11 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:41:12 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:41:13 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:41:13 - INFO - starting unhappy login test with invalid credentials Credentials(username='*LHp#97I', password='^').
+2024-12-12 13:41:13 - INFO - LoginPage.login: Attempting to login with username *LHp#97I and password ^
+2024-12-12 13:41:14 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:41:14 - INFO - starting login test with random data
+2024-12-12 13:41:15 - INFO - LoginPage.login: Attempting to login with username mw"]2n and password i{nj
+2024-12-12 13:41:16 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:41:16 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:41:16 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:41:17 - INFO - At Inventory page
+2024-12-12 13:41:17 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:41:18 - INFO - Happy login test succeeded.
+2024-12-12 13:41:18 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:41:18 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:41:19 - INFO - At Inventory page
+2024-12-12 13:41:19 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:41:21 - INFO - Happy login test succeeded.
+2024-12-12 13:41:21 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:41:21 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:41:28 - INFO - At Inventory page
+2024-12-12 13:41:28 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:41:30 - INFO - Happy login test succeeded.
+2024-12-12 13:41:30 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:41:31 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:41:32 - INFO - At Inventory page
+2024-12-12 13:41:33 - INFO - at the cart page
+2024-12-12 13:41:33 - INFO - removing items from cart
+2024-12-12 13:41:33 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:41:34 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:41:35 - INFO - At Inventory page
+2024-12-12 13:41:35 - INFO - at the cart page
+2024-12-12 13:41:35 - INFO - removing items from cart
+2024-12-12 13:41:35 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:41:36 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:41:42 - INFO - At Inventory page
+2024-12-12 13:41:42 - INFO - at the cart page
+2024-12-12 13:41:42 - INFO - removing items from cart
+2024-12-12 13:42:33 - INFO - creating the chromedriver
+2024-12-12 13:42:36 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:42:36 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:42:37 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:42:38 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:42:38 - INFO - starting unhappy login test with invalid credentials Credentials(username='-&ukNi,Y', password='6b').
+2024-12-12 13:42:39 - INFO - LoginPage.login: Attempting to login with username -&ukNi,Y and password 6b
+2024-12-12 13:42:40 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:42:40 - INFO - starting login test with random data
+2024-12-12 13:42:40 - INFO - LoginPage.login: Attempting to login with username 4< and password &"h;@
+2024-12-12 13:42:41 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:42:41 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:42:41 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:42:42 - INFO - At Inventory page
+2024-12-12 13:42:42 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:42:44 - INFO - Happy login test succeeded.
+2024-12-12 13:42:44 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:42:44 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:42:45 - INFO - At Inventory page
+2024-12-12 13:42:45 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:42:46 - INFO - Happy login test succeeded.
+2024-12-12 13:42:46 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:42:46 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:42:52 - INFO - At Inventory page
+2024-12-12 13:42:52 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:42:54 - INFO - Happy login test succeeded.
+2024-12-12 13:42:54 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:42:54 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:42:55 - INFO - At Inventory page
+2024-12-12 13:42:55 - INFO - at the cart page
+2024-12-12 13:42:55 - INFO - removing items from cart
+2024-12-12 13:43:05 - INFO - found 0 in cart
+2024-12-12 13:43:06 - INFO - At Inventory page
+2024-12-12 13:43:06 - INFO - trying to add 5 of elements to cart at random indexes
+2024-12-12 13:43:07 - INFO - at the cart page
+2024-12-12 13:43:07 - INFO - Cart item number check passed.
+2024-12-12 13:43:07 - INFO - at the checkout first page.
+2024-12-12 13:43:08 - INFO - at the checkout second page.
+2024-12-12 13:43:09 - INFO - at the checkout complete page.
+2024-12-12 13:43:09 - INFO - At Inventory page
+2024-12-12 13:43:09 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:43:11 - INFO - Checkout test passed..
+2024-12-12 13:43:11 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:43:11 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:43:12 - INFO - At Inventory page
+2024-12-12 13:43:12 - INFO - at the cart page
+2024-12-12 13:43:12 - INFO - removing items from cart
+2024-12-12 13:43:22 - INFO - found 0 in cart
+2024-12-12 13:43:23 - INFO - At Inventory page
+2024-12-12 13:43:23 - INFO - trying to add 2 of elements to cart at random indexes
+2024-12-12 13:43:23 - INFO - at the cart page
+2024-12-12 13:43:33 - ERROR - The cart item number is wrong, assert 2 == 0
+ +  where 0 = len([])
+ +    where [] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x000001E8F3622570>.get_cart_items
+2024-12-12 13:43:34 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:43:34 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:43:40 - INFO - At Inventory page
+2024-12-12 13:43:40 - INFO - at the cart page
+2024-12-12 13:43:40 - INFO - removing items from cart
+2024-12-12 13:43:50 - INFO - found 0 in cart
+2024-12-12 13:43:56 - INFO - At Inventory page
+2024-12-12 13:43:56 - INFO - trying to add 3 of elements to cart at random indexes
+2024-12-12 13:43:57 - INFO - at the cart page
+2024-12-12 13:43:57 - INFO - Cart item number check passed.
+2024-12-12 13:43:57 - INFO - at the checkout first page.
+2024-12-12 13:43:58 - INFO - at the checkout second page.
+2024-12-12 13:43:59 - INFO - at the checkout complete page.
+2024-12-12 13:44:04 - INFO - At Inventory page
+2024-12-12 13:44:04 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:44:06 - INFO - Checkout test passed..
+2024-12-12 13:46:14 - INFO - creating the chromedriver
+2024-12-12 13:46:18 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 13:46:18 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 13:46:19 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 13:46:20 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:46:21 - INFO - starting unhappy login test with invalid credentials Credentials(username='Z+FN}4C', password='Vr/av').
+2024-12-12 13:46:21 - INFO - LoginPage.login: Attempting to login with username Z+FN}4C and password Vr/av
+2024-12-12 13:46:22 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 13:46:22 - INFO - starting login test with random data
+2024-12-12 13:46:22 - INFO - LoginPage.login: Attempting to login with username "`q|4fKn6]vf" and password 46.E-)X"}@L8@
+2024-12-12 13:46:23 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 13:46:23 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:46:24 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:46:24 - INFO - At Inventory page
+2024-12-12 13:46:24 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:46:26 - INFO - Happy login test succeeded.
+2024-12-12 13:46:26 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:46:27 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:46:28 - INFO - At Inventory page
+2024-12-12 13:46:28 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:46:29 - INFO - Happy login test succeeded.
+2024-12-12 13:46:29 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:46:30 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:46:36 - INFO - At Inventory page
+2024-12-12 13:46:36 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:46:37 - INFO - Happy login test succeeded.
+2024-12-12 13:46:37 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 13:46:38 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 13:46:39 - INFO - At Inventory page
+2024-12-12 13:46:39 - INFO - at the cart page
+2024-12-12 13:46:39 - INFO - removing items from cart
+2024-12-12 13:46:49 - INFO - found 0 in cart
+2024-12-12 13:46:50 - INFO - At Inventory page
+2024-12-12 13:46:50 - INFO - trying to add 1 of elements to cart at random indexes
+2024-12-12 13:46:51 - INFO - at the cart page
+2024-12-12 13:46:51 - INFO - Cart item number check passed.
+2024-12-12 13:46:52 - INFO - at the checkout first page.
+2024-12-12 13:46:53 - INFO - at the checkout second page.
+2024-12-12 13:46:53 - INFO - at the checkout complete page.
+2024-12-12 13:46:54 - INFO - At Inventory page
+2024-12-12 13:46:54 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:46:55 - INFO - Checkout test passed..
+2024-12-12 13:46:55 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 13:46:56 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 13:46:56 - INFO - At Inventory page
+2024-12-12 13:46:56 - INFO - at the cart page
+2024-12-12 13:46:57 - INFO - removing items from cart
+2024-12-12 13:47:07 - INFO - found 0 in cart
+2024-12-12 13:47:07 - INFO - At Inventory page
+2024-12-12 13:47:07 - INFO - trying to add 2 of elements to cart at random indexes
+2024-12-12 13:47:08 - INFO - at the cart page
+2024-12-12 13:47:18 - ERROR - The cart item number is wrong, assert 2 == 0
+ +  where 0 = len([])
+ +    where [] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x0000029969D8F350>.get_cart_items
+2024-12-12 13:47:18 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 13:47:18 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 13:47:24 - INFO - At Inventory page
+2024-12-12 13:47:24 - INFO - at the cart page
+2024-12-12 13:47:24 - INFO - removing items from cart
+2024-12-12 13:47:34 - INFO - found 0 in cart
+2024-12-12 13:47:40 - INFO - At Inventory page
+2024-12-12 13:47:40 - INFO - trying to add 3 of elements to cart at random indexes
+2024-12-12 13:47:40 - INFO - at the cart page
+2024-12-12 13:47:41 - INFO - Cart item number check passed.
+2024-12-12 13:47:41 - INFO - at the checkout first page.
+2024-12-12 13:47:42 - INFO - at the checkout second page.
+2024-12-12 13:47:42 - INFO - at the checkout complete page.
+2024-12-12 13:47:48 - INFO - At Inventory page
+2024-12-12 13:47:48 - INFO - trying to log out through hamburger menu link
+2024-12-12 13:47:49 - INFO - Checkout test passed..
+2024-12-12 14:06:59 - INFO - creating the chromedriver
+2024-12-12 14:07:02 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-12 14:07:02 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-12 14:07:03 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-12 14:07:05 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 14:07:05 - INFO - starting unhappy login test with invalid credentials Credentials(username='uz{Im[L', password='"7Yx,').
+2024-12-12 14:07:06 - INFO - LoginPage.login: Attempting to login with username uz{Im[L and password "7Yx,
+2024-12-12 14:07:07 - INFO - Unhappy login failed as expected, test passed.
+2024-12-12 14:07:07 - INFO - starting login test with random data
+2024-12-12 14:07:07 - INFO - LoginPage.login: Attempting to login with username )O"`le<:, and password 4<{(R_
+2024-12-12 14:07:08 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-12 14:07:08 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 14:07:08 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 14:07:09 - INFO - At Inventory page
+2024-12-12 14:07:09 - INFO - trying to log out through hamburger menu link
+2024-12-12 14:07:11 - INFO - Happy login test succeeded.
+2024-12-12 14:07:11 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 14:07:11 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 14:07:13 - INFO - At Inventory page
+2024-12-12 14:07:13 - INFO - trying to log out through hamburger menu link
+2024-12-12 14:07:15 - INFO - Happy login test succeeded.
+2024-12-12 14:07:15 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 14:07:16 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 14:07:23 - INFO - At Inventory page
+2024-12-12 14:07:24 - INFO - trying to log out through hamburger menu link
+2024-12-12 14:07:25 - INFO - Happy login test succeeded.
+2024-12-12 14:07:25 - INFO - Starting test of cart and checkout with user Credentials(username='standard_user', password='secret_sauce').
+2024-12-12 14:07:26 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-12 14:07:27 - INFO - At Inventory page
+2024-12-12 14:07:27 - INFO - at the cart page
+2024-12-12 14:07:27 - INFO - removing items from cart
+2024-12-12 14:07:37 - INFO - found 0 in cart
+2024-12-12 14:07:38 - INFO - At Inventory page
+2024-12-12 14:07:38 - INFO - trying to add 1 of elements to cart at random indexes
+2024-12-12 14:07:38 - INFO - at the cart page
+2024-12-12 14:07:38 - INFO - Cart item number check passed.
+2024-12-12 14:07:38 - INFO - at the checkout first page.
+2024-12-12 14:07:41 - INFO - at the checkout second page.
+2024-12-12 14:07:41 - INFO - at the checkout complete page.
+2024-12-12 14:07:42 - INFO - At Inventory page
+2024-12-12 14:07:42 - INFO - trying to log out through hamburger menu link
+2024-12-12 14:07:43 - INFO - Checkout test passed..
+2024-12-12 14:07:43 - INFO - Starting test of cart and checkout with user Credentials(username='problem_user', password='secret_sauce').
+2024-12-12 14:07:43 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-12 14:07:44 - INFO - At Inventory page
+2024-12-12 14:07:44 - INFO - at the cart page
+2024-12-12 14:07:45 - INFO - removing items from cart
+2024-12-12 14:07:55 - INFO - found 0 in cart
+2024-12-12 14:07:55 - INFO - At Inventory page
+2024-12-12 14:07:55 - INFO - trying to add 3 of elements to cart at random indexes
+2024-12-12 14:07:56 - INFO - at the cart page
+2024-12-12 14:07:56 - ERROR - The cart item number is wrong, assert 3 == 2
+ +  where 2 = len([<selenium.webdriver.remote.webelement.WebElement (session="947ef2641a07f2ac1f0884399e362cfa", element="f.2CA70960455C...f2641a07f2ac1f0884399e362cfa", element="f.2CA70960455CD7312C40CD75B69BA2D8.d.83047FD37111F23537E4DCE74BA61BB1.e.251")>])
+ +    where [<selenium.webdriver.remote.webelement.WebElement (session="947ef2641a07f2ac1f0884399e362cfa", element="f.2CA70960455C...f2641a07f2ac1f0884399e362cfa", element="f.2CA70960455CD7312C40CD75B69BA2D8.d.83047FD37111F23537E4DCE74BA61BB1.e.251")>] = get_cart_items()
+ +      where get_cart_items = <POM.cart.Cart object at 0x000001FC1A01EED0>.get_cart_items
+2024-12-12 14:07:56 - INFO - at the checkout first page.
+2024-12-12 14:07:58 - INFO - at the checkout second page.
+2024-12-12 14:08:08 - ERROR - finish button element not found
+2024-12-12 14:08:09 - INFO - Starting test of cart and checkout with user Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-12 14:08:09 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-12 14:08:15 - INFO - At Inventory page
+2024-12-12 14:08:15 - INFO - at the cart page
+2024-12-12 14:08:15 - INFO - removing items from cart
+2024-12-12 14:08:15 - INFO - found 2 in cart
+2024-12-12 14:08:21 - INFO - At Inventory page
+2024-12-12 14:08:21 - INFO - trying to add 2 of elements to cart at random indexes
+2024-12-12 14:08:21 - INFO - at the cart page
+2024-12-12 14:08:21 - INFO - Cart item number check passed.
+2024-12-12 14:08:22 - INFO - at the checkout first page.
+2024-12-12 14:08:23 - INFO - at the checkout second page.
+2024-12-12 14:08:23 - INFO - at the checkout complete page.
+2024-12-12 14:08:28 - INFO - At Inventory page
+2024-12-12 14:08:28 - INFO - trying to log out through hamburger menu link
+2024-12-12 14:08:30 - INFO - Checkout test passed..

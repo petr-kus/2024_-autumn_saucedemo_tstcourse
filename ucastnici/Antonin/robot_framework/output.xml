@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-12T17:06:13.914239" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Swoma\OneDrive\Desktop\AT2024\2024_autumn_saucedemo_tstcourse\ucastnici\Antonin\robot_framework\test.robot">
+<test id="s1-t1" name="Checkout Test" line="5">
+<kw name="Login Page Test">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-12T17:06:14.064201" level="INFO">Starting Browser process c:\Users\Swoma\OneDrive\Desktop\AT2024\2024_autumn_saucedemo_tstcourse\.venv\Lib\site-packages\Browser\wrapper\index.js using port 53377</msg>
+<msg time="2024-12-12T17:06:14.064301" level="INFO">Node startup parameters: ['node', 'c:\\Users\\Swoma\\OneDrive\\Desktop\\AT2024\\2024_autumn_saucedemo_tstcourse\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '53377']</msg>
+<msg time="2024-12-12T17:06:15.630836" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2024-12-12T17:06:15.630897" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-12T17:06:14.044663" elapsed="1.586350"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.632193" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>input#user-name</arg>
+<arg>${login}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.631191" elapsed="0.044596"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.676927" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.675958" elapsed="0.022686"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.699769" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.698806" elapsed="0.060466"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2024-12-12T17:06:14.044108" elapsed="1.715287"/>
+</kw>
+<kw name="Varify Login">
+<kw name="Get Url" owner="Browser">
+<arg>contains</arg>
+<arg>inventory</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.760071" elapsed="0.002643"/>
+</kw>
+<status status="PASS" start="2024-12-12T17:06:15.759679" elapsed="0.003119"/>
+</kw>
+<kw name="Add Item to Cart Test">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.763964" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=add-to-cart-sauce-labs-${item}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.763260" elapsed="0.028688"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.809516" level="INFO">Text: '1'</msg>
+<arg>span.shopping_cart_badge</arg>
+<arg>==</arg>
+<arg>1</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.792117" elapsed="0.017489"/>
+</kw>
+<arg>backpack</arg>
+<status status="PASS" start="2024-12-12T17:06:15.762970" elapsed="0.046752"/>
+</kw>
+<kw name="Checkout Test">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.811178" level="INFO">Clicks the element 'a.shopping_cart_link'.</msg>
+<arg>a.shopping_cart_link</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.810351" elapsed="0.034516"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<arg>contains</arg>
+<arg>cart</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.845020" elapsed="0.002286"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.848126" level="INFO">Clicks the element '"Checkout"'.</msg>
+<arg>"Checkout"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.847443" elapsed="0.029076"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.877645" level="INFO">Types the text 'Joe' in the given field.</msg>
+<arg>input#first-name</arg>
+<arg>${first_name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.876674" elapsed="0.014768"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.892573" level="INFO">Types the text 'Doe' in the given field.</msg>
+<arg>input#last-name</arg>
+<arg>${last_name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.891603" elapsed="0.013912"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:15.906660" level="INFO">Types the text '111' in the given field.</msg>
+<arg>input#postal-code</arg>
+<arg>${zip}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.905681" elapsed="0.012321"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.919103" level="INFO">Clicks the element '"Continue"'.</msg>
+<arg>"Continue"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.918161" elapsed="0.042627"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:15.961856" level="INFO">Clicks the element '"Finish"'.</msg>
+<arg>"Finish"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.960946" elapsed="0.032247"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-12T17:06:16.001782" level="INFO">Text: 'Thank you for your order!'</msg>
+<arg>h2</arg>
+<arg>contains</arg>
+<arg>Thank you</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:15.993342" elapsed="0.008521"/>
+</kw>
+<arg>Joe</arg>
+<arg>Doe</arg>
+<arg>111</arg>
+<status status="PASS" start="2024-12-12T17:06:15.809955" elapsed="0.192005"/>
+</kw>
+<status status="PASS" start="2024-12-12T17:06:14.043650" elapsed="1.958548"/>
+</test>
+<test id="s1-t2" name="Denied Login Information" line="12">
+<kw name="Login Page Test">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-12T17:06:16.613107" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2024-12-12T17:06:16.613170" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-12T17:06:16.023551" elapsed="0.589713"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:16.614546" level="INFO">Types the text 'locked_out_user' in the given field.</msg>
+<arg>input#user-name</arg>
+<arg>${login}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:16.613415" elapsed="0.036339"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-12T17:06:16.650914" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:16.649913" elapsed="0.020184"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-12T17:06:16.671312" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:16.670279" elapsed="0.045940"/>
+</kw>
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2024-12-12T17:06:16.023181" elapsed="0.693144"/>
+</kw>
+<kw name="Varify Denied Login">
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-12T17:06:16.729186" level="INFO">Text: 'Epic sadface: Sorry, this user has been locked out.'</msg>
+<arg>h3</arg>
+<arg>contains</arg>
+<arg>Epic sadface</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-12T17:06:16.716932" elapsed="0.012339"/>
+</kw>
+<status status="PASS" start="2024-12-12T17:06:16.716587" elapsed="0.012775"/>
+</kw>
+<status status="PASS" start="2024-12-12T17:06:16.021451" elapsed="0.708095"/>
+</test>
+<status status="PASS" start="2024-12-12T17:06:13.915273" elapsed="2.828097"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
