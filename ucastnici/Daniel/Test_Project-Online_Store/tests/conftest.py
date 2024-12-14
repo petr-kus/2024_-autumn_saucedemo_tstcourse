@@ -16,6 +16,13 @@ from utilities.logger import get_logger
 def pytest_html_report_title(report):
     report.title = "Test Report - online store"
 
+#TODO Lektor, zajímava konstrukce a za mě silné využití pytestu tím že to je automaticky v conftest.py které se načte by default. 
+# v každém pádě mě zde fixtures přijdou dost vyprázdněné. ALe chápu...
+# nebál bych se se m psát i víc kodu... . Rozumím tomu že se zde primárně pracuje s drivrem. A je to obezlička... ale...
+#doporučil bych nastudovat Scope v pamaterech fixtures... Scope=Modul explicitně a Autouse=True... .
+
+# Autouse= true třeba pro logger by ti ušetřil hodně psání ve volání testů...
+
 @pytest.fixture
 def driver():
     """Initializes the WebDriver based on the browser parameter."""

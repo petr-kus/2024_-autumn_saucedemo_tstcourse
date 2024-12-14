@@ -1,10 +1,17 @@
 import pytest
 import allure
 
+#TODO: Lektor - chvalim pouziti Allure popisku. TO je originalni funkcionalita. Chvalim dohledani si teto funckionality a vyuziti!
+
 @allure.title("Search for an existing product")
 @allure.description("Verify behavior, when results match the search query.")
 @allure.severity(allure.severity_level.CRITICAL)
 @allure.testcase("TC_001_search")
+
+#TODO: Lektor - toto dependency je super, funguje to krasne jako label v Allure, ale.. jinak je to na prd pokud nekde neni uvedeno
+#@pytest.mark.dependency(name="test_visibility_search_field")
+# coz nikde neni... . Takze je tam cisty skip. A proste tam sel napsat skip... . :-) Ale... jako ze pekne ty... .
+
 @pytest.mark.dependency(depends=["test_visibility_search_field"])
 def test_search_functionality(logger, driver, search_page):
 
@@ -33,4 +40,4 @@ def test_search_functionality(logger, driver, search_page):
 
     
     
-    
+#TODO: Lektor - co ty prazdne radky a znaky na konci?! TO je zbytecne odebirat prosim... . TIP: Da se pro to pouzivat auto formatovani... .
