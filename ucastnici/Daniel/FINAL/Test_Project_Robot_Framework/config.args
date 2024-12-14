@@ -1,0 +1,7 @@
+# Spuštění testu -> napsat do příkazového řádku robot -A config.args tests/
+
+# Nastavení adresáře pro výstupy
+--outputdir results
+
+# Nastavení úrovně logování
+--loglevel INFO
