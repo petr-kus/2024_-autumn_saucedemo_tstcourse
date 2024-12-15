@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-15T20:22:21.387723" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo" source="C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\HW_09\tests\saucedemo.robot">
+<kw name="Start tests - Open browser" owner="common" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-12-15T20:22:21.653479" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_09\\results\\browser\\traces\\temp\\b28850f2-94bf-4499-8597-1c9352af262c"}</msg>
+<msg time="2024-12-15T20:22:21.676114" level="INFO">Starting Browser process C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\index.js using port 62755</msg>
+<msg time="2024-12-15T20:22:21.676409" level="INFO">Node startup parameters: ['node', 'C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '62755']</msg>
+<msg time="2024-12-15T20:22:23.624304" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_09\\results\\browser\\traces\\temp\\b28850f2-94bf-4499-8597-1c9352af262c"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-12-15T20:22:21.652389" elapsed="1.972120"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2024-12-15T20:22:23.626352" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2024-12-15T20:22:23.650109" level="INFO">Successfully created context. </msg>
+<msg time="2024-12-15T20:22:23.650184" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-12-15T20:22:23.624769" elapsed="0.025515"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-15T20:22:24.248729" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-15T20:22:23.650509" elapsed="0.598435"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:21.651661" elapsed="2.597437"/>
+</kw>
+<test id="s1-t1" name="Can Login with valid credentials" line="15">
+<kw name="Load Page" owner="saucedemoApp">
+<kw name="Go To" owner="Browser">
+<msg time="2024-12-15T20:22:24.642641" level="INFO">Successfully opened URL https://www.saucedemo.com/</msg>
+<arg>${STARTING_PAGE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.264951" elapsed="0.377951"/>
+</kw>
+<kw name="Check Login Page is loaded" owner="loginPage">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-12-15T20:22:24.672469" level="INFO">Waited for Element with selector text=Swag Labs at state visible</msg>
+<arg>text=${LOGIN_PAGE_TITLE}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.643810" elapsed="0.028830"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:24.643237" elapsed="0.029531"/>
+</kw>
+<arg>https://www.saucedemo.com/</arg>
+<status status="PASS" start="2024-12-15T20:22:24.264468" elapsed="0.408368"/>
+</kw>
+<kw name="Login using" owner="saucedemoApp">
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2024-12-15T20:22:24.674031" level="INFO">Set test message to:
+Test started with username: "standard_user" and password: "secret_sauce"</msg>
+<arg>Test started with username: "${USERNAME}" and password: "${PASSWORD}"</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.673719" elapsed="0.000375"/>
+</kw>
+<kw name="Fill in username" owner="loginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-15T20:22:24.675254" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>selector=${USERNAME_FIELD}</arg>
+<arg>txt=${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.674660" elapsed="0.022628"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2024-12-15T20:22:24.674272" elapsed="0.023178"/>
+</kw>
+<kw name="Fill in password" owner="loginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-15T20:22:24.698891" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>selector=${PASSWORD_FIELD}</arg>
+<arg>txt=${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.698253" elapsed="0.015812"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-12-15T20:22:24.697675" elapsed="0.016531"/>
+</kw>
+<kw name="Click Login Button" owner="loginPage">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-15T20:22:24.715420" level="INFO">Clicks the element '"Login"'.</msg>
+<arg>"Login"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.714822" elapsed="0.093541"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:24.714415" elapsed="0.094262"/>
+</kw>
+<arg>USERNAME=standard_user</arg>
+<arg>PASSWORD=secret_sauce</arg>
+<status status="PASS" start="2024-12-15T20:22:24.673203" elapsed="0.135564"/>
+</kw>
+<kw name="Logout" owner="saucedemoApp">
+<kw name="Open burger menu" owner="header">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-15T20:22:24.822417" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>${OPEN_BURGER_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.821863" elapsed="0.062564"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:24.821516" elapsed="0.063046"/>
+</kw>
+<kw name="Click Logout" owner="header">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-15T20:22:24.887002" level="INFO">Clicks the element 'xpath=//*[text()="Logout"]'.</msg>
+<arg>${LOGOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:24.885180" elapsed="1.003601"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:24.884764" elapsed="1.004186"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:24.820900" elapsed="1.068147"/>
+</kw>
+<doc>About test no. 001</doc>
+<tag>001</tag>
+<status status="PASS" start="2024-12-15T20:22:24.249229" elapsed="1.640642">Test started with username: "standard_user" and password: "secret_sauce"</status>
+</test>
+<test id="s1-t2" name="Add item to cart" line="22">
+<kw name="standard_user is logged in" type="SETUP" source_name="${user} is logged in">
+<kw name="Get Element States" owner="Browser">
+<msg time="2024-12-15T20:22:26.160759" level="INFO">States are: ['detached']</msg>
+<msg time="2024-12-15T20:22:26.160925" level="INFO">${cart_present} = ['detached']</msg>
+<var>${cart_present}</var>
+<arg>${CART_LINK}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:25.904082" elapsed="0.256879"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Login using" owner="saucedemoApp">
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2024-12-15T20:22:26.162529" level="INFO">Set test message to:
+Test started with username: "standard_user" and password: "secret_sauce"</msg>
+<arg>Test started with username: "${USERNAME}" and password: "${PASSWORD}"</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.162224" elapsed="0.000362"/>
+</kw>
+<kw name="Fill in username" owner="loginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-15T20:22:26.163697" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>selector=${USERNAME_FIELD}</arg>
+<arg>txt=${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.163122" elapsed="0.012454"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2024-12-15T20:22:26.162755" elapsed="0.012979"/>
+</kw>
+<kw name="Fill in password" owner="loginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-15T20:22:26.177144" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>selector=${PASSWORD_FIELD}</arg>
+<arg>txt=${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.176482" elapsed="0.013128"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-12-15T20:22:26.175962" elapsed="0.013822"/>
+</kw>
+<kw name="Click Login Button" owner="loginPage">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-15T20:22:26.191131" level="INFO">Clicks the element '"Login"'.</msg>
+<arg>"Login"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.190495" elapsed="0.052751"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:26.190022" elapsed="0.053378"/>
+</kw>
+<arg>USERNAME=${user}</arg>
+<arg>PASSWORD=secret_sauce</arg>
+<status status="PASS" start="2024-12-15T20:22:26.161732" elapsed="0.081738"/>
+</kw>
+<arg>'visible' not in ${cart_present}</arg>
+<arg>saucedemoApp.Login using</arg>
+<arg>USERNAME=${user}</arg>
+<arg>PASSWORD=secret_sauce</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.161194" elapsed="0.082342"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:25.903554" elapsed="0.340068"/>
+</kw>
+<kw name="Add Backpack to cart" owner="saucedemoApp">
+<kw name="Add Backpack to cart" owner="inventoryPage">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-15T20:22:26.247851" level="INFO">Clicks the element 'xpath=//div[@class='inventory_container']//div[@class='inventory_item_description' and contains(., 'Backpack')]//button[contains(translate(text(),'A','a'),'add to cart')]'.</msg>
+<arg>${ADD_BACKPACK_TO_CART}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.247239" elapsed="0.048934"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:26.246796" elapsed="0.049520"/>
+</kw>
+<kw name="Check number of items in cart" owner="header">
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-15T20:22:26.322203" level="INFO">Text: '1'</msg>
+<msg time="2024-12-15T20:22:26.322354" level="INFO">${NUMBER_OF_ITEMS_IN_CART} = 1</msg>
+<var>${NUMBER_OF_ITEMS_IN_CART}</var>
+<arg>selector=${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.296927" elapsed="0.025458"/>
+</kw>
+<return>
+<value>${NUMBER_OF_ITEMS_IN_CART}</value>
+<status status="PASS" start="2024-12-15T20:22:26.322494" elapsed="0.000181"/>
+</return>
+<msg time="2024-12-15T20:22:26.322855" level="INFO">${CART_COUNT} = 1</msg>
+<var>${CART_COUNT}</var>
+<status status="PASS" start="2024-12-15T20:22:26.296542" elapsed="0.026343"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${CART_COUNT} == 1&quot;">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-15T20:22:26.323530" level="INFO">Backpack succesfully added.</msg>
+<arg>Backpack succesfully added.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.323324" elapsed="0.000259"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:26.322993" elapsed="0.000643"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Expected 1 item in the cart, but found ${CART_COUNT}.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-15T20:22:26.323879" elapsed="0.000110"/>
+</kw>
+<status status="NOT RUN" start="2024-12-15T20:22:26.323689" elapsed="0.000360"/>
+</branch>
+<status status="PASS" start="2024-12-15T20:22:26.322966" elapsed="0.001128"/>
+</if>
+<status status="PASS" start="2024-12-15T20:22:26.245511" elapsed="0.078639"/>
+</kw>
+<doc>About test no. 002</doc>
+<tag>002</tag>
+<status status="PASS" start="2024-12-15T20:22:25.898155" elapsed="0.426217">Test started with username: "standard_user" and password: "secret_sauce"</status>
+</test>
+<kw name="Finish tests - Close browser" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-12-15T20:22:26.756449" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-15T20:22:26.331632" elapsed="0.425031"/>
+</kw>
+<status status="PASS" start="2024-12-15T20:22:26.331249" elapsed="0.425566"/>
+</kw>
+<doc>About this test suite</doc>
+<status status="PASS" start="2024-12-15T20:22:21.389230" elapsed="5.367655"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">001</stat>
+<stat pass="1" fail="0" skip="0">002</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Saucedemo">Saucedemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
