@@ -30,7 +30,34 @@ def test_search_functionality(logger, driver, search_page):
 
     logger.info(f"Searching for '{search_query}' was succesful.")
 
+#HODNOCENI: (100 bodu je maximum - pokud někdo nebude fakt dobrej*á) 
+# jde v podstate o totoznou ulohu s du 9 - muze byt. Vetsina komentaru k oprave je tam! 
+# Pokud se nekdo chce poucit z tvých chyb (existuje k tomu i video z konzultace s tebou...).
+# + 50 bodu za funkčnost (jde spustit, standard_user prochází a na uživateli error user  failuje). 
+# + 5 bodu za readme markdown file!
+# + 5 bodu odddeleni keywordu do souboru i dat - jen by to mohlo byt lepe provazane v idititelne
+# + 5 je pouzite POM
+# + 5 je pouzite OOP
+# + 5 je pouzite Fixtures
+# + 5 je pouzite pytest.ini a conftest.py
+# + 5 je report do allure a html
+# + 5 je relativně dobře logováno + screenshoty sem tam
+# + 3 jsou pouzite specialni znaceni pro allure
+# + 3 použití Domain Langauge
 
+ 
+#=> 96 bodů TEST V Pytest splněn! 
+
+# mohl jsi dostat další body kdyby třeba... (easy tip pro ostatní):
+# - jsi lepe používal domain language (dlouhá názvy)
+# - jsi lépe rozdělil page object (máš komponenty součástí base třídy...)
+# - jsi nespouštěl pro každý test znovu browser
+# - jsi realně použil dependency nebo rozdělení do fixtures pro zalogování například (jako prerequisitu)
+# - jsi použil doplněk BDD pro pytest
+# - jsi logoval relevantnější zprávy a dělal častěji screnshoty
+# - ... 
+
+#Ano, šlo by to pak jistě přes sto...
     
     
     
