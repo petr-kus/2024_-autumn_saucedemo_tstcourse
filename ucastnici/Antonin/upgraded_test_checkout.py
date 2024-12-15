@@ -105,6 +105,7 @@ def checkoutTest(fisrtName, lastName, zip, itemsAmount):
 
     if driver.current_url == "https://www.saucedemo.com/checkout-complete.html" and driver.find_element(*Navigation.OtherEls.checkoutComplete):
         logging.info(f"Checkout test completed successfully on {datetime.datetime.now()}. ")
+        #TODO Lektor - to je supoer ten date time ale uz je vetsioonou soucasti logu...
     else:
         logging.warning("Checkout failed!")
         #TODO Lektor - to je spis error
