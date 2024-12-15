@@ -1,0 +1,36 @@
+INFO     root:playwright-with-pytest.py:17 User successfully logged in
+INFO     root:playwright-with-pytest.py:26 Item "add-to-cart-test\.allthethings\(\)-t-shirt-\(red\)" added to cart directly.
+INFO     root:playwright-with-pytest.py:34 There are 1 items on the cart badge.
+INFO     root:playwright-with-pytest.py:26 Item "add-to-cart-sauce-labs-fleece-jacket" added to cart directly.
+INFO     root:playwright-with-pytest.py:34 There are 2 items on the cart badge.
+INFO     root:playwright-with-pytest.py:39 Going to cart.
+INFO     root:playwright-with-pytest.py:61 There are 2 items in the cart.
+INFO     root:playwright-with-pytest.py:66 Going to checkout page.
+INFO     root:playwright-with-pytest.py:77 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:playwright-with-pytest.py:81 Going to summary page.
+INFO     root:playwright-with-pytest.py:90 Item total label is "Item total: $65.98".
+INFO     root:playwright-with-pytest.py:95 Going to final page.
+INFO     root:playwright-with-pytest.py:104 Final message is "Thank you for your order!".
+INFO     root:playwright-with-pytest.py:109 Going back to inventory page.
+INFO     root:playwright-with-pytest.py:17 User successfully logged in
+INFO     root:playwright-with-pytest.py:30 Going to item "item_1_title_link" detail page.
+INFO     root:playwright-with-pytest.py:48 Item added to cart directly.
+INFO     root:playwright-with-pytest.py:52 Going back to inventory page.
+INFO     root:playwright-with-pytest.py:34 There are 1 items on the cart badge.
+INFO     root:playwright-with-pytest.py:30 Going to item "item_4_title_link" detail page.
+INFO     root:playwright-with-pytest.py:48 Item added to cart directly.
+INFO     root:playwright-with-pytest.py:52 Going back to inventory page.
+INFO     root:playwright-with-pytest.py:34 There are 2 items on the cart badge.
+INFO     root:playwright-with-pytest.py:30 Going to item "item_0_title_link" detail page.
+INFO     root:playwright-with-pytest.py:48 Item added to cart directly.
+INFO     root:playwright-with-pytest.py:52 Going back to inventory page.
+INFO     root:playwright-with-pytest.py:34 There are 3 items on the cart badge.
+INFO     root:playwright-with-pytest.py:39 Going to cart.
+INFO     root:playwright-with-pytest.py:61 There are 3 items in the cart.
+INFO     root:playwright-with-pytest.py:66 Going to checkout page.
+INFO     root:playwright-with-pytest.py:77 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:playwright-with-pytest.py:81 Going to summary page.
+INFO     root:playwright-with-pytest.py:90 Item total label is "Item total: $55.97".
+INFO     root:playwright-with-pytest.py:95 Going to final page.
+INFO     root:playwright-with-pytest.py:104 Final message is "Thank you for your order!".
+INFO     root:playwright-with-pytest.py:109 Going back to inventory page.
