@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time, random, logging, datetime
 
+#TODO Lektor - Bylo hodne komentovane na lekci tak jen par poznamek. Neni zmineno vse... .
+#TODO Lektor - nma error uzivateli mi ten test neselze do konzole... nic tam nevidim. To je docela problem... . 
+
 logging.basicConfig(filename="my_log.log", level=logging.DEBUG)
 logging.info(f"Test executed on {datetime.datetime.now()}.")
 
@@ -32,9 +35,13 @@ class Navigation(): #Create web navigation obj
         itemsInCartAmount = (By.CLASS_NAME, "cart_quantity")
         checkoutComplete = (By.XPATH, "//*[contains(., 'Thank you')]")
 
+#TODO Lektor - Pochvala za OOP ktere v sobe zahrnuje adresaci prvku vcetne ID! Jen to melo byt oddeleno do speare souboru. 
+#TODO Lektor - Jen to melo byt oddeleno do speare souboru a nejspise stejne jako funkce nize... . 
+
 def wait(seconds=2):
     time.sleep(seconds)
     
+#TODO Lektor - Pochvala za parametrizaci waitu.
 def setup(testPage):
     Option = Options()
     Option.add_argument("start-maximized")
@@ -51,6 +58,7 @@ def loginTest(userName, password):
     except Exception as err:
         logging.debug(f"Error occured: {err}")
     logging.debug("Logged in.")
+    #TODO Lektor - hmmm to se ale vypise i kdyz chyba nastane... 
 
 def addToCartTest(additions):
     numAddedItems = 0 #Keeps track of products added during the test
@@ -79,6 +87,7 @@ def checkoutTest(fisrtName, lastName, zip, itemsAmount):
         logging.debug("There were items in the cart that were not added during this test.")
     else:
         logging.debug(f"There were {cartAmount} items added to the cart during this test.")
+     #TODO Lektor - zbytecne moc upodminkovane... stacil jeden assert a jeden log...
 
     driver.find_element(*Navigation.Btns.firstCheckoutBtn).click() #Starting checkout
     try:
@@ -98,6 +107,7 @@ def checkoutTest(fisrtName, lastName, zip, itemsAmount):
         logging.info(f"Checkout test completed successfully on {datetime.datetime.now()}. ")
     else:
         logging.warning("Checkout failed!")
+        #TODO Lektor - to je spis error
 
 def teardown():
     wait
@@ -111,6 +121,8 @@ testUser = User("standard_user", "secret_sauce", "Joe", "Doe", "111") #(login na
 numItemsToOrder = 2
 testDriver = webdriver.Chrome()
 
+#TODO Lektor - velka pochvala za oddeleni testovacich dat! jen to melo byt asi spis nahore?
+
 #Test execution
 try: 
     driver = setup(testPage)
@@ -120,3 +132,4 @@ try:
     teardown()
 except Exception as err:
     logging.warning (f"Test failed: {err}!")
+    #TODO Lektor - to je spis error
