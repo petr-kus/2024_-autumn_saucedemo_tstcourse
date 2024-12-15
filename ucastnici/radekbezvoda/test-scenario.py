@@ -6,6 +6,12 @@ import pathlib
 from selenium.webdriver.chrome.options import Options
 import logging
 
+#TODO Lektor -  Oprava úkolu 5 + 6 dohromady. 
+#TODO Lektor -  Mohlo to být už v POM/OOP aspoň :-) 
+#TODO Lektor -  cením si verifikace typů ve funkcích
+#TODO Lektor -  super že test jede ale do konzole nedá vědět, že zalogovanbí selhalo když dám usra locked_out_user
+#TODO Lektor -  ulohu si pamatuji ze jsem podrobne komentoval na lekci... . Tak jen v rychlosti nejdulezitejsi body.
+
 
 FOLDER_SCREENSHOTS = pathlib.Path('screenshots')
 SITE_URL = "https://www.saucedemo.com/"
@@ -14,7 +20,9 @@ INVENTORY_PAGE_FILE_NAME = 'inventory_page.png'
 HAMBURGER_CLICKED_FILE_NAME = 'hamburger_clicked.png'
 LOGOUT_PAGE_FILE_NAME = 'logout.png'
 LOG_FILE_NAME = 'saucedemo-tests.log'
-LOGIN_CREDENTIALS = ('standard_user','secret_sauce')
+LOGIN_CREDENTIALS = ('locked_out_user','secret_sauce')
+#TODO Lektor -  pro cesty k obraykum bz bzl lepsi generator ney je tu vsechny uvadet.
+
 
 def prepare_folder(folder_name: pathlib.Path) -> None:
     if folder_name.exists(): # clear old content
@@ -56,9 +64,11 @@ def run_test(folder_path: pathlib.Path, driver: webdriver) -> None:
         logger.info(f'login attempt')
 
         username = driver.find_element(By.ID,'user-name')
+        #TODO Lektor -  to id  by to chctelo nekam oddelit
         username.send_keys(LOGIN_CREDENTIALS[0]) 
         password = driver.find_element(By.ID,'password')
         password.send_keys(LOGIN_CREDENTIALS[1])
+        #TODO Lektor -  password pouzijes jen jendou mohl to byt one liner...treba: driver.find_element(password).send_keys(credentials['password'])
         login_button = driver.find_element(By.ID, 'login-button')
         login_button.click()
         # time.sleep(5)
@@ -74,6 +84,7 @@ def run_test(folder_path: pathlib.Path, driver: webdriver) -> None:
         driver.save_screenshot(folder_path / pathlib.Path(LOGIN_PAGE_FILE_NAME))
     except Exception as excp:
         logger.error(f'Exception {excp} triggered.')
+        #TODO Lektor -  super ze logujes cely error - me to ale do konuzole neselhalo diky odchytu erroru... .
 
 
 def teardown(driver):
