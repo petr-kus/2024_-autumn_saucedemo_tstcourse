@@ -1,0 +1,76 @@
+import pytest
+import pytest_html
+
+from page_objects.base_page import BasePage
+from page_objects.login_page import LoginPage
+from page_objects.search_page import SearchPage
+from page_objects.home_page import HomePage
+from page_objects.product_category_page import ProductCategoryPage
+from page_objects.product_detail_page import ProductDetailPage
+from page_objects.cart_page import CartPage
+from page_objects.checkout_page import CheckoutPage
+
+from utilities.driver_factory import get_driver
+from utilities.logger import get_logger
+
+def pytest_html_report_title(report):
+    report.title = "Test Report - online store"
+
+#TODO Lektor, zajímava konstrukce a za mě silné využití pytestu tím že to je automaticky v conftest.py které se načte by default. 
+# v každém pádě mě zde fixtures přijdou dost vyprázdněné. ALe chápu...
+# nebál bych se se m psát i víc kodu... . Rozumím tomu že se zde primárně pracuje s drivrem. A je to obezlička... ale...
+#doporučil bych nastudovat Scope v pamaterech fixtures... Scope=Modul explicitně a Autouse=True... .
+
+# Autouse= true třeba pro logger by ti ušetřil hodně psání ve volání testů...
+
+@pytest.fixture
+def driver():
+    """Initializes the WebDriver based on the browser parameter."""
+    driver = get_driver("chrome")
+    yield driver
+    driver.quit()
+
+@pytest.fixture
+def logger():
+    return get_logger("TestInfo")
+
+@pytest.fixture
+def base_page(driver):
+    """Initializes the base page."""
+    return BasePage(driver)
+
+@pytest.fixture
+def login_page(driver):
+    """Initializes the login page."""
+    return LoginPage(driver)
+
+@pytest.fixture
+def search_page(driver):
+    """Initializes the search page."""
+    return SearchPage(driver)
+
+@pytest.fixture
+def home_page(driver):
+    """Initializes the home page."""
+    return HomePage(driver)
+
+@pytest.fixture
+def product_category_page(driver):
+    """Initializes the product category page."""
+    return ProductCategoryPage(driver)
+
+@pytest.fixture
+def product_detail_page(driver):
+    """Initializes the product detail page."""
+    return ProductDetailPage(driver)
+
+@pytest.fixture
+def cart_page(driver):
+    """Initializes the cart page."""
+    return CartPage(driver)
+
+@pytest.fixture
+def checkout_page(driver):
+    """Initializes the checkout page."""
+    return CheckoutPage(driver)
+

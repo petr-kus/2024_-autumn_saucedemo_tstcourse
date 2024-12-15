@@ -1,0 +1,9 @@
+To show the allure report in html, write this into the command line after "pytest" is completed:
+
+"allure serve allure-results"
+
+FYI:
+You need to have JAVA installed on your device environment. To show result of allure report in web browser, its neccessary to set up the PATH to your JAVA_HOME.
+You also need to have ALLURE installed on your device environment.
+
+Get more information here: https://allurereport.org/docs/pytest/
