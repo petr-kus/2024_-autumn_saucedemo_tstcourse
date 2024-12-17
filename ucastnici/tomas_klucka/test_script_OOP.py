@@ -25,34 +25,38 @@ class Browser:
   time.sleep(5)
   self.driver.quit()
 
-class User:
- def __init__(self, user_name, password):
+class LoginPage:
+ def __init__(self, driver):
+  self.driver = driver
+
+ def login(self, user_name, password):
   self.user_name = user_name
   self.password = password
+  self.username_field = self.driver.find_element(By.ID, 'user-name')
+  self.password_field = self.driver.find_element(By.ID, 'password')
+  self.login_button = self.driver.find_element(By.ID, 'login-button')
 
- def login(self, driver):
   try:
    logging.info(f"logging in as user: '{self.user_name}'")
-   username_field = driver.find_element(By.ID, 'user-name')
-   password_field = driver.find_element(By.ID, 'password')
-   login_button = driver.find_element(By.ID, 'login-button')
 
-   username_field.send_keys(self.user_name)
-   password_field.send_keys(self.password)
-   login_button.click()
+   self.username_field.send_keys(self.user_name)
+   self.password_field.send_keys(self.password)
+   self.login_button.click()
    logging.info("login successfull")
 
   except Exception as error:
-   logging.error(f"error during login: '{error}'")
+   logging.error(f"error during login as user '{self.user_name}': '{error}'")
    raise
 
-class Nav:
- def __init__(self, **menu_items):
+class Navigation:
+ def __init__(self, driver, menu_button, **menu_items):
   self.menu_items = menu_items
+  self.menu_button = menu_button
+  self.driver = driver
 
- def open_menu(self, driver, menu_button):
+ def open_menu(self):
   try:
-   menu_button = driver.find_element(By.ID, menu_button)
+   menu_button = self.driver.find_element(By.ID, self.menu_button)
    menu_button.click()
    logging.info(f"menu '{menu_button}' clicked successfully")
 
@@ -60,17 +64,17 @@ class Nav:
     logging.error(f"error during clicking on '{menu_button}': '{error}'")
     raise
 
- def open_menu_item(self, driver, menu_item_name):
+ def open_menu_item(self, menu_item_name):
   try:
    if menu_item_name not in self.menu_items:
     logging.error(f"menu item '{menu_item_name}' does not exist")
     raise ValueError(f"invalid menu item: '{menu_item_name}'")
 
    # waiting until hamburger menu opens
-   driver.implicitly_wait(2)
+   self.driver.implicitly_wait(2)
 
    menu_item_id = self.menu_items[menu_item_name]
-   menu_item = driver.find_element(By.ID, menu_item_id)
+   menu_item = self.driver.find_element(By.ID, menu_item_id)
    menu_item.click()
 
    logging.info(f"successfully clicked on menu item '{menu_item}'")
@@ -79,6 +83,7 @@ class Nav:
    logging.error(f"error while clicking on menu item '{menu_item}': {error}")
    raise
   
+
 def main():
  # URL for testing
  test_page = "https://www.saucedemo.com/"
@@ -94,14 +99,16 @@ def main():
  browser = Browser(test_page)
  browser.setup()
 
- user = User('problem_user', 'secret_sauce')
- user.login(browser.driver)
+ try:
+  login_problem_user = LoginPage(browser.driver)
+  login_problem_user.login('problem_user', 'secret_sauce')
 
- nav = Nav(**menu_items)
- nav.open_menu(browser.driver, menu_button)
- nav.open_menu_item(browser.driver, "about_page")
+  nav = Navigation(browser.driver, menu_button, **menu_items)
+  nav.open_menu()
+  nav.open_menu_item("about_page")
 
- browser.close()
+ finally:
+  browser.close()
  
 if __name__ == "__main__":
  main()
