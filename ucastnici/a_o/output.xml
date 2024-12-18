@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-18T19:00:05.073072" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\public_git\2024_autumn_saucedemo_tstcourse_8\ucastnici\a_o\Final_Test\robot_framework\login_test.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-18T19:00:05.321143" level="FAIL">Variable '${URL}' not found.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-12-18T19:00:05.320769" elapsed="0.000416">Variable '${URL}' not found.</status>
+</kw>
+<kw name="Login To App" owner="login_page">
+<arg>${USER}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2024-12-18T19:00:05.321536" elapsed="0.000035"/>
+</kw>
+<kw name="Verify Page Title" owner="inventory_page">
+<arg>${EXPECTED_TITLE}</arg>
+<status status="NOT RUN" start="2024-12-18T19:00:05.321898" elapsed="0.000028"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-12-18T19:00:05.322755" elapsed="0.000029"/>
+</kw>
+<kw name="Stop Video Recording">
+<status status="NOT RUN" start="2024-12-18T19:00:05.323140" elapsed="0.000027"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-18T19:00:05.323555" elapsed="0.000123"/>
+</kw>
+<tag>Valid</tag>
+<status status="FAIL" start="2024-12-18T19:00:05.319870" elapsed="0.004042">Variable '${URL}' not found.</status>
+</test>
+<test id="s1-t2" name="Invalid Login" line="21">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-18T19:00:05.326101" level="FAIL">Variable '${URL}' not found.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-12-18T19:00:05.325692" elapsed="0.000449">Variable '${URL}' not found.</status>
+</kw>
+<kw name="Login To App" owner="login_page">
+<arg>${LOCKED_USER}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2024-12-18T19:00:05.326391" elapsed="0.000032"/>
+</kw>
+<kw name="Verify Error Message" owner="inventory_page">
+<status status="NOT RUN" start="2024-12-18T19:00:05.326727" elapsed="0.000044"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-12-18T19:00:05.327097" elapsed="0.000029"/>
+</kw>
+<kw name="Stop Video Recording">
+<status status="NOT RUN" start="2024-12-18T19:00:05.327302" elapsed="0.000024"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-18T19:00:05.327560" elapsed="0.000113"/>
+</kw>
+<tag>Invalid</tag>
+<status status="FAIL" start="2024-12-18T19:00:05.325195" elapsed="0.002662">Variable '${URL}' not found.</status>
+</test>
+<status status="FAIL" start="2024-12-18T19:00:05.074229" elapsed="0.254415"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Invalid</stat>
+<stat pass="0" fail="1" skip="0">Valid</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-18T19:00:05.315913" level="ERROR">Error in file 'C:\public_git\2024_autumn_saucedemo_tstcourse_8\ucastnici\a_o\Final_Test\robot_framework\login_test.robot' on line 6: Processing variable file 'Final_Test/robot_framework/variables/test_data.robot' failed: Importing variable file 'Final_Test/robot_framework/variables/test_data.robot' failed: ModuleNotFoundError: No module named 'Final_Test/robot_framework/variables/test_data'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\public_git\2024_autumn_saucedemo_tstcourse_8\ucastnici\a_o\venv\Scripts\robot.exe
+  C:\Users\alexo\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\alexo\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\alexo\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\alexo\AppData\Local\Programs\Python\Python313
+  C:\public_git\2024_autumn_saucedemo_tstcourse_8\ucastnici\a_o\venv
+  C:\public_git\2024_autumn_saucedemo_tstcourse_8\ucastnici\a_o\venv\Lib\site-packages</msg>
+</errors>
+</robot>
