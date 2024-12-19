@@ -5,4 +5,4 @@ Verify Page Title
     Should Be Equal    ${actual_title}    ${expected_title}
 
 Verify Error Message
-    Element Should Contain    xpath://div[@class='error-message-container']    "lock
+    Element Should Contain    xpath://div[@class='error-message-container']    "lock"

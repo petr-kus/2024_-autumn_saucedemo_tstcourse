@@ -1,6 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
 Library           Screenshot
+Library           ScreenCapLibrary
 Resource          resources/login_page.robot
 Resource          resources/inventory_page.robot
 Variables         ucastnici\a_o\Final_test\robot_framework\variables\test_data.robot

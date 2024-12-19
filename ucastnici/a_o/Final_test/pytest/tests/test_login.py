@@ -18,4 +18,4 @@ def test_login(standard_user, username, password, expected_title):
     if expected_title:
         assert inventory_page.get_title() == expected_title, "Login failed for standard_user"
     else:
-        assert "error" in standard_user.page_source, "Locked out user should not log i
+        assert "error" in standard_user.page_source, "Locked out user should not log i"
