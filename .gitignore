@@ -26,3 +26,11 @@ ucastnici/Antonin/myLogFile.log
 /1_lektor_petr_kus/my_log.log
 /1_lektor_petr_kus/output.xml
 /1_lektor_petr_kus/report.html
+/ucastnici/Antonin/__pycache__
+/ucastnici/Antonin/final_tests/pytest/__pycache__
+/ucastnici/Antonin/final_tests/robot_framework/__pycache__
+ucastnici/Antonin/final_tests/robot_framework/browser/screenshot/robotframework-browser-screenshot-1.png
+ucastnici/Antonin/final_tests/robot_framework/report.html
+ucastnici/Antonin/final_tests/robot_framework/output.xml
+ucastnici/Antonin/final_tests/robot_framework/playwright-log.txt
+ucastnici/Antonin/final_tests/robot_framework/log.html
