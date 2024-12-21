@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    DateTime
 
 *** Variables ***
 ${PASSWORD}    secret_sauce
@@ -20,11 +21,15 @@ Run Login Test And Continue
 
 Run Login Test
     [Arguments]    ${USERNAME}
+    ${start_time}=    Get Time    epoch
     Open Browser    ${URL}    Chrome
     Input Text      id:user-name    ${USERNAME}
     Input Text      id:password     ${PASSWORD}
     Click Element   id:login-button
     Verify Login Successful
+    ${end_time}=    Get Time    epoch
+    ${duration}=    Evaluate    ${end_time} - ${start_time}
+    Run Keyword And Continue On Failure    Should Be True    ${duration} <= 3    Login took too long: ${duration} seconds (maximum allowed: 3 seconds)
     Capture Page Screenshot
 
 Verify Login Successful

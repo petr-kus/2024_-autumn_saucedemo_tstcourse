@@ -1,5 +1,15 @@
 Run script> ./install_requirements.sh
 IF it is not executable run> chmod +x ./install_requirements.sh
-Run test by> robot --argumentfile arguments.txt to get allure results if you dont need allure run only >robot test.robot
+
+ROBOTFRAMEWORK
+Run test by> robot --argumentfile arguments.txt
+to get allure results if you dont need allure run only > robot test.robot
 robot frameworks log output and results can be found in> results folder
-compile and run allure by > allure serve allure_results (make sure in Petr_Kus_Github/ucastnici/O_Kutil directory, otherwise the output is null)
+compile and run allure by > "allure serve allure_results" 
+(make sure in Petr_Kus_Github/ucastnici/O_Kutil directory, otherwise the output is null)
+
+PYTEST
+Run test by> pytest test_login_all_users.py
+Generate HTML report> pytest test_login_all_users.py --html=report.html
+Run with Allure> pytest test_login_all_users.py --alluredir=./allure-results-pytest
+View Allure report> allure serve ./allure-results

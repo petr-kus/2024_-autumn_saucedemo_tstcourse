@@ -1,428 +1,633 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-12T09:34:56.219400" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on darwin)" generated="2024-12-20T23:50:27.098582" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/Users/ondrejkutil/Automation testing kurz/PUBLIC GIT/Petr_Kus_Github/ucastnici/O_Kutil/test.robot">
-<test id="s1-t1" name="Test Login For All Users" line="10">
+<test id="s1-t1" name="Test Login For All Users" line="11">
 <for flavor="IN">
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:27.217564" level="INFO">${start_time} = 1734735027</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:27.217478" elapsed="0.000103"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:56.346371" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:27.217939" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:34:56.346256" elapsed="2.384733"/>
+<status status="PASS" start="2024-12-20T23:50:27.217847" elapsed="3.470050"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:58.741267" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:30.691708" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:34:58.740713" elapsed="0.145982"/>
+<status status="PASS" start="2024-12-20T23:50:30.691367" elapsed="0.116565"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:58.887346" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:30.808543" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:34:58.887158" elapsed="0.050170"/>
+<status status="PASS" start="2024-12-20T23:50:30.808381" elapsed="0.035431"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:58.941042" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:30.846875" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:34:58.940381" elapsed="0.062101"/>
+<status status="PASS" start="2024-12-20T23:50:30.846671" elapsed="0.054442"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:59.021938" level="INFO">Element 'id:inventory_container' is displayed.</msg>
+<msg time="2024-12-20T23:50:30.910888" level="INFO">Element 'id:inventory_container' is displayed.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-12T09:34:59.004827" elapsed="0.017213"/>
+<status status="PASS" start="2024-12-20T23:50:30.901689" elapsed="0.009251"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-12T09:34:59.023002" level="INFO">Login was successful</msg>
+<msg time="2024-12-20T23:50:30.911321" level="INFO">Login was successful</msg>
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-12T09:34:59.022765" elapsed="0.000301"/>
+<status status="PASS" start="2024-12-20T23:50:30.911242" elapsed="0.000102"/>
 </kw>
-<status status="PASS" start="2024-12-12T09:34:59.003320" elapsed="0.020058"/>
+<status status="PASS" start="2024-12-20T23:50:30.901504" elapsed="0.010030"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:30.911734" level="INFO">${end_time} = 1734735030</msg>
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:30.911627" elapsed="0.000120"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-20T23:50:30.912234" level="INFO">${duration} = 3</msg>
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-20T23:50:30.912068" elapsed="0.000182"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-12-20T23:50:30.912574" elapsed="0.000142"/>
+</kw>
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T23:50:30.912480" elapsed="0.000301"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:59.090851" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:31.132821" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-12T09:34:59.023545" elapsed="0.067392"/>
+<status status="PASS" start="2024-12-20T23:50:30.912859" elapsed="0.220028"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:34:56.346090" elapsed="2.745158"/>
+<status status="PASS" start="2024-12-20T23:50:27.217363" elapsed="3.915800"/>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-12-12T09:34:56.345957" elapsed="2.745393"/>
+<status status="PASS" start="2024-12-20T23:50:27.217251" elapsed="3.915983"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:34:56.345513" elapsed="2.745946"/>
+<status status="PASS" start="2024-12-20T23:50:27.216917" elapsed="3.916379"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:34:59.091618" elapsed="0.079151"/>
+<status status="PASS" start="2024-12-20T23:50:31.133402" elapsed="0.072309"/>
 </kw>
 <var name="${USERNAME}">standard_user</var>
-<status status="PASS" start="2024-12-12T09:34:56.345319" elapsed="2.825658"/>
+<status status="PASS" start="2024-12-20T23:50:27.216762" elapsed="3.989069"/>
 </iter>
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:31.206487" level="INFO">${start_time} = 1734735031</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:31.206400" elapsed="0.000101"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:34:59.172294" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:31.206842" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:34:59.172143" elapsed="1.119689"/>
+<status status="PASS" start="2024-12-20T23:50:31.206750" elapsed="0.913212"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:00.297041" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:32.121176" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.296718" elapsed="0.101392"/>
+<status status="PASS" start="2024-12-20T23:50:32.120889" elapsed="0.105159"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:00.398914" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:32.226612" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.398698" elapsed="0.029103"/>
+<status status="PASS" start="2024-12-20T23:50:32.226470" elapsed="0.031983"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:00.428742" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:32.258941" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.428538" elapsed="0.039528"/>
+<status status="PASS" start="2024-12-20T23:50:32.258813" elapsed="0.036343"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:00.534778" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-12-12T09:35:00.534943" level="FAIL">Element with locator 'id:inventory_container' not found.</msg>
+<msg time="2024-12-20T23:50:32.363747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:32.363957" level="FAIL">Element with locator 'id:inventory_container' not found.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-12-12T09:35:00.468820" elapsed="0.071311">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:32.295792" elapsed="0.071521">Element with locator 'id:inventory_container' not found.</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-12-12T09:35:00.540513" elapsed="0.000052"/>
+<status status="NOT RUN" start="2024-12-20T23:50:32.368067" elapsed="0.000042"/>
 </kw>
-<status status="FAIL" start="2024-12-12T09:35:00.468590" elapsed="0.072108">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:32.295578" elapsed="0.072708">Element with locator 'id:inventory_container' not found.</status>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="NOT RUN" start="2024-12-20T23:50:32.368385" elapsed="0.000026"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-12-20T23:50:32.368488" elapsed="0.000021"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" start="2024-12-20T23:50:32.368588" elapsed="0.000021"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2024-12-12T09:35:00.540840" elapsed="0.000036"/>
+<status status="NOT RUN" start="2024-12-20T23:50:32.368681" elapsed="0.000020"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="FAIL" start="2024-12-12T09:34:59.171924" elapsed="1.369060">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:31.206292" elapsed="1.162477">Element with locator 'id:inventory_container' not found.</status>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="FAIL" start="2024-12-12T09:34:59.171755" elapsed="1.369333">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:31.206198" elapsed="1.162639">Element with locator 'id:inventory_container' not found.</status>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="FAIL" start="2024-12-12T09:34:59.171461" elapsed="1.369749">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:31.206050" elapsed="1.162854">Element with locator 'id:inventory_container' not found.</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.541327" elapsed="0.071895"/>
+<status status="PASS" start="2024-12-20T23:50:32.368993" elapsed="0.072958"/>
 </kw>
 <var name="${USERNAME}">locked_out_user</var>
-<status status="FAIL" start="2024-12-12T09:34:59.171196" elapsed="1.442236">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:31.205949" elapsed="1.236148">Element with locator 'id:inventory_container' not found.</status>
 </iter>
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:32.442917" level="INFO">${start_time} = 1734735032</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:32.442803" elapsed="0.000130"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:00.614776" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:32.443327" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.614606" elapsed="1.177774"/>
+<status status="PASS" start="2024-12-20T23:50:32.443233" elapsed="0.851788"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:01.796381" level="INFO">Typing text 'problem_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:33.298309" level="INFO">Typing text 'problem_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.795940" elapsed="0.095871"/>
+<status status="PASS" start="2024-12-20T23:50:33.298069" elapsed="0.090989"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:01.892533" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:33.389556" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.892330" elapsed="0.033128"/>
+<status status="PASS" start="2024-12-20T23:50:33.389420" elapsed="0.029191"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:01.926145" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:33.419084" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.925969" elapsed="0.035811"/>
+<status status="PASS" start="2024-12-20T23:50:33.418968" elapsed="0.035311"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:01.973526" level="INFO">Element 'id:inventory_container' is displayed.</msg>
+<msg time="2024-12-20T23:50:33.463272" level="INFO">Element 'id:inventory_container' is displayed.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.962634" elapsed="0.010968"/>
+<status status="PASS" start="2024-12-20T23:50:33.454897" elapsed="0.008449"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-12T09:35:01.974202" level="INFO">Login was successful</msg>
+<msg time="2024-12-20T23:50:33.463807" level="INFO">Login was successful</msg>
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.974082" elapsed="0.000153"/>
+<status status="PASS" start="2024-12-20T23:50:33.463709" elapsed="0.000129"/>
 </kw>
-<status status="PASS" start="2024-12-12T09:35:01.962358" elapsed="0.012179"/>
+<status status="PASS" start="2024-12-20T23:50:33.454711" elapsed="0.009493"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:33.464443" level="INFO">${end_time} = 1734735033</msg>
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:33.464327" elapsed="0.000131"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-20T23:50:33.464788" level="INFO">${duration} = 1</msg>
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-20T23:50:33.464654" elapsed="0.000147"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-12-20T23:50:33.465054" elapsed="0.000133"/>
+</kw>
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T23:50:33.464977" elapsed="0.000267"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:02.032425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:33.633372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-12T09:35:01.974679" elapsed="0.057838"/>
+<status status="PASS" start="2024-12-20T23:50:33.465314" elapsed="0.168124"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:00.614378" elapsed="1.418435"/>
+<status status="PASS" start="2024-12-20T23:50:32.442678" elapsed="1.191051"/>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-12-12T09:35:00.614184" elapsed="1.418730"/>
+<status status="PASS" start="2024-12-20T23:50:32.442553" elapsed="1.191245"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:00.613777" elapsed="1.419289"/>
+<status status="PASS" start="2024-12-20T23:50:32.442380" elapsed="1.191482"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:35:02.033264" elapsed="0.073095"/>
+<status status="PASS" start="2024-12-20T23:50:33.633970" elapsed="0.072756"/>
 </kw>
 <var name="${USERNAME}">problem_user</var>
-<status status="PASS" start="2024-12-12T09:35:00.613616" elapsed="1.493059"/>
+<status status="PASS" start="2024-12-20T23:50:32.442254" elapsed="1.264618"/>
 </iter>
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:33.707528" level="INFO">${start_time} = 1734735033</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:33.707439" elapsed="0.000104"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:02.108878" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:33.707933" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:35:02.108689" elapsed="1.088001"/>
+<status status="PASS" start="2024-12-20T23:50:33.707838" elapsed="0.881909"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:03.198989" level="INFO">Typing text 'performance_glitch_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:34.593610" level="INFO">Typing text 'performance_glitch_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:03.198593" elapsed="0.095176"/>
+<status status="PASS" start="2024-12-20T23:50:34.593368" elapsed="0.097492"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:03.294499" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:34.691491" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:03.294281" elapsed="0.032386"/>
+<status status="PASS" start="2024-12-20T23:50:34.691311" elapsed="0.030124"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:03.330985" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:34.721911" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:03.329264" elapsed="5.043566"/>
+<status status="PASS" start="2024-12-20T23:50:34.721797" elapsed="5.040351"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:08.384808" level="INFO">Element 'id:inventory_container' is displayed.</msg>
+<msg time="2024-12-20T23:50:39.772359" level="INFO">Element 'id:inventory_container' is displayed.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.375718" elapsed="0.009188"/>
+<status status="PASS" start="2024-12-20T23:50:39.763376" elapsed="0.009044"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-12T09:35:08.385486" level="INFO">Login was successful</msg>
+<msg time="2024-12-20T23:50:39.772951" level="INFO">Login was successful</msg>
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.385348" elapsed="0.000180"/>
+<status status="PASS" start="2024-12-20T23:50:39.772851" elapsed="0.000125"/>
 </kw>
-<status status="PASS" start="2024-12-12T09:35:08.374160" elapsed="0.011614"/>
+<status status="PASS" start="2024-12-20T23:50:39.762909" elapsed="0.010263"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:39.773372" level="INFO">${end_time} = 1734735039</msg>
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:39.773263" elapsed="0.000122"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-20T23:50:39.773698" level="INFO">${duration} = 6</msg>
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-20T23:50:39.773568" elapsed="0.000144"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2024-12-20T23:50:39.774135" level="FAIL">Login took too long: 6 seconds (maximum allowed: 3 seconds)</msg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2024-12-20T23:50:39.773963" elapsed="0.000227">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
+</kw>
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-12-20T23:50:39.773886" elapsed="0.000471">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:08.450853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:39.838979" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.385906" elapsed="0.065031"/>
+<status status="PASS" start="2024-12-20T23:50:39.774443" elapsed="0.064601"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:02.108462" elapsed="6.342815"/>
+<status status="FAIL" start="2024-12-20T23:50:33.707326" elapsed="6.132027">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-12-12T09:35:02.108209" elapsed="6.343172"/>
+<status status="FAIL" start="2024-12-20T23:50:33.707231" elapsed="6.132199">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:02.107709" elapsed="6.343768"/>
+<status status="FAIL" start="2024-12-20T23:50:33.707084" elapsed="6.132418">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.451652" elapsed="0.084605"/>
+<status status="PASS" start="2024-12-20T23:50:39.839605" elapsed="0.094929"/>
 </kw>
 <var name="${USERNAME}">performance_glitch_user</var>
-<status status="PASS" start="2024-12-12T09:35:02.107122" elapsed="6.429358"/>
+<status status="FAIL" start="2024-12-20T23:50:33.706983" elapsed="6.227700">Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </iter>
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:39.935367" level="INFO">${start_time} = 1734735039</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:39.935278" elapsed="0.000103"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:08.538053" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:39.935738" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.537832" elapsed="2.879521"/>
+<status status="PASS" start="2024-12-20T23:50:39.935650" elapsed="0.840814"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.424972" level="INFO">Typing text 'error_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:40.779144" level="INFO">Typing text 'error_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.423194" elapsed="0.300342"/>
+<status status="PASS" start="2024-12-20T23:50:40.778892" elapsed="0.092671"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.724555" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:40.872082" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.724240" elapsed="0.031248"/>
+<status status="PASS" start="2024-12-20T23:50:40.871951" elapsed="0.030347"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.757118" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:40.902735" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.756728" elapsed="0.038496"/>
+<status status="PASS" start="2024-12-20T23:50:40.902618" elapsed="0.035443"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.808006" level="INFO">Element 'id:inventory_container' is displayed.</msg>
+<msg time="2024-12-20T23:50:40.948956" level="INFO">Element 'id:inventory_container' is displayed.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.796843" elapsed="0.011248"/>
+<status status="PASS" start="2024-12-20T23:50:40.939509" elapsed="0.009503"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-12T09:35:11.808661" level="INFO">Login was successful</msg>
+<msg time="2024-12-20T23:50:40.949427" level="INFO">Login was successful</msg>
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.808522" elapsed="0.000181"/>
+<status status="PASS" start="2024-12-20T23:50:40.949327" elapsed="0.000123"/>
 </kw>
-<status status="PASS" start="2024-12-12T09:35:11.796209" elapsed="0.012744"/>
+<status status="PASS" start="2024-12-20T23:50:40.939016" elapsed="0.010652"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:40.949916" level="INFO">${end_time} = 1734735040</msg>
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:40.949791" elapsed="0.000140"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-20T23:50:40.950287" level="INFO">${duration} = 1</msg>
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-20T23:50:40.950151" elapsed="0.000150"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-12-20T23:50:40.950579" elapsed="0.000137"/>
+</kw>
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T23:50:40.950496" elapsed="0.000476"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.900673" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:41.041443" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.809140" elapsed="0.091630"/>
+<status status="PASS" start="2024-12-20T23:50:40.951088" elapsed="0.090430"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:08.537610" elapsed="3.363479"/>
+<status status="PASS" start="2024-12-20T23:50:39.935171" elapsed="1.106599"/>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-12-12T09:35:08.537439" elapsed="3.363757"/>
+<status status="PASS" start="2024-12-20T23:50:39.935080" elapsed="1.106761"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:08.537162" elapsed="3.364137"/>
+<status status="PASS" start="2024-12-20T23:50:39.934935" elapsed="1.106969"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.901461" elapsed="0.076359"/>
+<status status="PASS" start="2024-12-20T23:50:41.042033" elapsed="0.069058"/>
 </kw>
 <var name="${USERNAME}">error_user</var>
-<status status="PASS" start="2024-12-12T09:35:08.536968" elapsed="3.441093"/>
+<status status="PASS" start="2024-12-20T23:50:39.934832" elapsed="1.176379"/>
 </iter>
 <iter>
 <kw name="Run Login Test And Continue">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Run Login Test">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:41.111858" level="INFO">${start_time} = 1734735041</msg>
+<var>${start_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:41.111762" elapsed="0.000112"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:11.979370" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-20T23:50:41.112227" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.979203" elapsed="1.249880"/>
+<status status="PASS" start="2024-12-20T23:50:41.112138" elapsed="0.918322"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:13.230456" level="INFO">Typing text 'visual_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-20T23:50:42.034169" level="INFO">Typing text 'visual_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.230085" elapsed="0.082947"/>
+<status status="PASS" start="2024-12-20T23:50:42.033933" elapsed="0.091063"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:13.313733" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-12-20T23:50:42.125489" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.313528" elapsed="0.036116"/>
+<status status="PASS" start="2024-12-20T23:50:42.125362" elapsed="0.030530"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:13.350496" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-12-20T23:50:42.156439" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.350250" elapsed="0.037780"/>
+<status status="PASS" start="2024-12-20T23:50:42.156327" elapsed="0.038205"/>
 </kw>
 <kw name="Verify Login Successful">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:13.400642" level="INFO">Element 'id:inventory_container' is displayed.</msg>
+<msg time="2024-12-20T23:50:42.205140" level="INFO">Element 'id:inventory_container' is displayed.</msg>
 <arg>id:inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.388975" elapsed="0.011930"/>
+<status status="PASS" start="2024-12-20T23:50:42.195164" elapsed="0.010044"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-12-12T09:35:13.401608" level="INFO">Login was successful</msg>
+<msg time="2024-12-20T23:50:42.205789" level="INFO">Login was successful</msg>
 <arg>Login was successful</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.401453" elapsed="0.000192"/>
+<status status="PASS" start="2024-12-20T23:50:42.205583" elapsed="0.000232"/>
 </kw>
-<status status="PASS" start="2024-12-12T09:35:13.388708" elapsed="0.013207"/>
+<status status="PASS" start="2024-12-20T23:50:42.194982" elapsed="0.011033"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-12-20T23:50:42.206221" level="INFO">${end_time} = 1734735042</msg>
+<var>${end_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-12-20T23:50:42.206112" elapsed="0.000122"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-20T23:50:42.206542" level="INFO">${duration} = 1</msg>
+<var>${duration}</var>
+<arg>${end_time} - ${start_time}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-20T23:50:42.206414" elapsed="0.000141"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-12-20T23:50:42.206805" elapsed="0.000127"/>
+</kw>
+<arg>Should Be True</arg>
+<arg>${duration} &lt;= 3</arg>
+<arg>Login took too long: ${duration} seconds (maximum allowed: 3 seconds)</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T23:50:42.206727" elapsed="0.000265"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-12T09:35:13.491496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-20T23:50:42.288161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.402067" elapsed="0.089599"/>
+<status status="PASS" start="2024-12-20T23:50:42.207069" elapsed="0.081157"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:11.978972" elapsed="1.513095"/>
+<status status="PASS" start="2024-12-20T23:50:41.111657" elapsed="1.176796"/>
 </kw>
 <arg>Run Login Test</arg>
 <arg>${USERNAME}</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-12-12T09:35:11.978756" elapsed="1.513429"/>
+<status status="PASS" start="2024-12-20T23:50:41.111566" elapsed="1.176955"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-12T09:35:11.978468" elapsed="1.513832"/>
+<status status="PASS" start="2024-12-20T23:50:41.111421" elapsed="1.177164"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-12T09:35:13.492508" elapsed="0.075099"/>
+<status status="PASS" start="2024-12-20T23:50:42.288691" elapsed="0.070270"/>
 </kw>
 <var name="${USERNAME}">visual_user</var>
-<status status="PASS" start="2024-12-12T09:35:11.978298" elapsed="1.589486"/>
+<status status="PASS" start="2024-12-20T23:50:41.111322" elapsed="1.247775"/>
 </iter>
 <var>${USERNAME}</var>
 <value>@{USERS}</value>
-<status status="FAIL" start="2024-12-12T09:34:56.345189" elapsed="17.222744">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:27.216655" elapsed="15.142551">Several failures occurred:
+
+1) Element with locator 'id:inventory_container' not found.
+
+2) Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </for>
-<status status="FAIL" start="2024-12-12T09:34:56.344924" elapsed="17.223289">Element with locator 'id:inventory_container' not found.</status>
+<status status="FAIL" start="2024-12-20T23:50:27.216455" elapsed="15.142964">Several failures occurred:
+
+1) Element with locator 'id:inventory_container' not found.
+
+2) Login took too long: 6 seconds (maximum allowed: 3 seconds)</status>
 </test>
-<status status="FAIL" start="2024-12-12T09:34:56.245085" elapsed="17.324844"/>
+<status status="FAIL" start="2024-12-20T23:50:27.129212" elapsed="15.231437"/>
 </suite>
 <statistics>
 <total>

@@ -1,0 +1,52 @@
+2024-12-21 07:51:18 - INFO - creating the chromedriver
+2024-12-21 07:51:21 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-21 07:51:21 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-21 07:51:22 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-21 07:51:24 - INFO - Unhappy login failed as expected, test passed.
+2024-12-21 07:51:24 - INFO - starting unhappy login test with invalid credentials Credentials(username='~.wDu', password='0=,n.]R').
+2024-12-21 07:51:25 - INFO - LoginPage.login: Attempting to login with username ~.wDu and password 0=,n.]R
+2024-12-21 07:51:25 - INFO - Unhappy login failed as expected, test passed.
+2024-12-21 07:51:25 - INFO - starting login test with random data
+2024-12-21 07:51:26 - INFO - LoginPage.login: Attempting to login with username falq25h and password @^
+2024-12-21 07:51:26 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-21 07:51:26 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-21 07:51:27 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-21 07:51:28 - INFO - At Inventory page
+2024-12-21 07:51:28 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:51:29 - INFO - Happy login test succeeded.
+2024-12-21 07:51:29 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-21 07:51:29 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-21 07:51:30 - INFO - At Inventory page
+2024-12-21 07:51:30 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:51:32 - INFO - Happy login test succeeded.
+2024-12-21 07:51:32 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-21 07:51:32 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-21 07:51:39 - INFO - At Inventory page
+2024-12-21 07:51:39 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:51:40 - INFO - Happy login test succeeded.
+2024-12-21 07:52:46 - INFO - creating the chromedriver
+2024-12-21 07:52:49 - INFO - folder screenshots already exists, attempting to erase its content
+2024-12-21 07:52:49 - INFO - starting unhappy login test with invalid credentials Credentials(username='error_user', password='sauce').
+2024-12-21 07:52:50 - INFO - LoginPage.login: Attempting to login with username error_user and password sauce
+2024-12-21 07:52:51 - INFO - Unhappy login failed as expected, test passed.
+2024-12-21 07:52:51 - INFO - starting unhappy login test with invalid credentials Credentials(username='"$~>~la\\Gry0', password='jgtBvZJ').
+2024-12-21 07:52:51 - INFO - LoginPage.login: Attempting to login with username "$~>~la\Gry0 and password jgtBvZJ
+2024-12-21 07:52:52 - INFO - Unhappy login failed as expected, test passed.
+2024-12-21 07:52:52 - INFO - starting login test with random data
+2024-12-21 07:52:53 - INFO - LoginPage.login: Attempting to login with username nfbmEXD-3;JwQP and password ;ctl&4`d%8+$
+2024-12-21 07:52:53 - INFO - Login page is  displaying login error message. Test login with random data passed
+2024-12-21 07:52:53 - INFO - starting login test with valid credentials Credentials(username='standard_user', password='secret_sauce').
+2024-12-21 07:52:54 - INFO - LoginPage.login: Attempting to login with username standard_user and password secret_sauce
+2024-12-21 07:52:55 - INFO - At Inventory page
+2024-12-21 07:52:55 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:52:56 - INFO - Happy login test succeeded.
+2024-12-21 07:52:56 - INFO - starting login test with valid credentials Credentials(username='problem_user', password='secret_sauce').
+2024-12-21 07:52:56 - INFO - LoginPage.login: Attempting to login with username problem_user and password secret_sauce
+2024-12-21 07:52:57 - INFO - At Inventory page
+2024-12-21 07:52:57 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:52:58 - INFO - Happy login test succeeded.
+2024-12-21 07:52:58 - INFO - starting login test with valid credentials Credentials(username='performance_glitch_user', password='secret_sauce').
+2024-12-21 07:52:59 - INFO - LoginPage.login: Attempting to login with username performance_glitch_user and password secret_sauce
+2024-12-21 07:53:05 - INFO - At Inventory page
+2024-12-21 07:53:05 - INFO - trying to log out through hamburger menu link
+2024-12-21 07:53:06 - INFO - Happy login test succeeded.
