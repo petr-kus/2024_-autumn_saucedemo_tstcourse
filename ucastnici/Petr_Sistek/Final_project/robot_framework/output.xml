@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2024-12-20T13:04:01.445506" rpa="false" schemaversion="5">
+<suite id="s1" name="Login And Cart Test" source="C:\Users\petr.sistek\Desktop\kody\Final_project\robot_framework\login_and_cart_test.robot">
+<test id="s1-t1" name="Test Login And Add To Cart" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:01.657427" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-20T13:04:01.657427" elapsed="1.747535"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.406504" elapsed="0.030370"/>
+</kw>
+<kw name="Login To SauceDemo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:03.440200" level="INFO">Typing text 'standard_user' into text field 'id = user-name'.</msg>
+<arg>id = user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.439197" elapsed="0.158432"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:03.598870" level="INFO">Typing text 'secret_sauce' into text field 'id = password'.</msg>
+<arg>id = password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.597629" elapsed="0.093726"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:03.691355" level="INFO">Clicking button 'id = login-button'.</msg>
+<arg>id = login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.691355" elapsed="0.121839"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.813194" elapsed="0.022935"/>
+</kw>
+<status status="PASS" start="2024-12-20T13:04:03.438192" elapsed="0.397937"/>
+</kw>
+<kw name="Add Product To Cart">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:03.837129" level="INFO">Clicking button 'xpath = //div[@class="inventory_item"][.//div[text()="Sauce Labs Backpack"]]//button'.</msg>
+<arg>xpath = //div[@class="inventory_item"][.//div[text()="${PRODUCT}"]]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.837129" elapsed="0.113304"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.950433" elapsed="0.014830"/>
+</kw>
+<status status="PASS" start="2024-12-20T13:04:03.836129" elapsed="0.129134"/>
+</kw>
+<kw name="Verify Product In Cart">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:03.966307" level="INFO">Clicking link 'class = shopping_cart_link'.</msg>
+<arg>class = shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-20T13:04:03.965263" elapsed="0.067790"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${PRODUCT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-20T13:04:04.033053" elapsed="0.012619"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-20T13:04:04.054739" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>${PRODUCT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-20T13:04:04.046679" elapsed="0.008060"/>
+</kw>
+<status status="PASS" start="2024-12-20T13:04:03.965263" elapsed="0.089476"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-20T13:04:04.054739" elapsed="2.173385"/>
+</kw>
+<status status="PASS" start="2024-12-20T13:04:01.656428" elapsed="4.571696"/>
+</test>
+<status status="PASS" start="2024-12-20T13:04:01.446513" elapsed="4.782633"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login And Cart Test">Login And Cart Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
