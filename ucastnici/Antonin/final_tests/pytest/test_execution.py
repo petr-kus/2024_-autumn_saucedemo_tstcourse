@@ -44,7 +44,7 @@ class login_page():
         fillField(login_page.passwordField, user_password)
     def clickLoginBtn():
         clickBtn(login_page.loginBtn)
-        assert "inventory.html" in driver.current_url
+        assert "inventory.html" in driver.current_url, logging.error(f"Logging in failed.")
 
 class inventory_page():
     cartBadge = (By.CLASS_NAME, "shopping_cart_badge")
@@ -80,7 +80,7 @@ class checkout_page():
         clickBtn(checkout_page.secondCheckoutBtn)
     def clickFinishBtn():
         clickBtn(checkout_page.lastCheckoutBtn)
-        assert "checkout-complete.html" in driver.current_url
+        assert "checkout-complete.html" in driver.current_url, logging.error(f"Checkout failed.")
 
 
 
