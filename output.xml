@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-12-21T16:54:37.345322" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Saucedemo Login" source="/Users/davidhalman/2024_autumn_saucedemo_tstcourse/ucastnici/David_Halman/final_test_robot/test_saucedemo_login.robot">
+<test id="s1-t1" name="Login Test with Selenium Library" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:38.236947" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-21T16:54:38.236215" elapsed="3.817118"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:42.056730" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:42.055427" elapsed="0.412188"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:42.469584" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:42.468710" elapsed="0.154210"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:42.625264" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:42.624798" elapsed="0.159892"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-12-21T16:54:42.805549" level="FAIL">'title' does not contain 'Products'</msg>
+<arg>title</arg>
+<arg>Products</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-12-21T16:54:42.785760" elapsed="0.021461">'title' does not contain 'Products'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-12-21T16:54:42.808595" elapsed="0.000241"/>
+</kw>
+<doc>Test validního přihlášení pomocí Selenium Library.</doc>
+<status status="FAIL" start="2024-12-21T16:54:38.232940" elapsed="4.576620">'title' does not contain 'Products'</status>
+</test>
+<test id="s1-t2" name="Failed Login Test with Selenium Library" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:45.693157" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-21T16:54:45.692386" elapsed="3.490145"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:49.184394" level="INFO">Typing text 'invalid_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>invalid_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:49.183608" elapsed="0.491458"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:49.679276" level="INFO">Typing text 'wrong_password' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>wrong_password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:49.678758" elapsed="0.198212"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T16:54:49.878114" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T16:54:49.877572" elapsed="0.140386"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-12-21T16:54:50.019650" level="FAIL">'xpath://div[contains(@class, 'error-message')]' does not contain 'Epic sadface:'</msg>
+<arg>xpath://div[contains(@class, 'error-message')]</arg>
+<arg>Epic sadface:</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-12-21T16:54:50.018875" elapsed="0.001074">'xpath://div[contains(@class, 'error-message')]' does not contain 'Epic sadface:'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-12-21T16:54:50.020480" elapsed="0.000210"/>
+</kw>
+<doc>Test neplatného přihlášení pomocí Selenium Library.</doc>
+<status status="FAIL" start="2024-12-21T16:54:45.688056" elapsed="4.333375">'xpath://div[contains(@class, 'error-message')]' does not contain 'Epic sadface:'</status>
+</test>
+<test id="s1-t3" name="Login Test with Browser Library" line="33">
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-12-21T16:54:50.042183" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-12-21T16:54:50.042920" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/davidhalman/2024_autumn_saucedemo_tstcourse/browser/traces/temp/70456132-78c2-4031-9239-fc49282edc4a"}</msg>
+<msg time="2024-12-21T16:54:52.221716" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/davidhalman/2024_autumn_saucedemo_tstcourse/browser/traces/temp/70456132-78c2-4031-9239-fc49282edc4a"}</msg>
+<msg time="2024-12-21T16:54:52.223977" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2024-12-21T16:54:52.272011" level="INFO">Successfully created context. </msg>
+<msg time="2024-12-21T16:54:52.272107" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2024-12-21T16:54:53.936842" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<arg>${URL}</arg>
+<arg>Chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2024-12-21T16:54:50.038327" elapsed="3.899491"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-21T16:54:53.941768" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>[data-test="username"]</arg>
+<arg>${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:53.940170" elapsed="0.143593"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-21T16:54:54.088482" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>[data-test="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:54.084430" elapsed="0.046269"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-21T16:54:54.132368" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[data-test="login-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:54.131387" elapsed="0.222431"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-12-21T16:54:54.374259" level="INFO">Waited for Element with selector text="Products" at state visible</msg>
+<arg>text="Products"</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-12-21T16:54:54.354664" elapsed="0.019916"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-12-21T16:54:56.182050" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-21T16:54:54.375051" elapsed="1.807213"/>
+</kw>
+<doc>Test validního přihlášení pomocí Browser Library.</doc>
+<status status="PASS" start="2024-12-21T16:54:50.033974" elapsed="6.148723"/>
+</test>
+<test id="s1-t4" name="Failed Login Test with Browser Library" line="42">
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-12-21T16:54:56.196950" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-12-21T16:54:56.197927" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/davidhalman/2024_autumn_saucedemo_tstcourse/browser/traces/temp/833ff438-eea3-4c00-9b50-e871c6763fa5"}</msg>
+<msg time="2024-12-21T16:54:57.310186" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/davidhalman/2024_autumn_saucedemo_tstcourse/browser/traces/temp/833ff438-eea3-4c00-9b50-e871c6763fa5"}</msg>
+<msg time="2024-12-21T16:54:57.312374" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2024-12-21T16:54:57.351277" level="INFO">Successfully created context. </msg>
+<msg time="2024-12-21T16:54:57.351374" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2024-12-21T16:54:58.995615" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<arg>${URL}</arg>
+<arg>Chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2024-12-21T16:54:56.195410" elapsed="2.800930"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-21T16:54:58.999128" level="INFO">Fills the text 'invalid_user' in the given field.</msg>
+<arg>[data-test="username"]</arg>
+<arg>invalid_user</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:58.997105" elapsed="0.125256"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-21T16:54:59.123946" level="INFO">Fills the text 'wrong_password' in the given field.</msg>
+<arg>[data-test="password"]</arg>
+<arg>wrong_password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:59.122862" elapsed="0.042003"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-21T16:54:59.166711" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[data-test="login-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-21T16:54:59.165404" elapsed="0.069581"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-12-21T16:55:09.891591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-21T16:55:09.898136" level="INFO">See also file:///Users/davidhalman/2024_autumn_saucedemo_tstcourse/playwright-log.txt for additional details.</msg>
+<msg time="2024-12-21T16:55:12.427168" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('text="Epic sadface:"') to be visible
+</msg>
+<arg>text="Epic sadface:"</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2024-12-21T16:54:59.235662" elapsed="13.216638">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('text="Epic sadface:"') to be visible
+</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-12-21T16:55:12.452969" elapsed="0.001312"/>
+</kw>
+<doc>Test neplatného přihlášení pomocí Browser Library.</doc>
+<status status="FAIL" start="2024-12-21T16:54:56.189974" elapsed="16.265151">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('text="Epic sadface:"') to be visible
+</status>
+</test>
+<status status="FAIL" start="2024-12-21T16:54:37.347186" elapsed="35.290078"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="3" skip="0" id="s1" name="Test Saucedemo Login">Test Saucedemo Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-21T16:54:50.042183" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-12-21T16:54:56.196950" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
