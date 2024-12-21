@@ -1,0 +1,5 @@
+--listener
+allure_robotframework;allure_results
+--outputdir
+results
+test.robot

@@ -1,0 +1,5 @@
+- Python 3
+- Selenium
+- Pytest
+- Robot Framework
+- Allure (optional for report generation)
