@@ -1,0 +1,145 @@
+{"level":30,"time":"2024-12-22T16:13:41.561Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Listening on 59410"}
+(node:4956) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-12-22T16:13:41.758Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-12-22T16:13:42.114Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Adding browser to stack: chromium, version: 131.0.6778.33"}
+{"level":30,"time":"2024-12-22T16:13:42.115Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-12-22T16:13:42.115Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-12-22T16:13:42.122Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2024-12-22T16:13:42.122Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T16:13:42.122Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Trace file: "}
+{"level":30,"time":"2024-12-22T16:13:42.136Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Changed active context"}
+{"level":30,"time":"2024-12-22T16:13:42.142Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T16:13:42.121Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-12-22T16:13:42.137Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method newContext"}
+{"level":30,"time":"2024-12-22T16:13:42.142Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T16:13:42.502Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T16:13:42.502Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T16:13:42.628Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T16:13:42.649Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:42.661Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:42.666Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method goTo"}
+{"level":30,"time":"2024-12-22T16:13:43.377Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method goTo"}
+{"level":30,"time":"2024-12-22T16:13:43.385Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-12-22T16:13:43.385Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with text=Swag Labs in page."}
+{"level":30,"time":"2024-12-22T16:13:43.413Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-12-22T16:13:43.420Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:43.420Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Username\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:43.439Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:43.445Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:43.445Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:43.601Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:43.607Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:43.607Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Password\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:43.621Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:43.625Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:43.625Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:43.736Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:43.740Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:43.740Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with \"Login\" in page."}
+{"level":30,"time":"2024-12-22T16:13:43.815Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:43.825Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:43.825Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with id=react-burger-menu-btn in page."}
+{"level":30,"time":"2024-12-22T16:13:43.862Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:43.866Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:43.866Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//*[text()=\"Logout\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:44.865Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:44.873Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:44.875Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:44.878Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:44.880Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:44.884Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method goTo"}
+{"level":30,"time":"2024-12-22T16:13:44.949Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method goTo"}
+{"level":30,"time":"2024-12-22T16:13:44.953Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-12-22T16:13:44.953Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with text=Swag Labs in page."}
+{"level":30,"time":"2024-12-22T16:13:44.968Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-12-22T16:13:44.974Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:44.974Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Username\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:44.983Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:44.989Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:44.989Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:45.106Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.110Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.110Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Password\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:45.119Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.124Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.124Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-4.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:45.226Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.230Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.230Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with \"Login\" in page."}
+{"level":30,"time":"2024-12-22T16:13:45.270Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.281Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:45.282Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:45.287Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:45.288Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:45.293Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2024-12-22T16:13:45.293Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"shopping_cart_container\"]/a in page."}
+{"level":30,"time":"2024-12-22T16:13:45.553Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getElementStates"}
+{"level":30,"time":"2024-12-22T16:13:45.558Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.558Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Username\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:45.570Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.575Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.575Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-5.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:45.673Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.677Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.677Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//input[@placeholder=\"Password\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:45.686Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method fillText"}
+{"level":30,"time":"2024-12-22T16:13:45.691Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.691Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-6.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:45.782Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.787Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.787Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with \"Login\" in page."}
+{"level":30,"time":"2024-12-22T16:13:45.864Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.874Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.874Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//div[@class='inventory_container']//div[@class='inventory_item_description' and contains(., 'Backpack')]//button[contains(translate(text(),'A','a'),'add to cart')] in page."}
+{"level":30,"time":"2024-12-22T16:13:45.911Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:45.915Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:45.915Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-7.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:46.046Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:46.051Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T16:13:46.051Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with //*[@class=\"shopping_cart_badge\"] in page."}
+{"level":30,"time":"2024-12-22T16:13:46.076Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Retrieved text for element //*[@class=\"shopping_cart_badge\"] containing 1"}
+{"level":30,"time":"2024-12-22T16:13:46.076Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T16:13:46.082Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.082Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//div[@id='shopping_cart_container'] in page."}
+{"level":30,"time":"2024-12-22T16:13:46.116Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.121Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.121Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with \"Checkout\" in page."}
+{"level":30,"time":"2024-12-22T16:13:46.164Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.170Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.170Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//div[@id='shopping_cart_container'] in page."}
+{"level":30,"time":"2024-12-22T16:13:46.215Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.220Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:46.220Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-8.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:46.320Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:46.325Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.325Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is enabled, find Locator with xpath=//button[text()='Remove'] in page."}
+{"level":30,"time":"2024-12-22T16:13:46.358Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T16:13:46.362Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:46.362Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","Take screenshot with options: ":{"path":"C:\\Testing\\beeIT\\2024_autumn_saucedemo_tstcourse\\ucastnici\\zu_pri\\HW_10_FINAL\\RF\\results\\browser\\screenshot\\robotframework-browser-screenshot-9.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-12-22T16:13:46.457Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-12-22T16:13:46.461Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-12-22T16:13:46.461Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Strict mode is disabled, return Locator: xpath=//div[@class='cart_list']//div[@class='cart_quantity'] in page."}
+{"level":30,"time":"2024-12-22T16:13:46.463Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-12-22T16:13:46.471Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:46.472Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:46.478Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-12-22T16:13:46.487Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Removed page=7a9ffdac-9cd8-48b6-9ca8-499c231bedb8 from context=51c1fffa-028c-456d-b410-e367293453f1 page stack"}
+{"level":30,"time":"2024-12-22T16:13:47.263Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\index.js:12202:15)
+    at PlaywrightServer.getActiveBrowser (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\index.js:13094:59)
+    at PlaywrightServer.setTimeout (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\index.js:13342:57)
+    at Object.onReceiveHalfClose (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Testing\beeIT\2024_autumn_saucedemo_tstcourse\ucastnici\zu_pri\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2024-12-22T16:13:47.293Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:47.293Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T16:13:47.359Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-12-22T16:13:47.359Z","pid":4956,"hostname":"DESKTOP-L2O0AJK","msg":"End of node method closeAllBrowsers"}
