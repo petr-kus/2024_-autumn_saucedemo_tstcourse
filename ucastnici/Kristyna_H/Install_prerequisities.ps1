@@ -5,4 +5,5 @@ python -m venv venv
 #Lektor - na rakdu vyse jsem ti opravil activaci virtualniho prostredi... .
 pip install -r requirements.txt
 pip freeze > requirements.txt
+rfbrowser init
 playwright install

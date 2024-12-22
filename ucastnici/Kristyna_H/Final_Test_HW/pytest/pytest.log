@@ -1,0 +1,82 @@
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:11 Item "add-to-cart-test\.allthethings\(\)-t-shirt-\(red\)" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:11 Item "add-to-cart-sauce-labs-fleece-jacket" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 2 items on the cart badge.
+INFO     root:logged_in_page.py:13 Going to cart.
+INFO     root:cart_page.py:11 There are 2 items in the cart.
+INFO     root:cart_page.py:16 Going to checkout page.
+INFO     root:checkout_page.py:13 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:checkout_page.py:17 Going to summary page.
+INFO     root:summary_page.py:11 Item total label is "Item total: $65.98".
+INFO     root:summary_page.py:16 Going to final page.
+INFO     root:final_page.py:11 Final message is "Thank you for your order!".
+INFO     root:final_page.py:16 Going back to inventory page.
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:11 Item "add-to-cart-sauce-labs-backpack" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:11 Item "add-to-cart-sauce-labs-bolt-t-shirt" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 2 items on the cart badge.
+INFO     root:logged_in_page.py:13 Going to cart.
+INFO     root:cart_page.py:11 There are 2 items in the cart.
+INFO     root:cart_page.py:16 Going to checkout page.
+INFO     root:checkout_page.py:13 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:checkout_page.py:17 Going to summary page.
+INFO     root:summary_page.py:11 Item total label is "Item total: $45.98".
+INFO     root:summary_page.py:16 Going to final page.
+INFO     root:final_page.py:11 Final message is "Thank you for your order!".
+INFO     root:final_page.py:16 Going back to inventory page.
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:11 Item "add-to-cart-sauce-labs-backpack" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:11 Item "add-to-cart-sauce-labs-bolt-t-shirt" added to cart directly.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:15 Going to item "item_0_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:15 Going to item "item_1_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 2 items on the cart badge.
+INFO     root:inventory_page.py:15 Going to item "item_4_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 3 items on the cart badge.
+INFO     root:logged_in_page.py:13 Going to cart.
+INFO     root:cart_page.py:11 There are 3 items in the cart.
+INFO     root:cart_page.py:16 Going to checkout page.
+INFO     root:checkout_page.py:13 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:checkout_page.py:17 Going to summary page.
+INFO     root:summary_page.py:11 Item total label is "Item total: $55.97".
+INFO     root:summary_page.py:16 Going to final page.
+INFO     root:final_page.py:11 Final message is "Thank you for your order!".
+INFO     root:final_page.py:16 Going back to inventory page.
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:15 Going to item "item_4_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:15 Going to item "item_1_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 2 items on the cart badge.
+INFO     root:logged_in_page.py:13 Going to cart.
+INFO     root:cart_page.py:11 There are 2 items in the cart.
+INFO     root:cart_page.py:16 Going to checkout page.
+INFO     root:checkout_page.py:13 Filling in order form - first name: "Kris", last name: "Tyna", postal code: "tady".
+INFO     root:checkout_page.py:17 Going to summary page.
+INFO     root:summary_page.py:11 Item total label is "Item total: $45.98".
+INFO     root:summary_page.py:16 Going to final page.
+INFO     root:final_page.py:11 Final message is "Thank you for your order!".
+INFO     root:final_page.py:16 Going back to inventory page.
+INFO     root:login_page.py:15 User successfully logged in
+INFO     root:inventory_page.py:15 Going to item "item_4_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
+INFO     root:inventory_page.py:15 Going to item "item_1_title_link" detail page.
+INFO     root:product_detail_page.py:11 Item added to cart via detail page.
+INFO     root:product_detail_page.py:15 Going back to inventory page.
+INFO     root:logged_in_page.py:17 There are 1 items on the cart badge.
