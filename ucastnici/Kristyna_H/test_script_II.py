@@ -14,6 +14,7 @@ import logging
 #TODO Lektor - zde mohly byt parametry pro test! Vstup i stranka atp., 
 
 logging.basicConfig(filename='OK_log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#TODO Lektor - chvalim logovani do souboru bokem!
 
 
 def setup():
