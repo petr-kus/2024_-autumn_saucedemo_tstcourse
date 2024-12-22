@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-12-21T07:54:30.466859" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\testcases.robot">
+<test id="s1-t1" name="Unhappy Login Test" line="6">
+<kw name="Setup Test Environment" owner="resources" type="SETUP">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:31.230938" level="INFO">${screenshot_path} = C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots</msg>
+<var>${screenshot_path}</var>
+<arg>C:\\LocalData\\repos\\2024_autumn_saucedemo_tstcourse\\2024_autumn_saucedemo_tstcourse\\ucastnici\\radekbezvoda\\L10HW\\robotFramework${/}screenshots</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:31.230938" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-12-21T07:54:31.230938" level="FAIL">Directory 'C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots' does not exist.</msg>
+<arg>${screenshot_path}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="FAIL" start="2024-12-21T07:54:31.230938" elapsed="0.015635">Directory 'C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots' does not exist.</status>
+</kw>
+<msg time="2024-12-21T07:54:31.246573" level="INFO">${folder_exists} = False</msg>
+<var>${folder_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${screenshot_path}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:31.230938" elapsed="0.015635"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${folder_exists}">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-12-21T07:54:31.246573" level="INFO" html="true">Created directory '&lt;a href="file://C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots"&gt;C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots&lt;/a&gt;'.</msg>
+<arg>${screenshot_path}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-12-21T07:54:31.246573" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:31.250351" level="INFO">Screenshot folder 'C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots' created.</msg>
+<arg>Screenshot folder '${screenshot_path}' created.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:31.250351" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:31.246573" elapsed="0.004857"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Screenshot folder '${screenshot_path}' already exists.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:31.251430" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:31.251430" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:31.246573" elapsed="0.004857"/>
+</if>
+<kw name="Open Browser And Maximize" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:31.251430" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${MAIN_PAGE_URL}</arg>
+<arg>Chrome</arg>
+<arg>maximize=True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-21T07:54:31.251430" elapsed="4.000163"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.251593" elapsed="0.025869"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:31.251430" elapsed="4.026032"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:31.230938" elapsed="4.046524"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2024-12-21T07:54:35.279464" level="INFO">@{parts} = [ error_user | sauce ]</msg>
+<var>@{parts}</var>
+<arg>${credential}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.279464" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:35.282464" level="INFO">${username} = error_user</msg>
+<var>${username}</var>
+<arg>${parts[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.280461" elapsed="0.002003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:35.284488" level="INFO">${password} = sauce</msg>
+<var>${password}</var>
+<arg>${parts[1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.282464" elapsed="0.002381"/>
+</kw>
+<kw name="Login With Credentials" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:35.398434" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.284845" elapsed="0.113589"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:35.399437" level="INFO">Current URL: https://www.saucedemo.com/</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.398434" elapsed="0.001003"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.400435" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:35.402440" level="INFO">Typing text 'error_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.401440" elapsed="0.583890"/>
+</kw>
+<msg time="2024-12-21T07:54:35.985330" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.401440" elapsed="0.583890"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input username.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:35.986331" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:35.986331" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:35.986331" elapsed="0.000999"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:35.988329" level="INFO">Typing text 'sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.987330" elapsed="0.189931"/>
+</kw>
+<msg time="2024-12-21T07:54:36.177261" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:35.987330" elapsed="0.189931"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input password.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:36.180844" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:36.180844" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:36.177261" elapsed="0.003583"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:36.182863" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.181865" elapsed="0.740172"/>
+</kw>
+<msg time="2024-12-21T07:54:36.923040" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Button</arg>
+<arg>id:login-button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.181865" elapsed="0.741175"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Could not click the login button. ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:36.924043" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the login button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:36.924043" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:36.923040" elapsed="0.001003"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:36.923040" elapsed="0.002001"/>
+</if>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-21T07:54:35.284845" elapsed="1.640196"/>
+</kw>
+<kw name="Check Failed Login" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:36.939793" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.926777" elapsed="0.013016"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:36.940795" level="INFO">Testing failed login, Current URL: https://www.saucedemo.com/</msg>
+<arg>Testing failed login, Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.939793" elapsed="0.001002"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.940795" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:36.941795" level="INFO">${error_message} = Epic sadface: Username and password do not match any user in this service</msg>
+<var>${error_message}</var>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.941795" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:36.965198" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>${error_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.943053" elapsed="0.022145"/>
+</kw>
+<msg time="2024-12-21T07:54:36.965198" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Page Should Contain</arg>
+<arg>${error_message}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.943053" elapsed="0.022145"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${status}">
+<kw name="Log" owner="BuiltIn">
+<arg>Login error message was not displayed. ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:36.965198" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Login error message was not displayed.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:36.974719" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:36.965198" elapsed="0.009521"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:36.965198" elapsed="0.009521"/>
+</if>
+<status status="PASS" start="2024-12-21T07:54:36.925041" elapsed="0.049678"/>
+</kw>
+<var name="${credential}">error_user:sauce</var>
+<status status="PASS" start="2024-12-21T07:54:35.278466" elapsed="1.696253"/>
+</iter>
+<var>${credential}</var>
+<value>@{INVALID_CREDENTIALS}</value>
+<status status="PASS" start="2024-12-21T07:54:35.278466" elapsed="1.696253"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-21T07:54:36.974719" elapsed="2.958680"/>
+</kw>
+<tag>unhappy</tag>
+<status status="PASS" start="2024-12-21T07:54:31.230938" elapsed="8.702461"/>
+</test>
+<test id="s1-t2" name="Happy Login Test" line="18">
+<kw name="Setup Test Environment" owner="resources" type="SETUP">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:39.933399" level="INFO">${screenshot_path} = C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots</msg>
+<var>${screenshot_path}</var>
+<arg>C:\\LocalData\\repos\\2024_autumn_saucedemo_tstcourse\\2024_autumn_saucedemo_tstcourse\\ucastnici\\radekbezvoda\\L10HW\\robotFramework${/}screenshots</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-12-21T07:54:39.933399" level="INFO" html="true">Directory '&lt;a href="file://C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots"&gt;C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots&lt;/a&gt;' exists.</msg>
+<arg>${screenshot_path}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<msg time="2024-12-21T07:54:39.933399" level="INFO">${folder_exists} = True</msg>
+<var>${folder_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${screenshot_path}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${folder_exists}">
+<kw name="Create Directory" owner="OperatingSystem">
+<arg>${screenshot_path}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Screenshot folder '${screenshot_path}' created.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:39.933399" level="INFO">Screenshot folder 'C:\LocalData\repos\2024_autumn_saucedemo_tstcourse\2024_autumn_saucedemo_tstcourse\ucastnici\radekbezvoda\L10HW\robotFramework\screenshots' already exists.</msg>
+<arg>Screenshot folder '${screenshot_path}' already exists.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="0.000000"/>
+</if>
+<kw name="Open Browser And Maximize" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:39.933399" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${MAIN_PAGE_URL}</arg>
+<arg>Chrome</arg>
+<arg>maximize=True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="2.999893"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-21T07:54:42.933292" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="2.999893"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="2.999893"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2024-12-21T07:54:42.948922" level="INFO">@{parts} = [ standard_user | secret_sauce ]</msg>
+<var>@{parts}</var>
+<arg>${credential}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:42.948922" level="INFO">${username} = standard_user</msg>
+<var>${username}</var>
+<arg>${parts[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:42.948922" level="INFO">${password} = secret_sauce</msg>
+<var>${password}</var>
+<arg>${parts[1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="0.000000"/>
+</kw>
+<kw name="Login With Credentials" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:43.020161" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="0.071239"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:43.020161" level="INFO">Current URL: https://www.saucedemo.com/</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.020161" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.020161" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:43.020161" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.020161" elapsed="0.341871"/>
+</kw>
+<msg time="2024-12-21T07:54:43.362032" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.020161" elapsed="0.342876"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input username.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:43.363037" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:43.363037" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:43.363037" elapsed="0.000999"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:43.365040" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.364036" elapsed="0.237742"/>
+</kw>
+<msg time="2024-12-21T07:54:43.601778" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.364036" elapsed="0.237742"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input password.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:43.602777" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:43.602777" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:43.602777" elapsed="0.001001"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:43.604778" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.604778" elapsed="0.440325"/>
+</kw>
+<msg time="2024-12-21T07:54:44.045103" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Button</arg>
+<arg>id:login-button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:43.603778" elapsed="0.441325"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Could not click the login button. ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.045103" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the login button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.045103" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.045103" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.045103" elapsed="0.000000"/>
+</if>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="1.096181"/>
+</kw>
+<kw name="Check Successful Login" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.078774" level="INFO">${current_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.045103" elapsed="0.033671"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.079770" level="INFO">Current URL: https://www.saucedemo.com/inventory.html</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.078774" elapsed="0.000996"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.080832" level="INFO">${expected_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${expected_url}</var>
+<arg>${MAIN_PAGE_URL}inventory.html</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<msg time="2024-12-21T07:54:44.080832" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url} ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2024-12-21T07:54:44.045103" elapsed="0.035729"/>
+</kw>
+<kw name="Logout" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.080832" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.184218"/>
+</kw>
+<msg time="2024-12-21T07:54:44.265050" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.184218"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the menu button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.265050" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.265050" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.265050" elapsed="0.000000"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.265050" elapsed="0.022945"/>
+</kw>
+<msg time="2024-12-21T07:54:44.287995" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.265050" elapsed="0.022945"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout link was not found.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.287995" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.287995" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.287995" elapsed="0.000000"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.296017" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.296017" elapsed="0.202768"/>
+</kw>
+<msg time="2024-12-21T07:54:44.498785" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.296017" elapsed="0.202768"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the logout link.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.499783" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.498785" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.498785" elapsed="0.000998"/>
+</if>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.510308" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.500785" elapsed="0.009523"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.511307" elapsed="0.001003"/>
+</kw>
+<msg time="2024-12-21T07:54:44.512310" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.511307" elapsed="0.001003"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:44.513309" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:44.512310" elapsed="0.001998"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:44.512310" elapsed="0.001998"/>
+</if>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.514308" level="INFO">Logout successful</msg>
+<arg>Logout successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.514308" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:44.080832" elapsed="0.434475"/>
+</kw>
+<var name="${credential}">standard_user:secret_sauce</var>
+<status status="PASS" start="2024-12-21T07:54:42.948922" elapsed="1.566385"/>
+</iter>
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2024-12-21T07:54:44.516309" level="INFO">@{parts} = [ problem_user | secret_sauce ]</msg>
+<var>@{parts}</var>
+<arg>${credential}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.516309" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.518304" level="INFO">${username} = problem_user</msg>
+<var>${username}</var>
+<arg>${parts[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.517308" elapsed="0.000996"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.520307" level="INFO">${password} = secret_sauce</msg>
+<var>${password}</var>
+<arg>${parts[1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.519306" elapsed="0.001001"/>
+</kw>
+<kw name="Login With Credentials" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.530193" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.522309" elapsed="0.008884"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:44.531193" level="INFO">Current URL: https://www.saucedemo.com/</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.531193" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.532191" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:44.533192" level="INFO">Typing text 'problem_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.533192" elapsed="0.514073"/>
+</kw>
+<msg time="2024-12-21T07:54:45.047265" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:44.532191" elapsed="0.528353"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input username.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.060544" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.060544" elapsed="0.001018"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.060544" elapsed="0.001018"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:45.062557" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.061562" elapsed="0.446802"/>
+</kw>
+<msg time="2024-12-21T07:54:45.509368" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.061562" elapsed="0.447806"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input password.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.509368" elapsed="0.000998"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.509368" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.509368" elapsed="0.000998"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:45.511366" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.511366" elapsed="0.200494"/>
+</kw>
+<msg time="2024-12-21T07:54:45.712878" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Button</arg>
+<arg>id:login-button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.510366" elapsed="0.202512"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Could not click the login button. ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.713874" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the login button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.713874" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.712878" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.712878" elapsed="0.001999"/>
+</if>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-21T07:54:44.521308" elapsed="1.193569"/>
+</kw>
+<kw name="Check Successful Login" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:45.725525" level="INFO">${current_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.715880" elapsed="0.009645"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:45.725525" level="INFO">Current URL: https://www.saucedemo.com/inventory.html</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.725525" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:45.726524" level="INFO">${expected_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${expected_url}</var>
+<arg>${MAIN_PAGE_URL}inventory.html</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.726524" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.726524" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.727525" elapsed="0.001000"/>
+</kw>
+<msg time="2024-12-21T07:54:45.728525" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.727525" elapsed="0.001000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url} ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.729523" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.729523" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.729523" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.728525" elapsed="0.002000"/>
+</if>
+<status status="PASS" start="2024-12-21T07:54:45.714877" elapsed="0.015648"/>
+</kw>
+<kw name="Logout" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:45.732526" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.731524" elapsed="0.205385"/>
+</kw>
+<msg time="2024-12-21T07:54:45.936909" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.731524" elapsed="0.205385"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the menu button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.937912" elapsed="0.000659"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.937912" elapsed="0.000792"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.936909" elapsed="0.001795"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.939564" elapsed="0.001872"/>
+</kw>
+<msg time="2024-12-21T07:54:45.941436" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.938704" elapsed="0.002732"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout link was not found.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:45.955276" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:45.941436" elapsed="0.013840"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:45.941436" elapsed="0.014356"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:45.956106" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.956106" elapsed="0.175011"/>
+</kw>
+<msg time="2024-12-21T07:54:46.131117" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:45.956106" elapsed="0.175011"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the logout link.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:46.132587" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:46.132132" elapsed="0.000455"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:46.132132" elapsed="0.000455"/>
+</if>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:46.142818" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.133639" elapsed="0.009179"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.143817" elapsed="0.000998"/>
+</kw>
+<msg time="2024-12-21T07:54:46.144815" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.143817" elapsed="0.000998"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:46.145818" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:46.144815" elapsed="0.001003"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:46.144815" elapsed="0.001003"/>
+</if>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:46.146818" level="INFO">Logout successful</msg>
+<arg>Logout successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.146818" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:45.730525" elapsed="0.416293"/>
+</kw>
+<var name="${credential}">problem_user:secret_sauce</var>
+<status status="PASS" start="2024-12-21T07:54:44.515307" elapsed="1.631511"/>
+</iter>
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2024-12-21T07:54:46.148816" level="INFO">@{parts} = [ performance_glitch_user | secret_sauce ]</msg>
+<var>@{parts}</var>
+<arg>${credential}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.147817" elapsed="0.000999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:46.149817" level="INFO">${username} = performance_glitch_user</msg>
+<var>${username}</var>
+<arg>${parts[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.148816" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:46.151814" level="INFO">${password} = secret_sauce</msg>
+<var>${password}</var>
+<arg>${parts[1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.150813" elapsed="0.001001"/>
+</kw>
+<kw name="Login With Credentials" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:46.162787" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.154766" elapsed="0.008021"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:46.163789" level="INFO">Current URL: https://www.saucedemo.com/</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.163789" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.163789" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:46.165790" level="INFO">Typing text 'performance_glitch_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.165790" elapsed="0.388618"/>
+</kw>
+<msg time="2024-12-21T07:54:46.554408" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.164789" elapsed="0.389619"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input username.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:46.554408" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:46.554408" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:46.554408" elapsed="0.000000"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:46.554408" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.554408" elapsed="0.344341"/>
+</kw>
+<msg time="2024-12-21T07:54:46.898749" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Input Text</arg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.554408" elapsed="0.344341"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not input password.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:46.899749" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:46.898749" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:46.898749" elapsed="0.001000"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:46.901410" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.900748" elapsed="5.165228"/>
+</kw>
+<msg time="2024-12-21T07:54:52.065976" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Button</arg>
+<arg>id:login-button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:46.899749" elapsed="5.166227"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Could not click the login button. ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.066981" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the login button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.067978" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.066981" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.066981" elapsed="0.000997"/>
+</if>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-21T07:54:46.152815" elapsed="5.915163"/>
+</kw>
+<kw name="Check Successful Login" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:52.080564" level="INFO">${current_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.069979" elapsed="0.010585"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:52.080564" level="INFO">Current URL: https://www.saucedemo.com/inventory.html</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-21T07:54:52.080564" level="INFO">${expected_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${expected_url}</var>
+<arg>${MAIN_PAGE_URL}inventory.html</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<msg time="2024-12-21T07:54:52.080564" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Log" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url} ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Login was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2024-12-21T07:54:52.068977" elapsed="0.011587"/>
+</kw>
+<kw name="Logout" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:52.080564" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.110436"/>
+</kw>
+<msg time="2024-12-21T07:54:52.191000" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:react-burger-menu-btn</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.110436"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the menu button.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.192006" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.191000" elapsed="0.001006"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.191000" elapsed="0.001006"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.192997" elapsed="0.004647"/>
+</kw>
+<msg time="2024-12-21T07:54:52.197644" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.192006" elapsed="0.005638"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout link was not found.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.197644" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.197644" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.197644" elapsed="0.000000"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:52.197644" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.197644" elapsed="0.222956"/>
+</kw>
+<msg time="2024-12-21T07:54:52.421604" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Click Element</arg>
+<arg>id:logout_sidebar_link</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.197644" elapsed="0.223960"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Could not click the logout link.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.422664" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.421604" elapsed="0.001060"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.421604" elapsed="0.001060"/>
+</if>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-21T07:54:52.435963" level="INFO">${current_url} = https://www.saucedemo.com/</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.422664" elapsed="0.013299"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.436961" elapsed="0.000000"/>
+</kw>
+<msg time="2024-12-21T07:54:52.436961" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Be Equal As Strings</arg>
+<arg>${current_url}</arg>
+<arg>${MAIN_PAGE_URL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.436961" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == False">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout was not successful. Current URL: ${current_url}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-12-21T07:54:52.437965" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-12-21T07:54:52.437965" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-12-21T07:54:52.436961" elapsed="0.001004"/>
+</if>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-21T07:54:52.437965" level="INFO">Logout successful</msg>
+<arg>Logout successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.437965" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:52.080564" elapsed="0.358402"/>
+</kw>
+<var name="${credential}">performance_glitch_user:secret_sauce</var>
+<status status="PASS" start="2024-12-21T07:54:46.147817" elapsed="6.291149"/>
+</iter>
+<var>${credential}</var>
+<value>@{VALID_CREDENTIALS}</value>
+<status status="PASS" start="2024-12-21T07:54:42.933292" elapsed="9.505674"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-21T07:54:52.439961" elapsed="2.415839"/>
+</kw>
+<tag>happy</tag>
+<status status="PASS" start="2024-12-21T07:54:39.933399" elapsed="14.922401"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-12-21T07:54:54.855800" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-21T07:54:30.466859" elapsed="24.388941"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">happy</stat>
+<stat pass="1" fail="0" skip="0">unhappy</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

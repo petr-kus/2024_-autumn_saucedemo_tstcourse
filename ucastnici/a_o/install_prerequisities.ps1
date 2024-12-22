@@ -1,10 +1,11 @@
 python.exe -m pip install --upgrade pip
 python -m venv venv
 
-# Aktivace prostøedí
+# Aktivace prostï¿½edï¿½
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+#chvalim hodne za pridani si tohoto prikazu! - v podtsate to znamena ze jsi pochopila princip a vyplivajici problemy a aspekty!
 .\venv\Scripts\Activate.ps1
 
-# Instalace balíèkù
+# Instalace balï¿½ï¿½kï¿½
 pip install -r requirements.txt
 pip freeze > requirements.txt

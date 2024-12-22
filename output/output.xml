@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-12-20T19:54:21.572872" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Saucedemo Login" source="/Users/davidhalman/2024_autumn_saucedemo_tstcourse/ucastnici/David_Halman/final_test_robot/test_saucedemo_login.robot">
+<test id="s1-t1" name="Login Page Test" line="12">
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-12-20T19:54:21.975629" level="FAIL">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="FAIL" start="2024-12-20T19:54:21.972579" elapsed="0.007348">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</status>
+</kw>
+<kw name="Input Text">
+<arg>id:user-name</arg>
+<arg>${USERNAME}</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:21.980690" elapsed="0.000170"/>
+</kw>
+<kw name="Input Text">
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:21.981420" elapsed="0.000124"/>
+</kw>
+<kw name="Click Button">
+<arg>id:login-button</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:21.981980" elapsed="0.000114"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>title</arg>
+<arg>Products</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2024-12-20T19:54:21.985897" elapsed="0.000429"/>
+</kw>
+<status status="FAIL" start="2024-12-20T19:54:21.969471" elapsed="0.018758">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</status>
+</test>
+<test id="s1-t2" name="Failed Login Test" line="19">
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-12-20T19:54:22.104616" level="FAIL">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="FAIL" start="2024-12-20T19:54:22.103313" elapsed="0.001764">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</status>
+</kw>
+<kw name="Input Text">
+<arg>id:user-name</arg>
+<arg>invalid_user</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:22.105687" elapsed="0.000563"/>
+</kw>
+<kw name="Input Text">
+<arg>id:password</arg>
+<arg>wrong_password</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:22.107776" elapsed="0.001111"/>
+</kw>
+<kw name="Click Button">
+<arg>id:login-button</arg>
+<status status="NOT RUN" start="2024-12-20T19:54:22.109784" elapsed="0.000449"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>xpath://div[contains(@class, 'error-message')]</arg>
+<arg>Epic sadface:</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2024-12-20T19:54:22.110842" elapsed="0.000208"/>
+</kw>
+<status status="FAIL" start="2024-12-20T19:54:22.102335" elapsed="0.009235">ValueError: Argument 'browser' got value 'Chrome' that cannot be converted to SupportedBrowsers: SupportedBrowsers does not have member 'Chrome'. Available: 'chromium', 'firefox' and 'webkit'</status>
+</test>
+<status status="FAIL" start="2024-12-20T19:54:21.575848" elapsed="0.645595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Test Saucedemo Login">Test Saucedemo Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-20T19:54:21.956172" level="ERROR">Error in file '/Users/davidhalman/2024_autumn_saucedemo_tstcourse/ucastnici/David_Halman/final_test_robot/test_saucedemo_login.robot' on line 3: Importing library 'Browser Library' failed: ModuleNotFoundError: No module named 'Browser Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.13/bin
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python313.zip
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages</msg>
+<msg time="2024-12-20T19:54:22.100780" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/Browser/wrapper</msg>
+<msg time="2024-12-20T19:54:22.220003" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/Browser/wrapper</msg>
+<msg time="2024-12-20T19:54:22.331897" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/Browser/wrapper</msg>
+</errors>
+</robot>
