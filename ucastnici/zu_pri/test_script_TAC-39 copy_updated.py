@@ -6,6 +6,9 @@ import logging
 import requests
 import time
 
+#TODO Lektor - komentovano na lekci takze jen prolitnu a okomentuji co tam vidim... .
+#TODO Lektor - nemusi / nebude to uplny seznam
+
 logging.basicConfig(filename="test_logs.log", level=logging.DEBUG, filemode="w")
 
 
@@ -35,6 +38,9 @@ add_sauce_labs_backpack = (By.XPATH, "//div[@class='inventory_container']//div[c
 add_sauce_labs_bike_light = (By.XPATH, "//div[@class='inventory_container']//div[contains(text(),'Light')]//following::button[contains(text(),'Add to cart')]")
 #Cart
 cart_button = (By.CLASS_NAME, "shopping_cart_badge")
+#TODO Lektor - super ze jsi oddelila adresaci super ze jsi si zkusila ruzne adressace ... ale absolutni je dost krehka tu pak nepouzivej.
+#TODO Lektor - promene mohli byt oddelne do POM
+
 
 def setup(url):
     Option = Options()
@@ -62,6 +68,7 @@ def login_test(used_username, used_password):
             # Valid login
             username = driver.find_element(*username_field)
             username.send_keys(used_username)
+            #TODO Lektor - mohl byt one liner... driver.find_element(*username_field).send_keys(used_username)
 
             password = driver.find_element(*password_field)
             password.send_keys(used_password)
@@ -71,6 +78,7 @@ def login_test(used_username, used_password):
 
             # Check if successfuly redirected to Inventory page
             assert "inventory" in driver.current_url, "Login failed or not redirected to Inventory page"
+            #TODO Lektor - chvalim assert
             
             # Assert pro účel testování testu:
             #assert "LOL" in driver.current_url, "Login failed or not redirected to Inventory page"
@@ -90,8 +98,10 @@ def add_item_to_cart_test():
 
 def open_cart():
      '''Pro účel otestování testu'''
+     #TODO Lektor - komentare test casu mohl byt pritomne i jinde... :-)
      driver.get("https://www.saucedemo.com/cart.html")
      time.sleep(5)
+      #TODO Lektor - tvrdy sleep je antipatern mel byt parametrizovan nahore!
 
 ## EXECUTION
 print("Starting...")
@@ -104,10 +114,13 @@ if driver:
         
         # Pro testování testu
         #open_cart()
-
+        #TODO Lektor - chvalim krasnou strukturu testu... vyuziti a rozdeleni na pom by tomu pomohlo jeste vic...
     finally:
         print("...Testing finished")
         teardown()
 
 else:
     logging.info(f"Setup selhal!")
+
+#TODO Lektor - celkove krasna prace na lekci 6 .... jde videt ze nad tim premyslis.. .
+#TODO Lektor - krasne prochazi a selhava kdyz ma... pecka!

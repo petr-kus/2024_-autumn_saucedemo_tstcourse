@@ -1,12 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+#TODO Lektor - toto je zbytecny nepouzity import. Cim vic importu tim vic to brzdi script... .
 from selenium.webdriver.common.by import By
 
 import time
 from selenium.webdriver.chrome.options import Options
 import logging
 
+#TODO Lektor - komentovano na lekci takze jen prolitnu a okomentuji co tam vidim... .
+#TODO Lektor - nemusi / nebude to uplny seznam
+#TODO Lektor - na prvni pohled se me ukol moc libi jak je rozdelen do funkci jako test steptu/test casu. Je prehledny!
+
+#TODO Lektor - zde mohly byt parametry pro test! Vstup i stranka atp., 
+
 logging.basicConfig(filename='OK_log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#TODO Lektor - chvalim logovani do souboru bokem!
 
 
 def setup():
@@ -14,20 +22,24 @@ def setup():
     Option.add_argument("start-maximized")
     driver = webdriver.Chrome()
     driver.get("https://www.saucedemo.com/")
+    #TODO Lektor - stranka mohl byt parametrizovana paramtrem funkce setup
     return driver
 
 
 def login(driver):
     username = driver.find_element(By.ID, "user-name")
     username.send_keys("standard_user")
+    #TODO Lektor - toto mohl byt one liner... driver.find_element(By.ID, "user-name").send_keys("standard_user")
 
     password = driver.find_element(By.ID, "password")
     password.send_keys("secret_sauce")
+    #TODO By.ID, "password" - to mohlo byt v POM strukture mimo hlavni skript... .
 
     login_button = driver.find_element(By.ID, "login-button")
     login_button.click()
     
     logging.info("User succesfuly logged in")
+    #TODO tohle ale nevis... primpomina mi to jendoho z kolegu... neni tu assert. Toto ti to napise i kdyz budes mit invalid udaje... .
 
 
 def add_item_to_cart_directly(driver, item_id: str):
@@ -35,6 +47,7 @@ def add_item_to_cart_directly(driver, item_id: str):
     add_to_cart_button.click()
        
     logging.info(f"Item {item_id} added to cart directly.")
+    #TODO tohle ale nevis... primpomina mi to jendoho z kolegu... neni tu assert. Toto ti to napise i kdyz budes mit invalid udaje... .
 
 
 def add_item_to_cart_via_detail_page(driver, item_id: str):
@@ -48,6 +61,7 @@ def add_item_to_cart_via_detail_page(driver, item_id: str):
     back_to_products_button.click()
        
     logging.info(f"Item {item_id} added to cart via detail page.")
+    #TODO tohle ale nevis... primpomina mi to jendoho z kolegu... neni tu assert. Toto ti to napise i kdyz budes mit invalid udaje... .
 
 
 def go_to_cart(driver, expected_item_count):
@@ -130,11 +144,21 @@ def teardown(driver):
 
 def run_test_scenario():
     driver = setup()
+    #TODO driver mohl byt global driver a nemusis si ho pak predavat v parametrech funkci.. .
+
     login(driver)
     test_adding_items_directly(driver, ["add-to-cart-test.allthethings()-t-shirt-(red)", "add-to-cart-sauce-labs-fleece-jacket"], 65.98)
+    #TODO Lektor -zde bych doporucil bud rozsirit nazev funkce o to ze verifikujes i cenu a nebo pridat price=65.98 (pouzit spravne pojmenovane vstupni parametry)
     test_adding_items_via_detail_page(driver, ["item_1_title_link", "item_4_title_link", "item_0_title_link"], 55.97)
     teardown(driver)
 
+    #TODO Lektor - libi se mi moc ze mas test case co prehravas vlastne za sebou jako naky scenar. 
+    #TODO Lektor - to je velmi spravne premysleni! Dost pokrocile! a perfektni... . Presne tak by to totiz melo fungovat!
+    #TODO Lektor - v kazdem pade je evidentni ze potrebujes zapracovat na Domain Languge aby to bylo orpavdu srozumitelne... a na vzajmenem predavani dat... . 
+
+    #TODO Lektor -kdyz by jsi jednotlive metody napsala jeste obecneji a jeste vic parametricky a predaval si treba objekt stranky... umoznil by ti to napsat to lepe. 
+    #TODO Lektor -takove jednoduche vylepseni by bylo navrhu si vytvorit dictionary a v nem jednoltive produkty a jednotlive ceny... a ID... tim by jsi tu pak nemusel amit ty dlouhe texty jako... "add-to-cart-sauce-labs-fleece-jacket"
+    #TODO Lektor - proste jsi malo pouzila POM a oddeleni dat od testu...
 
 run_test_scenario()
 
