@@ -5,6 +5,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class LoginPage:
     """Page Object for the Login Page of the application."""
 
@@ -15,6 +16,8 @@ class LoginPage:
         self.login_button = (By.ID, 'login-button')
         self.main_menu_icon = (By.ID, 'react-burger-menu-btn')
         self.logout_button = (By.ID, 'logout_sidebar_link')
+
+        #TODO Lektor - mohlo byt definovano jako parametr primo pro objekt ne initem... .
 
     def enter_username(self, username: str):
         """Enter username into the username field."""
@@ -37,3 +40,4 @@ class LoginPage:
         self.driver.find_element(*self.logout_button).click()
         element = self.driver.find_element(*self.login_button)
         return element
+    #TODO Lektor - tady je hezke ze je i overeni logoutu ... jen no. neni to moc odelene jako POM... 
