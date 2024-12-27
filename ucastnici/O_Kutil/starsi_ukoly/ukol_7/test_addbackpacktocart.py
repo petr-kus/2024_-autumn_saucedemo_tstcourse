@@ -10,6 +10,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+#TODO Lektor - zbytecny nepouzite importy (snazime se minimalizovat importy kazdy import je alokace, pametia zdrzeni...)
+
 class TestAddbackpacktocart():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
@@ -20,6 +22,7 @@ class TestAddbackpacktocart():
   
   def test_addbackpacktocart(self):
     self.driver.find_element(By.XPATH, "//a[@id=\'item_4_title_link\']/div").click()
+    #TODO Lektor - (By.XPATH, "//a[@id=\'item_4_title_link\']/div") - by melo nekma byt oddeleno bokem a lomitka by nemeli byt potreba!
     self.driver.find_element(By.XPATH, "//button[@id=\'add-to-cart\']").click()
     self.driver.find_element(By.XPATH, "//div[@id=\'shopping_cart_container\']/a/span").click()
     self.driver.find_element(By.XPATH, "//div[@id=\'page_wrapper\']/footer").click()
