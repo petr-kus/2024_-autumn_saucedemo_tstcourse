@@ -10,6 +10,11 @@ import logging
 import test_data
 import POM
 
+#TODO Lektor - ukol jen proletim a dam par komentaru. Vetsinu jsem odpovedel/komentoval na lekci.
+#TODO Lektor - Take pridavam priklad jak by to slo napsat s lektorksymi komentari, abych uzavrel tuto 7 ulohu kde by mel byt vrchol umeni jak test automatizovat bez Test Frameworku.
+#TODO Lektor - Priklad je v 1_lektor_petr_kus/Python_OOP_POM_Lectors_example/ i s komentarema co si z toho kde odnest... . A je tam pouzity pattern singleton pro predani driveru (odpoved na otazku z lekci ja to udelat dobre... )
+#TODO Lektor - dost se me libi struktura cele tve slozky ... jde videt ze jsi zvykli si v tom drzet poradek coz hodne chvalim!
+
 def prepare_logging(logger_name: str):
     logger = logging.getLogger(__name__)
     logging.basicConfig(filename=logger_name, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',  # Log message format
@@ -80,7 +85,11 @@ def test_happy_login(driver, credentials, screenshot_folder, logger):
     inventory_page = POM.inventory.InventoryPage(driver, screenshot_folder, logger)
     inventory_page.logout()
     login_page = POM.login_page.LoginPage(driver, screenshot_folder, logger)
+    #TODO Lektor - te iniciaci se da vyhnout... ke vsemu zere fakt hodne parametru na muj vkus... coz snizuje citelnost.
     logger.info(f'Happy login test succeeded.')
+    #TODO Lektor - neni spatne ale furt je to trosku necitelne. To logovani bych mozna schoval... nekam bud do logovani tech akci... 
+    # a nebo bych proto pouzil dekorator nejlepe pomuze k tomuto pochopeni s ekouknout na lektorsky priklad. 
+
 
 
 def test_cart_checkout(driver, credentials, screenshot_folder, logger):
@@ -115,6 +124,11 @@ def test_cart_checkout(driver, credentials, screenshot_folder, logger):
 
 if __name__ == '__main__':
     logger = prepare_logging(test_data.LOG_FILE_NAME)
+    #TODO Lektor -  ten logger pouziva pattern singleton interne takze ho staci nastavit z jednoho mista a nemusis si ho dal predavat. 
+    #cela ta konstrukce okolo je vlastne zbytecna. Koukni se do prikladoveho skriptu od lektora a nebo ke kolegum.
+    # to predavani musis delat je proto ze to nevolas z hlavniho skriptu ale z funkce nejspis.. .
+    # ale stacil by asi import logovani do tech pod modululu (v pomku..)
+
     driver = prepare_driver(logger)
     for item in test_data.SCREENSHOT_FOLDERS:
         prepare_screenshot_folder(item)
@@ -122,7 +136,9 @@ if __name__ == '__main__':
     try:
         logger.info('starting main test procedure')
         test_happy_login(driver, test_data.standard_user, test_data.FOLDER_HAPPY_SCREENSHOTS, logger)
+        #TODO Lektor - happy je takove hovorove... positiv scenario negativ scenario... je lepsi.
         test_unhappy_login(driver,test_data.bad_password, test_data.FOLDER_UNHAPPY_SCREENSHOTS,logger)
+        #TODO opravdu to zere dost parametru a cca pulka je imlicitni... jako logger a driver... takze obou se da zbavit pkmoci pouziti vlastnosti sinlgtton patternu.
         test_random_login(driver, test_data.FOLDER_RANDOM_SCREENSHOTS, logger)
         test_cart_checkout(driver, test_data.standard_user, test_data.FOLDER_CART_SCREENSHOTS, logger)
     except Exception as error:
@@ -133,3 +149,9 @@ if __name__ == '__main__':
 
     finally:
         teardown(driver)
+
+#TODO Lektor - tve logovani vypada dost dobre! Zatim asi nejlepsi z tech co jsem opravoval. Jde vylepsit samozrejmne... . ale dobry.
+# jak jde vylepsit... hod oko na priklad od lektora.
+
+#TODO Lektor - hodne chvalim delani screenshotu! Cesty bych generoval dynamicky... pomoci dekoratoru (to jsme neprobirali..) a nedelal si staticky list... a nebo bych pouzil Test Framework... jo jo. 
+#narazis zde uz na to zeby se ti vlastne testovaci framework desne hodil... ale jeste ho nepouzivas... .
