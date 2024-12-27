@@ -78,3 +78,7 @@ ucastnici/Antonin/final_tests/robot_framework/log.html
 /ucastnici/zu_pri/HW_10_FINAL/RF/results/browser/screenshot/robotframework-browser-screenshot-2.png
 /ucastnici/zu_pri/HW_10_FINAL/RF/results/browser/screenshot/robotframework-browser-screenshot-3.png
 /ucastnici/zu_pri/HW_10_FINAL/RF/results/browser/screenshot/robotframework-browser-screenshot-4.png
+*/__pycache__/*
+*/*/__pycache__/*
+*/*/*/__pycache__/*
+*/*/*/*/__pycache__/*
