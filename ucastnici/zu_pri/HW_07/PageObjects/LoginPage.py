@@ -8,12 +8,16 @@ from TestData import TestData
 
 class LoginPage(Base):
     def __init__(self, driver):
-        super().__init__(driver)
+        super().__init__(driver) 
+        #TODO Lektor - vidim ze se tu asi snazis vyvtorit singleton konstrukci. to je fajn a spravne reseni na problem s predavanim driveru ale asi to neni uplne.
 
 ##### VARIABLEs ---------------------------------
 
     tested_username = TestData.users[TestData.chosen_user]["name"]
     tested_password = TestData.users[TestData.chosen_user]["password"]
+
+    #TODO Lektor - strceni tohoto do podtrid proc ne. Jen me prijde ze by stacilo to rozdelit spise jmenem pokud to je potreba. 
+    #ale jak rikam proc ne... . SuperS
     class Fields:
         username = (By.XPATH,'//*[translate(@placeholder, "USERNAME", "username")="username"]')
         password = (By.XPATH,'//*[translate(@placeholder, "PASSWORD", "password")="password"]')

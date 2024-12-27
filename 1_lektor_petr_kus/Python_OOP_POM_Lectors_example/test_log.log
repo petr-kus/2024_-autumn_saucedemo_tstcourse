@@ -1,0 +1,29 @@
+2024-12-26 17:07:48 - INFO - Logging is set!
+2024-12-26 17:07:51 - INFO - Login_Page - Filling user name 'standard_user'
+2024-12-26 17:07:51 - INFO - Login_Page - Filling password 'secret_sauce'
+2024-12-26 17:07:51 - INFO - Login_Page - clicking to login
+2024-12-26 17:07:51 - INFO - Current url is 'https://www.saucedemo.com/inventory.html' and contains 'inventory.html'
+2024-12-26 17:07:51 - INFO - menu - Opening burger menu
+2024-12-26 17:07:51 - INFO - menu - Logging out user
+2024-12-26 17:07:51 - INFO - Current url is 'https://www.saucedemo.com/' and contains 'www.saucedemo.com'
+2024-12-26 17:07:52 - INFO - Login_Page - Filling user name 'standard_user'
+2024-12-26 17:07:52 - INFO - Login_Page - Filling password 'secret_sauce'
+2024-12-26 17:07:52 - INFO - Login_Page - clicking to login
+2024-12-26 17:07:52 - INFO - Current url is 'https://www.saucedemo.com/inventory.html' and contains 'inventory.html'
+2024-12-26 17:07:52 - INFO - Inventory_Page - These items are showed :
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Sauce Labs Backpack'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Sauce Labs Bike Light'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Sauce Labs Bolt T-Shirt'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Sauce Labs Fleece Jacket'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Sauce Labs Onesie'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item name: 'Test.allTheThings() T-Shirt (Red)'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Items are returned for next use.
+2024-12-26 17:07:52 - INFO - Inventory_Page - Try to add item 'Sauce Labs Onesie' to cart
+2024-12-26 17:07:52 - INFO - Inventory_Page - cliking to button add for xpath: '//div[contains(@class,'inventory_item_name') and text()='Sauce Labs Onesie']/ancestor::div[contains(@class,'inventory_item')]/div[@class='pricebar']/button[text()='Add to cart']'
+2024-12-26 17:07:52 - INFO - Inventory_Page - Item 'Sauce Labs Onesie' should be added to cart.
+2024-12-26 17:07:52 - INFO - menu - Opening burger menu
+2024-12-26 17:07:52 - INFO - menu - Logging out user
+2024-12-26 17:07:52 - INFO - Current url is 'https://www.saucedemo.com/' and contains 'www.saucedemo.com'
+2024-12-26 17:07:59 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D2306DCB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1ccd85d92e9a5649944c19449ab523d1
+2024-12-26 17:08:03 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D2304A82D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1ccd85d92e9a5649944c19449ab523d1
+2024-12-26 17:08:07 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D23049A2C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/1ccd85d92e9a5649944c19449ab523d1
