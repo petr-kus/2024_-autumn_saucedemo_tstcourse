@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-22T16:07:35.918779" rpa="false" schemaversion="5">
+<suite id="s1" name="Playwright" source="C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\Final_Test_HW\robotframework\playwright.robot">
+<kw name="New Browser" owner="Browser" type="SETUP">
+<msg time="2024-12-22T16:07:36.159243" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\krist\\GitExtension\\2024_autumn_saucedemo_tstcourse\\ucastnici\\Kristyna_H\\Final_Test_HW\\robotframework\\browser\\traces\\temp\\c665ad3a-91ba-4465-8e74-3a2e50eed29e"}</msg>
+<msg time="2024-12-22T16:07:36.193142" level="INFO">Starting Browser process C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\index.js using port 56202</msg>
+<msg time="2024-12-22T16:07:36.193272" level="INFO">Node startup parameters: ['node', 'C:\\Users\\krist\\GitExtension\\2024_autumn_saucedemo_tstcourse\\ucastnici\\Kristyna_H\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '56202']</msg>
+<msg time="2024-12-22T16:07:37.598025" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\krist\\GitExtension\\2024_autumn_saucedemo_tstcourse\\ucastnici\\Kristyna_H\\Final_Test_HW\\robotframework\\browser\\traces\\temp\\c665ad3a-91ba-4465-8e74-3a2e50eed29e"}</msg>
+<arg>browser=${BROWSER_TYPE}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-12-22T16:07:36.158343" elapsed="1.439982"/>
+</kw>
+<test id="s1-t1" name="Test Adding Items To Cart Directly And Placing Order" line="37">
+<kw name="New Context" owner="Browser" type="SETUP">
+<msg time="2024-12-22T16:07:37.611340" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2024-12-22T16:07:37.646228" level="INFO">Successfully created context. </msg>
+<msg time="2024-12-22T16:07:37.646352" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-12-22T16:07:37.607691" elapsed="0.038890"/>
+</kw>
+<kw name="Add Items To Cart Directly And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:07:44.500870" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:07:37.648991" elapsed="6.852224"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:37.648244" elapsed="6.853148"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:44.504407" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:44.502669" elapsed="0.166411"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:44.670487" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:44.669489" elapsed="0.069718"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:44.740582" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:44.739526" elapsed="0.098154"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:44.838075" elapsed="0.001175"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:07:44.501707" elapsed="0.337704"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:44.841639" level="INFO">Clicks the element 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:44.840804" elapsed="0.213768"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.055031" elapsed="0.001651"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.057496" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.056907" elapsed="0.000627"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.120150" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:45.120397" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.057702" elapsed="0.062731"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.121287" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.120697" elapsed="0.000666"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_button_id}">add-to-cart-test.allthethings()-t-shirt-(red)</var>
+<status status="PASS" start="2024-12-22T16:07:44.840358" elapsed="0.281065"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.122455" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.121913" elapsed="0.020439"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.142625" elapsed="0.000990"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.144579" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.143899" elapsed="0.001076"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.180219" level="INFO">Text: '2'</msg>
+<msg time="2024-12-22T16:07:45.180379" level="INFO">${actual_count} = 2</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.145160" elapsed="0.035250"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.181095" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.180639" elapsed="0.000515"/>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_button_id}">add-to-cart-sauce-labs-fleece-jacket</var>
+<status status="PASS" start="2024-12-22T16:07:45.121614" elapsed="0.059594"/>
+</iter>
+<var>${index}</var>
+<var>${item_button_id}</var>
+<value>@{item_button_ids}</value>
+<status status="PASS" start="2024-12-22T16:07:44.839564" elapsed="0.341718"/>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.181705" level="INFO">Length is 2.</msg>
+<msg time="2024-12-22T16:07:45.181796" level="INFO">${expected_product_count} = 2</msg>
+<var>${expected_product_count}</var>
+<arg>${item_button_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.181410" elapsed="0.000417"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<kw name="Checkout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.183579" level="INFO">Clicks the element 'id=shopping_cart_container'.</msg>
+<arg>id=${CART_CONTAINER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.182955" elapsed="0.055360"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2024-12-22T16:07:45.246123" level="INFO">${actual_product_count} = 2</msg>
+<var>${actual_product_count}</var>
+<arg>.cart_item</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.238619" elapsed="0.007581"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${expected_product_count}</arg>
+<arg>${actual_product_count}</arg>
+<arg>Product count mismatch.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.246573" elapsed="0.000713"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.248641" level="INFO">Clicks the element 'id=checkout'.</msg>
+<arg>id=${CHECKOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.247554" elapsed="0.035176"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<status status="PASS" start="2024-12-22T16:07:45.182545" elapsed="0.100383"/>
+</kw>
+<kw name="Continue To Summary" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.284552" level="INFO">Types the text 'Kris' in the given field.</msg>
+<arg>input#${FIRST_NAME_FIELD}</arg>
+<arg>Kris</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.283799" elapsed="0.051302"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.336357" level="INFO">Types the text 'Tyna' in the given field.</msg>
+<arg>input#${LAST_NAME_FIELD}</arg>
+<arg>Tyna</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.335426" elapsed="0.044729"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.381137" level="INFO">Types the text 'tady' in the given field.</msg>
+<arg>input#${POSTAL_CODE_FIELD}</arg>
+<arg>tady</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.380402" elapsed="0.048064"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.429603" level="INFO">Clicks the element 'id=continue'.</msg>
+<arg>id=${CONTINUE_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.428756" elapsed="0.060444"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:45.283168" elapsed="0.206218"/>
+</kw>
+<kw name="Finalize Order" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.490942" level="INFO">${expected_item_total_label} = Item total: $65.98</msg>
+<var>${expected_item_total_label}</var>
+<arg>Item total: $${expected_item_total_price}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.490501" elapsed="0.000476"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.508078" level="INFO">Text: 'Item total: $65.98'</msg>
+<msg time="2024-12-22T16:07:45.508238" level="INFO">${actual_item_total_label} = Item total: $65.98</msg>
+<var>${actual_item_total_label}</var>
+<arg>${ITEM_TOTAL_LABEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.491185" elapsed="0.017081"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_item_total_label}</arg>
+<arg>${actual_item_total_label}</arg>
+<arg>Item total mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.508478" elapsed="0.000672"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.509910" level="INFO">Clicks the element 'id=finish'.</msg>
+<arg>id=${FINISH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.509312" elapsed="0.056459"/>
+</kw>
+<arg>${expected_item_total_price}</arg>
+<status status="PASS" start="2024-12-22T16:07:45.489688" elapsed="0.076315"/>
+</kw>
+<kw name="Go Back Home" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:45.567469" level="INFO">${expected_message} = Thank you for your order!</msg>
+<var>${expected_message}</var>
+<arg>Thank you for your order!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.566990" elapsed="0.000524"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:45.585097" level="INFO">Text: 'Thank you for your order!'</msg>
+<msg time="2024-12-22T16:07:45.585300" level="INFO">${actual_message} = Thank you for your order!</msg>
+<var>${actual_message}</var>
+<arg>${COMPLETE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.567666" elapsed="0.017676"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_message}</arg>
+<arg>${actual_message}</arg>
+<arg>Order completion message mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.585568" elapsed="0.000600"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:45.566322" elapsed="0.020124"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="PASS" start="2024-12-22T16:07:45.182026" elapsed="0.404496"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.587614" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>id=${BURGER_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.587067" elapsed="0.021303"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:45.609347" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
+<arg>id=${LOGOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:45.608665" elapsed="0.975437"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Logged out.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:46.584421" elapsed="0.000767"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:45.586694" elapsed="0.998650"/>
+</kw>
+<arg>standard_user</arg>
+<arg>65.98</arg>
+<arg>add-to-cart-test.allthethings()-t-shirt-(red)</arg>
+<arg>add-to-cart-sauce-labs-fleece-jacket</arg>
+<status status="PASS" start="2024-12-22T16:07:37.647415" elapsed="8.938012"/>
+</kw>
+<kw name="Add Items To Cart Directly And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:07:46.807255" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:07:46.587307" elapsed="0.220413"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:46.586580" elapsed="0.221462"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:46.809810" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:46.809109" elapsed="0.139995"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:46.950413" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:46.949396" elapsed="0.053135"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.003960" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.002906" elapsed="0.106936"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.110503" elapsed="0.001393"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:07:46.808302" elapsed="0.303836"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.115631" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.114172" elapsed="0.036270"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.150833" elapsed="0.001083"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.153096" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.152230" elapsed="0.000941"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.202568" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:47.202840" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.153492" elapsed="0.049421"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.204143" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.203344" elapsed="0.000880"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_button_id}">add-to-cart-sauce-labs-backpack</var>
+<status status="PASS" start="2024-12-22T16:07:47.113532" elapsed="0.090786"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.205807" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.204932" elapsed="0.040353"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.245619" elapsed="0.000830"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.247119" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.246625" elapsed="0.000527"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.268871" level="INFO">Text: '2'</msg>
+<msg time="2024-12-22T16:07:47.269132" level="INFO">${actual_count} = 2</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.247283" elapsed="0.021890"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.270272" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.269458" elapsed="0.000941"/>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_button_id}">add-to-cart-sauce-labs-bolt-t-shirt</var>
+<status status="PASS" start="2024-12-22T16:07:47.204568" elapsed="0.065955"/>
+</iter>
+<var>${index}</var>
+<var>${item_button_id}</var>
+<value>@{item_button_ids}</value>
+<status status="PASS" start="2024-12-22T16:07:47.112433" elapsed="0.158237"/>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.271453" level="INFO">Length is 2.</msg>
+<msg time="2024-12-22T16:07:47.271670" level="INFO">${expected_product_count} = 2</msg>
+<var>${expected_product_count}</var>
+<arg>${item_button_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.270966" elapsed="0.000753"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<kw name="Checkout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.273771" level="INFO">Clicks the element 'id=shopping_cart_container'.</msg>
+<arg>id=${CART_CONTAINER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.273013" elapsed="0.031400"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2024-12-22T16:07:47.312961" level="INFO">${actual_product_count} = 2</msg>
+<var>${actual_product_count}</var>
+<arg>.cart_item</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.304977" elapsed="0.008060"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${expected_product_count}</arg>
+<arg>${actual_product_count}</arg>
+<arg>Product count mismatch.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.313430" elapsed="0.000836"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.315550" level="INFO">Clicks the element 'id=checkout'.</msg>
+<arg>id=${CHECKOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.314480" elapsed="0.044195"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<status status="PASS" start="2024-12-22T16:07:47.272444" elapsed="0.086424"/>
+</kw>
+<kw name="Continue To Summary" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.360650" level="INFO">Types the text 'Kris' in the given field.</msg>
+<arg>input#${FIRST_NAME_FIELD}</arg>
+<arg>Kris</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.359828" elapsed="0.047697"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.409079" level="INFO">Types the text 'Tyna' in the given field.</msg>
+<arg>input#${LAST_NAME_FIELD}</arg>
+<arg>Tyna</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.407919" elapsed="0.064402"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.474160" level="INFO">Types the text 'tady' in the given field.</msg>
+<arg>input#${POSTAL_CODE_FIELD}</arg>
+<arg>tady</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.472737" elapsed="0.065064"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.539924" level="INFO">Clicks the element 'id=continue'.</msg>
+<arg>id=${CONTINUE_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.538275" elapsed="0.067250"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:47.359136" elapsed="0.246661"/>
+</kw>
+<kw name="Finalize Order" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.607607" level="INFO">${expected_item_total_label} = Item total: $45.98</msg>
+<var>${expected_item_total_label}</var>
+<arg>Item total: $${expected_item_total_price}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.607065" elapsed="0.000636"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.631670" level="INFO">Text: 'Item total: $45.98'</msg>
+<msg time="2024-12-22T16:07:47.631946" level="INFO">${actual_item_total_label} = Item total: $45.98</msg>
+<var>${actual_item_total_label}</var>
+<arg>${ITEM_TOTAL_LABEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.607938" elapsed="0.024070"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_item_total_label}</arg>
+<arg>${actual_item_total_label}</arg>
+<arg>Item total mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.632361" elapsed="0.000890"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.634269" level="INFO">Clicks the element 'id=finish'.</msg>
+<arg>id=${FINISH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.633475" elapsed="0.044125"/>
+</kw>
+<arg>${expected_item_total_price}</arg>
+<status status="PASS" start="2024-12-22T16:07:47.606225" elapsed="0.071652"/>
+</kw>
+<kw name="Go Back Home" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:47.679756" level="INFO">${expected_message} = Thank you for your order!</msg>
+<var>${expected_message}</var>
+<arg>Thank you for your order!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.679190" elapsed="0.000633"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:47.704332" level="INFO">Text: 'Thank you for your order!'</msg>
+<msg time="2024-12-22T16:07:47.704588" level="INFO">${actual_message} = Thank you for your order!</msg>
+<var>${actual_message}</var>
+<arg>${COMPLETE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.680044" elapsed="0.024603"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_message}</arg>
+<arg>${actual_message}</arg>
+<arg>Order completion message mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.705039" elapsed="0.000766"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:47.678257" elapsed="0.027714"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="PASS" start="2024-12-22T16:07:47.271924" elapsed="0.434144"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.707827" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>id=${BURGER_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.706923" elapsed="0.020465"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:47.728647" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
+<arg>id=${LOGOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:47.727679" elapsed="0.973184"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Logged out.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:48.701146" elapsed="0.000866"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:47.706303" elapsed="0.995898"/>
+</kw>
+<arg>standard_user</arg>
+<arg>45.98</arg>
+<arg>add-to-cart-sauce-labs-backpack</arg>
+<arg>add-to-cart-sauce-labs-bolt-t-shirt</arg>
+<status status="PASS" start="2024-12-22T16:07:46.585934" elapsed="2.116369"/>
+</kw>
+<kw name="Add Items To Cart Directly And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:07:48.924133" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:07:48.704333" elapsed="0.220099"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:48.703686" elapsed="0.221011"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:48.926810" level="INFO">Types the text 'error_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:48.926035" elapsed="0.108819"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:49.035946" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.035133" elapsed="0.057206"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:49.093476" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.092632" elapsed="0.084088"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.177044" elapsed="0.001102"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:07:48.925038" elapsed="0.253276"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:49.181549" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.180150" elapsed="0.073749"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.254542" elapsed="0.001284"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:49.256787" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.256162" elapsed="0.000666"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:49.300150" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:49.300390" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.256981" elapsed="0.043455"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:49.301493" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.300811" elapsed="0.000775"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_button_id}">add-to-cart-sauce-labs-backpack</var>
+<status status="PASS" start="2024-12-22T16:07:49.179475" elapsed="0.122196"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:49.303786" level="INFO">Clicks the element 'id=add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<arg>id=${item_button_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.302436" elapsed="0.063205"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Item ${item_button_id} added to cart directly</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.365939" elapsed="0.000938"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:49.367581" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.367044" elapsed="0.000577"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:49.384811" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:49.384988" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.367840" elapsed="0.017175"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:49.385715" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-12-22T16:07:49.385852" level="FAIL">Item count in cart is incorrect.: 2 != 1</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2024-12-22T16:07:49.385226" elapsed="0.000811">Item count in cart is incorrect.: 2 != 1</status>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_button_id}">add-to-cart-sauce-labs-bolt-t-shirt</var>
+<status status="FAIL" start="2024-12-22T16:07:49.301879" elapsed="0.084253">Item count in cart is incorrect.: 2 != 1</status>
+</iter>
+<var>${index}</var>
+<var>${item_button_id}</var>
+<value>@{item_button_ids}</value>
+<status status="FAIL" start="2024-12-22T16:07:49.178528" elapsed="0.207694">Item count in cart is incorrect.: 2 != 1</status>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<var>${expected_product_count}</var>
+<arg>${item_button_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" start="2024-12-22T16:07:49.386367" elapsed="0.000169"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="NOT RUN" start="2024-12-22T16:07:49.386740" elapsed="0.000152"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<status status="NOT RUN" start="2024-12-22T16:07:49.387131" elapsed="0.000215"/>
+</kw>
+<arg>error_user</arg>
+<arg>45.98</arg>
+<arg>add-to-cart-sauce-labs-backpack</arg>
+<arg>add-to-cart-sauce-labs-bolt-t-shirt</arg>
+<status status="FAIL" start="2024-12-22T16:07:48.702918" elapsed="0.684621">Item count in cart is incorrect.: 2 != 1</status>
+</kw>
+<kw name="Close Context" owner="Browser" type="TEARDOWN">
+<msg time="2024-12-22T16:07:49.397632" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2024-12-22T16:07:49.400814" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2024-12-22T16:07:49.407835" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg time="2024-12-22T16:07:49.410791" level="INFO">Returned active context id: CURRENT</msg>
+<msg time="2024-12-22T16:07:49.411387" level="INFO">Switching context to context=799b28c6-ea8b-4070-a4bd-61f09a9794d6 in CURRENT</msg>
+<msg time="2024-12-22T16:07:49.419592" level="INFO">Successfully changed active context: context=799b28c6-ea8b-4070-a4bd-61f09a9794d6</msg>
+<msg time="2024-12-22T16:07:49.500728" level="INFO">Successfully closed Context</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.388178" elapsed="0.113155"/>
+</kw>
+<status status="FAIL" start="2024-12-22T16:07:37.598665" elapsed="11.903382">Item count in cart is incorrect.: 2 != 1</status>
+</test>
+<test id="s1-t2" name="Test Adding Items To Cart Via Detail Page And Placing Order" line="43">
+<kw name="New Context" owner="Browser" type="SETUP">
+<msg time="2024-12-22T16:07:49.518137" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2024-12-22T16:07:49.563885" level="INFO">Successfully created context. </msg>
+<msg time="2024-12-22T16:07:49.564009" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.515261" elapsed="0.049006"/>
+</kw>
+<kw name="Add Items To Cart Via Detail Page And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:07:55.830104" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:07:49.567007" elapsed="6.263586"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:49.566245" elapsed="6.264572"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:55.832870" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:55.831897" elapsed="0.141586"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:55.975085" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:55.973945" elapsed="0.059244"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.034603" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.033549" elapsed="0.093572"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.127524" elapsed="0.001106"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:07:55.831155" elapsed="0.297683"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.131230" level="INFO">Clicks the element 'id=item_0_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.130317" elapsed="0.095095"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.226968" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.225797" elapsed="0.201052"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.427914" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.427133" elapsed="0.063066"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.491260" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.490563" elapsed="0.000742"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:56.529207" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:56.529444" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.491461" elapsed="0.038023"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.530143" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.529700" elapsed="0.000496"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_link_id}">item_0_title_link</var>
+<status status="PASS" start="2024-12-22T16:07:56.129788" elapsed="0.400456"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.531124" level="INFO">Clicks the element 'id=item_1_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.530607" elapsed="0.054095"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.586065" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.585030" elapsed="0.057552"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.643519" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.642819" elapsed="0.057475"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.701466" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.700714" elapsed="0.000788"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:56.720658" level="INFO">Text: '2'</msg>
+<msg time="2024-12-22T16:07:56.720902" level="INFO">${actual_count} = 2</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.701661" elapsed="0.019272"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.722049" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.721450" elapsed="0.000667"/>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_link_id}">item_1_title_link</var>
+<status status="PASS" start="2024-12-22T16:07:56.530389" elapsed="0.191794"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.723220" level="INFO">Clicks the element 'id=item_4_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.722652" elapsed="0.027606"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.751680" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.750708" elapsed="0.043214"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.794903" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.794193" elapsed="0.053487"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.848588" level="INFO">${expected_count} = 3</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.847954" elapsed="0.000684"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:56.867367" level="INFO">Text: '3'</msg>
+<msg time="2024-12-22T16:07:56.867603" level="INFO">${actual_count} = 3</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.848832" elapsed="0.018807"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.868352" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.867875" elapsed="0.000539"/>
+</kw>
+<var name="${index}">2</var>
+<var name="${item_link_id}">item_4_title_link</var>
+<status status="PASS" start="2024-12-22T16:07:56.722361" elapsed="0.146112"/>
+</iter>
+<var>${index}</var>
+<var>${item_link_id}</var>
+<value>@{item_link_ids}</value>
+<status status="PASS" start="2024-12-22T16:07:56.129002" elapsed="0.739547"/>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-12-22T16:07:56.868923" level="INFO">Length is 3.</msg>
+<msg time="2024-12-22T16:07:56.868990" level="INFO">${expected_product_count} = 3</msg>
+<var>${expected_product_count}</var>
+<arg>${item_link_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.868680" elapsed="0.000331"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<kw name="Checkout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.870657" level="INFO">Clicks the element 'id=shopping_cart_container'.</msg>
+<arg>id=${CART_CONTAINER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.870008" elapsed="0.046976"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2024-12-22T16:07:56.923390" level="INFO">${actual_product_count} = 3</msg>
+<var>${actual_product_count}</var>
+<arg>.cart_item</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.917318" elapsed="0.006121"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${expected_product_count}</arg>
+<arg>${actual_product_count}</arg>
+<arg>Product count mismatch.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.923702" elapsed="0.000632"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:56.925215" level="INFO">Clicks the element 'id=checkout'.</msg>
+<arg>id=${CHECKOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.924498" elapsed="0.041783"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<status status="PASS" start="2024-12-22T16:07:56.869630" elapsed="0.096914"/>
+</kw>
+<kw name="Continue To Summary" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:56.968784" level="INFO">Types the text 'Kris' in the given field.</msg>
+<arg>input#${FIRST_NAME_FIELD}</arg>
+<arg>Kris</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:56.967747" elapsed="0.047857"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:57.017466" level="INFO">Types the text 'Tyna' in the given field.</msg>
+<arg>input#${LAST_NAME_FIELD}</arg>
+<arg>Tyna</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.015989" elapsed="0.044972"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:57.062095" level="INFO">Types the text 'tady' in the given field.</msg>
+<arg>input#${POSTAL_CODE_FIELD}</arg>
+<arg>tady</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.061290" elapsed="0.044256"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:57.107039" level="INFO">Clicks the element 'id=continue'.</msg>
+<arg>id=${CONTINUE_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.105920" elapsed="0.075169"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:56.966876" elapsed="0.214402"/>
+</kw>
+<kw name="Finalize Order" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:57.182698" level="INFO">${expected_item_total_label} = Item total: $55.97</msg>
+<var>${expected_item_total_label}</var>
+<arg>Item total: $${expected_item_total_price}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.182158" elapsed="0.000585"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:57.199801" level="INFO">Text: 'Item total: $55.97'</msg>
+<msg time="2024-12-22T16:07:57.200058" level="INFO">${actual_item_total_label} = Item total: $55.97</msg>
+<var>${actual_item_total_label}</var>
+<arg>${ITEM_TOTAL_LABEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.182929" elapsed="0.017190"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_item_total_label}</arg>
+<arg>${actual_item_total_label}</arg>
+<arg>Item total mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.200379" elapsed="0.000767"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:57.202163" level="INFO">Clicks the element 'id=finish'.</msg>
+<arg>id=${FINISH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.201489" elapsed="0.028972"/>
+</kw>
+<arg>${expected_item_total_price}</arg>
+<status status="PASS" start="2024-12-22T16:07:57.181476" elapsed="0.049233"/>
+</kw>
+<kw name="Go Back Home" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:57.231773" level="INFO">${expected_message} = Thank you for your order!</msg>
+<var>${expected_message}</var>
+<arg>Thank you for your order!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.231475" elapsed="0.000328"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:57.249031" level="INFO">Text: 'Thank you for your order!'</msg>
+<msg time="2024-12-22T16:07:57.249261" level="INFO">${actual_message} = Thank you for your order!</msg>
+<var>${actual_message}</var>
+<arg>${COMPLETE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.231908" elapsed="0.017382"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_message}</arg>
+<arg>${actual_message}</arg>
+<arg>Order completion message mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.249561" elapsed="0.000663"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:57.230950" elapsed="0.019393"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="PASS" start="2024-12-22T16:07:56.869170" elapsed="0.381255"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:57.251614" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>id=${BURGER_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.251013" elapsed="0.024325"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:57.276439" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
+<arg>id=${LOGOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:57.275597" elapsed="0.907008"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Logged out.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.182924" elapsed="0.000847"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:57.250595" elapsed="0.933337"/>
+</kw>
+<arg>standard_user</arg>
+<arg>55.97</arg>
+<arg>item_0_title_link</arg>
+<arg>item_1_title_link</arg>
+<arg>item_4_title_link</arg>
+<status status="PASS" start="2024-12-22T16:07:49.565075" elapsed="8.618965"/>
+</kw>
+<kw name="Add Items To Cart Via Detail Page And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:07:58.415897" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.185711" elapsed="0.230504"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:58.185214" elapsed="0.231187"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:58.418365" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.417584" elapsed="0.129852"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:58.548480" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.547738" elapsed="0.049269"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.598032" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.597252" elapsed="0.106821"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.704477" elapsed="0.001258"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:07:58.416717" elapsed="0.289292"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.709345" level="INFO">Clicks the element 'id=item_4_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.707753" elapsed="0.055942"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.765232" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.764141" elapsed="0.066620"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.832101" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.831085" elapsed="0.063126"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:58.895713" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.894707" elapsed="0.001094"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:58.939590" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:07:58.939852" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.896143" elapsed="0.043769"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:58.940998" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.940294" elapsed="0.000852"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_link_id}">item_4_title_link</var>
+<status status="PASS" start="2024-12-22T16:07:58.707077" elapsed="0.234163"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.943088" level="INFO">Clicks the element 'id=item_1_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.942048" elapsed="0.041964"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:58.985751" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:58.984447" elapsed="0.044877"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.030845" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.029650" elapsed="0.066299"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:07:59.097048" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.096375" elapsed="0.000729"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.119419" level="INFO">Text: '2'</msg>
+<msg time="2024-12-22T16:07:59.119642" level="INFO">${actual_count} = 2</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.097251" elapsed="0.022432"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:07:59.120647" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.119962" elapsed="0.000828"/>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_link_id}">item_1_title_link</var>
+<status status="PASS" start="2024-12-22T16:07:58.941457" elapsed="0.179448"/>
+</iter>
+<var>${index}</var>
+<var>${item_link_id}</var>
+<value>@{item_link_ids}</value>
+<status status="PASS" start="2024-12-22T16:07:58.706187" elapsed="0.414879"/>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-12-22T16:07:59.121661" level="INFO">Length is 2.</msg>
+<msg time="2024-12-22T16:07:59.121784" level="INFO">${expected_product_count} = 2</msg>
+<var>${expected_product_count}</var>
+<arg>${item_link_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.121313" elapsed="0.000536"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<kw name="Checkout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.124183" level="INFO">Clicks the element 'id=shopping_cart_container'.</msg>
+<arg>id=${CART_CONTAINER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.123375" elapsed="0.035952"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2024-12-22T16:07:59.167513" level="INFO">${actual_product_count} = 2</msg>
+<var>${actual_product_count}</var>
+<arg>.cart_item</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.159844" elapsed="0.007735"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${expected_product_count}</arg>
+<arg>${actual_product_count}</arg>
+<arg>Product count mismatch.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.167940" elapsed="0.000811"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.169786" level="INFO">Clicks the element 'id=checkout'.</msg>
+<arg>id=${CHECKOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.168930" elapsed="0.053843"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<status status="PASS" start="2024-12-22T16:07:59.122823" elapsed="0.100196"/>
+</kw>
+<kw name="Continue To Summary" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.225360" level="INFO">Types the text 'Kris' in the given field.</msg>
+<arg>input#${FIRST_NAME_FIELD}</arg>
+<arg>Kris</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.224374" elapsed="0.048455"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.274350" level="INFO">Types the text 'Tyna' in the given field.</msg>
+<arg>input#${LAST_NAME_FIELD}</arg>
+<arg>Tyna</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.273191" elapsed="0.068206"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.343321" level="INFO">Types the text 'tady' in the given field.</msg>
+<arg>input#${POSTAL_CODE_FIELD}</arg>
+<arg>tady</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.341897" elapsed="0.061526"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.404992" level="INFO">Clicks the element 'id=continue'.</msg>
+<arg>id=${CONTINUE_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.403848" elapsed="0.053065"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:59.223333" elapsed="0.233781"/>
+</kw>
+<kw name="Finalize Order" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:59.458434" level="INFO">${expected_item_total_label} = Item total: $45.98</msg>
+<var>${expected_item_total_label}</var>
+<arg>Item total: $${expected_item_total_price}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.458058" elapsed="0.000411"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.474061" level="INFO">Text: 'Item total: $45.98'</msg>
+<msg time="2024-12-22T16:07:59.474283" level="INFO">${actual_item_total_label} = Item total: $45.98</msg>
+<var>${actual_item_total_label}</var>
+<arg>${ITEM_TOTAL_LABEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.458607" elapsed="0.015750"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_item_total_label}</arg>
+<arg>${actual_item_total_label}</arg>
+<arg>Item total mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.474559" elapsed="0.000505"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.475708" level="INFO">Clicks the element 'id=finish'.</msg>
+<arg>id=${FINISH_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.475181" elapsed="0.022776"/>
+</kw>
+<arg>${expected_item_total_price}</arg>
+<status status="PASS" start="2024-12-22T16:07:59.457368" elapsed="0.040750"/>
+</kw>
+<kw name="Go Back Home" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T16:07:59.499308" level="INFO">${expected_message} = Thank you for your order!</msg>
+<var>${expected_message}</var>
+<arg>Thank you for your order!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.498979" elapsed="0.000363"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:07:59.516635" level="INFO">Text: 'Thank you for your order!'</msg>
+<msg time="2024-12-22T16:07:59.516867" level="INFO">${actual_message} = Thank you for your order!</msg>
+<var>${actual_message}</var>
+<arg>${COMPLETE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.499518" elapsed="0.017383"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expected_message}</arg>
+<arg>${actual_message}</arg>
+<arg>Order completion message mismatch.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.517222" elapsed="0.000652"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:59.498409" elapsed="0.019587"/>
+</kw>
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="PASS" start="2024-12-22T16:07:59.122128" elapsed="0.395936"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.519221" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
+<arg>id=${BURGER_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.518640" elapsed="0.024696"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:07:59.544305" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
+<arg>id=${LOGOUT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:07:59.543573" elapsed="0.923765"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Logged out.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:08:00.467623" elapsed="0.000808"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:07:59.518237" elapsed="0.950338"/>
+</kw>
+<arg>standard_user</arg>
+<arg>45.98</arg>
+<arg>item_4_title_link</arg>
+<arg>item_1_title_link</arg>
+<status status="PASS" start="2024-12-22T16:07:58.184506" elapsed="2.284138"/>
+</kw>
+<kw name="Add Items To Cart Via Detail Page And Place Order" owner="keywords">
+<kw name="Open Page" owner="keywords">
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-22T16:08:00.700789" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-22T16:08:00.470453" elapsed="0.230723"/>
+</kw>
+<status status="PASS" start="2024-12-22T16:08:00.469826" elapsed="0.231609"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:08:00.703936" level="INFO">Types the text 'error_user' in the given field.</msg>
+<arg>input#${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:00.702766" elapsed="0.143682"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-12-22T16:08:00.847769" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>input#${PASSWORD_FIELD}</arg>
+<arg>secret_sauce</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:00.846772" elapsed="0.058209"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:00.906587" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:00.905385" elapsed="0.132372"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>User logged in as ${username}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.038378" elapsed="0.001388"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-22T16:08:00.701801" elapsed="0.338309"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.044624" level="INFO">Clicks the element 'id=item_4_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.042360" elapsed="0.073186"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.117984" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.116081" elapsed="0.067108"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.184687" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.183508" elapsed="0.062516"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:08:01.247333" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.246636" elapsed="0.000741"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:08:01.289622" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:08:01.289813" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.247578" elapsed="0.042269"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:08:01.290618" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.290114" elapsed="0.000571"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${item_link_id}">item_4_title_link</var>
+<status status="PASS" start="2024-12-22T16:08:01.041534" elapsed="0.249212"/>
+</iter>
+<iter>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.291772" level="INFO">Clicks the element 'id=item_1_title_link'.</msg>
+<arg>id=${item_link_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.291192" elapsed="0.048646"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.341220" level="INFO">Clicks the element 'id=add-to-cart'.</msg>
+<arg>id=${ADD_TO_CART_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.340167" elapsed="0.037921"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-22T16:08:01.379115" level="INFO">Clicks the element 'id=back-to-products'.</msg>
+<arg>id=${BACK_TO_PRODUCTS_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.378451" elapsed="0.052232"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-22T16:08:01.431650" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.430981" elapsed="0.000699"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-22T16:08:01.449920" level="INFO">Text: '1'</msg>
+<msg time="2024-12-22T16:08:01.450158" level="INFO">${actual_count} = 1</msg>
+<var>${actual_count}</var>
+<arg>${CART_BADGE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.431801" elapsed="0.018390"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-12-22T16:08:01.450931" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-12-22T16:08:01.451060" level="FAIL">Item count in cart is incorrect.: 2 != 1</msg>
+<arg>${expected_count}</arg>
+<arg>${actual_count}</arg>
+<arg>Item count in cart is incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2024-12-22T16:08:01.450418" elapsed="0.000739">Item count in cart is incorrect.: 2 != 1</status>
+</kw>
+<var name="${index}">1</var>
+<var name="${item_link_id}">item_1_title_link</var>
+<status status="FAIL" start="2024-12-22T16:08:01.290923" elapsed="0.160352">Item count in cart is incorrect.: 2 != 1</status>
+</iter>
+<var>${index}</var>
+<var>${item_link_id}</var>
+<value>@{item_link_ids}</value>
+<status status="FAIL" start="2024-12-22T16:08:01.040344" elapsed="0.411047">Item count in cart is incorrect.: 2 != 1</status>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<var>${expected_product_count}</var>
+<arg>${item_link_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" start="2024-12-22T16:08:01.451565" elapsed="0.000165"/>
+</kw>
+<kw name="Place Order" owner="keywords">
+<arg>${expected_product_count}</arg>
+<arg>${expected_item_total}</arg>
+<status status="NOT RUN" start="2024-12-22T16:08:01.451932" elapsed="0.000136"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<status status="NOT RUN" start="2024-12-22T16:08:01.452214" elapsed="0.000127"/>
+</kw>
+<arg>error_user</arg>
+<arg>45.98</arg>
+<arg>item_4_title_link</arg>
+<arg>item_1_title_link</arg>
+<status status="FAIL" start="2024-12-22T16:08:00.469038" elapsed="0.983430">Item count in cart is incorrect.: 2 != 1</status>
+</kw>
+<kw name="Close Context" owner="Browser" type="TEARDOWN">
+<msg time="2024-12-22T16:08:01.459068" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2024-12-22T16:08:01.461102" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2024-12-22T16:08:01.465393" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg time="2024-12-22T16:08:01.469381" level="INFO">Returned active context id: CURRENT</msg>
+<msg time="2024-12-22T16:08:01.470497" level="INFO">Switching context to context=f07ccf19-a5e1-4c00-9d51-99957a4cc70b in CURRENT</msg>
+<msg time="2024-12-22T16:08:01.478251" level="INFO">Successfully changed active context: context=f07ccf19-a5e1-4c00-9d51-99957a4cc70b</msg>
+<msg time="2024-12-22T16:08:01.541748" level="INFO">Successfully closed Context</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.452947" elapsed="0.089223"/>
+</kw>
+<status status="FAIL" start="2024-12-22T16:07:49.511995" elapsed="12.030555">Item count in cart is incorrect.: 2 != 1</status>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2024-12-22T16:08:01.994175" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-22T16:08:01.555401" elapsed="0.438977"/>
+</kw>
+<status status="FAIL" start="2024-12-22T16:07:35.921563" elapsed="26.072911"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Playwright">Playwright</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,451 @@
+{"level":30,"time":"2024-12-22T15:07:37.068Z","pid":27036,"hostname":"AsusZenNew","msg":"Listening on 56202"}
+(node:27036) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-12-22T15:07:37.287Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-12-22T15:07:37.593Z","pid":27036,"hostname":"AsusZenNew","msg":"Adding browser to stack: chromium, version: 131.0.6778.33"}
+{"level":30,"time":"2024-12-22T15:07:37.594Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-12-22T15:07:37.594Z","pid":27036,"hostname":"AsusZenNew","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-12-22T15:07:37.601Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:37.603Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:37.613Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-12-22T15:07:37.613Z","pid":27036,"hostname":"AsusZenNew","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2024-12-22T15:07:37.614Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:37.614Z","pid":27036,"hostname":"AsusZenNew","msg":"Trace file: "}
+{"level":30,"time":"2024-12-22T15:07:37.640Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active context"}
+{"level":30,"time":"2024-12-22T15:07:37.641Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newContext"}
+{"level":30,"time":"2024-12-22T15:07:37.652Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:37.653Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:37.862Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:07:37.862Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:44.495Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:44.505Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:44.506Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:07:44.665Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:44.671Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:44.671Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:07:44.736Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:44.741Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:44.742Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:07:44.834Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:44.843Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:44.843Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-test.allthethings()-t-shirt-(red) in page."}
+{"level":30,"time":"2024-12-22T15:07:45.049Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.059Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.059Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:45.116Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:45.117Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.122Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.123Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-sauce-labs-fleece-jacket in page."}
+{"level":30,"time":"2024-12-22T15:07:45.139Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.145Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.145Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:45.177Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 2"}
+{"level":30,"time":"2024-12-22T15:07:45.177Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.184Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.184Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=shopping_cart_container in page."}
+{"level":30,"time":"2024-12-22T15:07:45.235Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.239Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:45.239Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is disabled, return Locator: .cart_item in page."}
+{"level":30,"time":"2024-12-22T15:07:45.243Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:45.249Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.249Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=checkout in page."}
+{"level":30,"time":"2024-12-22T15:07:45.280Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.285Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.285Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#first-name in page."}
+{"level":30,"time":"2024-12-22T15:07:45.332Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.336Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.336Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#last-name in page."}
+{"level":30,"time":"2024-12-22T15:07:45.377Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.381Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.381Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#postal-code in page."}
+{"level":30,"time":"2024-12-22T15:07:45.426Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:45.429Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.429Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=continue in page."}
+{"level":30,"time":"2024-12-22T15:07:45.486Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.491Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.491Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .summary_subtotal_label in page."}
+{"level":30,"time":"2024-12-22T15:07:45.505Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .summary_subtotal_label containing Item total: $65.98"}
+{"level":30,"time":"2024-12-22T15:07:45.505Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.509Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.509Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=finish in page."}
+{"level":30,"time":"2024-12-22T15:07:45.563Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.568Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.568Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .complete-header in page."}
+{"level":30,"time":"2024-12-22T15:07:45.582Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .complete-header containing Thank you for your order!"}
+{"level":30,"time":"2024-12-22T15:07:45.582Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:45.587Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.587Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=react-burger-menu-btn in page."}
+{"level":30,"time":"2024-12-22T15:07:45.606Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.609Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:45.609Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=logout_sidebar_link in page."}
+{"level":30,"time":"2024-12-22T15:07:46.580Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:46.588Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:46.588Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:46.647Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:07:46.647Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:46.804Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:46.810Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:46.810Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:07:46.946Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:46.950Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:46.950Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:07:46.999Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.004Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.004Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:07:47.105Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.117Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.117Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-sauce-labs-backpack in page."}
+{"level":30,"time":"2024-12-22T15:07:47.147Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.155Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.155Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:47.199Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:47.199Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.206Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.206Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-sauce-labs-bolt-t-shirt in page."}
+{"level":30,"time":"2024-12-22T15:07:47.242Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.248Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.248Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:47.265Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 2"}
+{"level":30,"time":"2024-12-22T15:07:47.266Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.274Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.274Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=shopping_cart_container in page."}
+{"level":30,"time":"2024-12-22T15:07:47.301Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.307Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:47.307Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is disabled, return Locator: .cart_item in page."}
+{"level":30,"time":"2024-12-22T15:07:47.310Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:47.316Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.316Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=checkout in page."}
+{"level":30,"time":"2024-12-22T15:07:47.355Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.361Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.361Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#first-name in page."}
+{"level":30,"time":"2024-12-22T15:07:47.404Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.410Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.410Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#last-name in page."}
+{"level":30,"time":"2024-12-22T15:07:47.468Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#postal-code in page."}
+{"level":30,"time":"2024-12-22T15:07:47.534Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:47.541Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.541Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=continue in page."}
+{"level":30,"time":"2024-12-22T15:07:47.602Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.609Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.609Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .summary_subtotal_label in page."}
+{"level":30,"time":"2024-12-22T15:07:47.628Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .summary_subtotal_label containing Item total: $45.98"}
+{"level":30,"time":"2024-12-22T15:07:47.628Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.635Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.635Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=finish in page."}
+{"level":30,"time":"2024-12-22T15:07:47.674Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.681Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.681Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .complete-header in page."}
+{"level":30,"time":"2024-12-22T15:07:47.701Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .complete-header containing Thank you for your order!"}
+{"level":30,"time":"2024-12-22T15:07:47.701Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:47.708Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.708Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=react-burger-menu-btn in page."}
+{"level":30,"time":"2024-12-22T15:07:47.724Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.728Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:47.728Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=logout_sidebar_link in page."}
+{"level":30,"time":"2024-12-22T15:07:48.698Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:48.706Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:48.706Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:48.765Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:07:48.765Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:48.921Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:48.926Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:48.927Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:07:49.032Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:49.035Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:49.035Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:07:49.089Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:49.093Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:07:49.093Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.172Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.183Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.184Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-sauce-labs-backpack in page."}
+{"level":30,"time":"2024-12-22T15:07:49.250Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.259Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:49.259Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:49.296Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:49.297Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:49.305Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.305Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart-sauce-labs-bolt-t-shirt in page."}
+{"level":30,"time":"2024-12-22T15:07:49.362Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:49.368Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:49.368Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:49.382Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:49.382Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:49.392Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.395Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.397Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-12-22T15:07:49.398Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-12-22T15:07:49.400Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.405Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.407Z","pid":27036,"hostname":"AsusZenNew","msg":"Changing current active page: page=ef26f605-f58c-4496-a2d8-ca268938f1dd"}
+{"level":30,"time":"2024-12-22T15:07:49.407Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:49.410Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.413Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.415Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active context"}
+{"level":30,"time":"2024-12-22T15:07:49.415Z","pid":27036,"hostname":"AsusZenNew","msg":"Changing current active page: page=ef26f605-f58c-4496-a2d8-ca268938f1dd"}
+{"level":30,"time":"2024-12-22T15:07:49.415Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:49.419Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-12-22T15:07:49.430Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=d9ecba1a-5be1-4e13-a949-6f0a2bd60778 from context=799b28c6-ea8b-4070-a4bd-61f09a9794d6 page stack"}
+{"level":30,"time":"2024-12-22T15:07:49.436Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=1d872f2d-862a-4a89-9656-613a6b82f560 from context=799b28c6-ea8b-4070-a4bd-61f09a9794d6 page stack"}
+{"level":30,"time":"2024-12-22T15:07:49.442Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=ae56ac63-e00a-4fdd-83af-9babed175df6 from context=799b28c6-ea8b-4070-a4bd-61f09a9794d6 page stack"}
+{"level":30,"time":"2024-12-22T15:07:49.497Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-12-22T15:07:49.507Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.507Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.512Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.512Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:07:49.519Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-12-22T15:07:49.519Z","pid":27036,"hostname":"AsusZenNew","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2024-12-22T15:07:49.519Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:49.519Z","pid":27036,"hostname":"AsusZenNew","msg":"Trace file: "}
+{"level":30,"time":"2024-12-22T15:07:49.559Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active context"}
+{"level":30,"time":"2024-12-22T15:07:49.560Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newContext"}
+{"level":30,"time":"2024-12-22T15:07:49.569Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:49.569Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:49.829Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:07:49.829Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:55.827Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:55.833Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:55.833Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:07:55.970Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:55.975Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:55.975Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:07:56.030Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:56.035Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.035Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:07:56.124Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.132Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.132Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_0_title_link in page."}
+{"level":30,"time":"2024-12-22T15:07:56.222Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.227Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.227Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:07:56.424Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.427Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.427Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:07:56.487Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.492Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.492Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:56.526Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:56.526Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.530Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.531Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_1_title_link in page."}
+{"level":30,"time":"2024-12-22T15:07:56.581Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.586Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.586Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:07:56.640Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.643Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.643Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:07:56.697Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.702Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.702Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:56.718Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 2"}
+{"level":30,"time":"2024-12-22T15:07:56.718Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.723Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.723Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_4_title_link in page."}
+{"level":30,"time":"2024-12-22T15:07:56.747Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.752Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.752Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:07:56.791Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.794Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.794Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:07:56.844Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.849Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.849Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:56.864Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 3"}
+{"level":30,"time":"2024-12-22T15:07:56.864Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:56.871Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.871Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=shopping_cart_container in page."}
+{"level":30,"time":"2024-12-22T15:07:56.914Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.918Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:56.918Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is disabled, return Locator: .cart_item in page."}
+{"level":30,"time":"2024-12-22T15:07:56.921Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:56.925Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.925Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=checkout in page."}
+{"level":30,"time":"2024-12-22T15:07:56.963Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:56.969Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:56.969Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#first-name in page."}
+{"level":30,"time":"2024-12-22T15:07:57.012Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:57.018Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:57.018Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#last-name in page."}
+{"level":30,"time":"2024-12-22T15:07:57.058Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:57.062Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:57.062Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#postal-code in page."}
+{"level":30,"time":"2024-12-22T15:07:57.102Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:57.107Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.107Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=continue in page."}
+{"level":30,"time":"2024-12-22T15:07:57.178Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.183Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:57.183Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .summary_subtotal_label in page."}
+{"level":30,"time":"2024-12-22T15:07:57.197Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .summary_subtotal_label containing Item total: $55.97"}
+{"level":30,"time":"2024-12-22T15:07:57.197Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:57.202Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.202Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=finish in page."}
+{"level":30,"time":"2024-12-22T15:07:57.228Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.232Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:57.233Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .complete-header in page."}
+{"level":30,"time":"2024-12-22T15:07:57.246Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .complete-header containing Thank you for your order!"}
+{"level":30,"time":"2024-12-22T15:07:57.246Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:57.251Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.251Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=react-burger-menu-btn in page."}
+{"level":30,"time":"2024-12-22T15:07:57.272Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.276Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:57.276Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=logout_sidebar_link in page."}
+{"level":30,"time":"2024-12-22T15:07:58.179Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.186Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:58.186Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:07:58.248Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:07:58.248Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:07:58.413Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:07:58.420Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:58.420Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:07:58.545Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:58.548Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:58.548Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:07:58.594Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:58.597Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.598Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:07:58.700Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.709Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.709Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_4_title_link in page."}
+{"level":30,"time":"2024-12-22T15:07:58.761Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.766Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.766Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:07:58.828Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.832Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.832Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:07:58.891Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.897Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:58.897Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:58.936Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:07:58.936Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:58.943Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.943Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_1_title_link in page."}
+{"level":30,"time":"2024-12-22T15:07:58.980Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.987Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:58.987Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:07:59.026Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.030Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.031Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:07:59.093Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.098Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.098Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:07:59.116Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 2"}
+{"level":30,"time":"2024-12-22T15:07:59.116Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.124Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.124Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=shopping_cart_container in page."}
+{"level":30,"time":"2024-12-22T15:07:59.156Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.161Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:59.161Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is disabled, return Locator: .cart_item in page."}
+{"level":30,"time":"2024-12-22T15:07:59.164Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-12-22T15:07:59.170Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.170Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=checkout in page."}
+{"level":30,"time":"2024-12-22T15:07:59.219Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.225Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.225Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#first-name in page."}
+{"level":30,"time":"2024-12-22T15:07:59.269Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.274Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.274Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#last-name in page."}
+{"level":30,"time":"2024-12-22T15:07:59.338Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.343Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.344Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#postal-code in page."}
+{"level":30,"time":"2024-12-22T15:07:59.400Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:07:59.405Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.405Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=continue in page."}
+{"level":30,"time":"2024-12-22T15:07:59.454Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.459Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.459Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .summary_subtotal_label in page."}
+{"level":30,"time":"2024-12-22T15:07:59.471Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .summary_subtotal_label containing Item total: $45.98"}
+{"level":30,"time":"2024-12-22T15:07:59.471Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=finish in page."}
+{"level":30,"time":"2024-12-22T15:07:59.495Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.500Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.500Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .complete-header in page."}
+{"level":30,"time":"2024-12-22T15:07:59.514Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .complete-header containing Thank you for your order!"}
+{"level":30,"time":"2024-12-22T15:07:59.514Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:07:59.519Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.519Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=react-burger-menu-btn in page."}
+{"level":30,"time":"2024-12-22T15:07:59.541Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.544Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:07:59.544Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=logout_sidebar_link in page."}
+{"level":30,"time":"2024-12-22T15:08:00.464Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:00.471Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-12-22T15:08:00.471Z","pid":27036,"hostname":"AsusZenNew","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-12-22T15:08:00.534Z","pid":27036,"hostname":"AsusZenNew","msg":"Video path: undefined"}
+{"level":30,"time":"2024-12-22T15:08:00.534Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:08:00.698Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method newPage"}
+{"level":30,"time":"2024-12-22T15:08:00.704Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:08:00.705Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#user-name in page."}
+{"level":30,"time":"2024-12-22T15:08:00.843Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:08:00.847Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-12-22T15:08:00.847Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with input#password in page."}
+{"level":30,"time":"2024-12-22T15:08:00.902Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method typeText"}
+{"level":30,"time":"2024-12-22T15:08:00.907Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:00.907Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2024-12-22T15:08:01.033Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.046Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.046Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_4_title_link in page."}
+{"level":30,"time":"2024-12-22T15:08:01.112Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.119Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.119Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:08:01.180Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.185Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.185Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:08:01.243Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.249Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:08:01.249Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:08:01.287Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:08:01.287Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:08:01.291Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.291Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=item_1_title_link in page."}
+{"level":30,"time":"2024-12-22T15:08:01.337Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.341Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.341Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=add-to-cart in page."}
+{"level":30,"time":"2024-12-22T15:08:01.375Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.378Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.378Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with id=back-to-products in page."}
+{"level":30,"time":"2024-12-22T15:08:01.428Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method click"}
+{"level":30,"time":"2024-12-22T15:08:01.432Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getText"}
+{"level":30,"time":"2024-12-22T15:08:01.432Z","pid":27036,"hostname":"AsusZenNew","msg":"Strict mode is enabled, find Locator with .shopping_cart_badge in page."}
+{"level":30,"time":"2024-12-22T15:08:01.447Z","pid":27036,"hostname":"AsusZenNew","msg":"Retrieved text for element .shopping_cart_badge containing 1"}
+{"level":30,"time":"2024-12-22T15:08:01.447Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getText"}
+{"level":30,"time":"2024-12-22T15:08:01.453Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.456Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.458Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-12-22T15:08:01.459Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-12-22T15:08:01.460Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.463Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.465Z","pid":27036,"hostname":"AsusZenNew","msg":"Changing current active page: page=f843c438-024e-4030-8c17-d49204fb6c3d"}
+{"level":30,"time":"2024-12-22T15:08:01.465Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:08:01.470Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.473Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active context"}
+{"level":30,"time":"2024-12-22T15:08:01.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Changing current active page: page=f843c438-024e-4030-8c17-d49204fb6c3d"}
+{"level":30,"time":"2024-12-22T15:08:01.475Z","pid":27036,"hostname":"AsusZenNew","msg":"Changed active page"}
+{"level":30,"time":"2024-12-22T15:08:01.477Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-12-22T15:08:01.484Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=2727ac51-7b1a-4799-9420-f247b81da7ce from context=f07ccf19-a5e1-4c00-9d51-99957a4cc70b page stack"}
+{"level":30,"time":"2024-12-22T15:08:01.490Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=f2653aaa-05fe-4ec7-a376-8423b259848c from context=f07ccf19-a5e1-4c00-9d51-99957a4cc70b page stack"}
+{"level":30,"time":"2024-12-22T15:08:01.496Z","pid":27036,"hostname":"AsusZenNew","msg":"Removed page=9c76eb66-f54d-4aaa-8b0b-29416054309b from context=f07ccf19-a5e1-4c00-9d51-99957a4cc70b page stack"}
+{"level":30,"time":"2024-12-22T15:08:01.539Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-12-22T15:08:01.548Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.548Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:01.558Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-12-22T15:08:01.992Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\index.js:12202:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\index.js:13094:59)
+    at PlaywrightServer.setTimeout (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\index.js:13342:57)
+    at Object.onReceiveHalfClose (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\krist\GitExtension\2024_autumn_saucedemo_tstcourse\ucastnici\Kristyna_H\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2024-12-22T15:08:02.018Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:02.018Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-12-22T15:08:02.396Z","pid":27036,"hostname":"AsusZenNew","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-12-22T15:08:02.397Z","pid":27036,"hostname":"AsusZenNew","msg":"End of node method closeAllBrowsers"}
