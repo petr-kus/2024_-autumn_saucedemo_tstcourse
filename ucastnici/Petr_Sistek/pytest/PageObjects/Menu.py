@@ -5,6 +5,7 @@ import time
 
 def slowdown():
     time.sleep(0.5)
+# TODO Lektor - znovu definujem slowdown? No... ok. Udella bych jeden centralni... .
 
 class Menu:
     main_menu_button = (By.ID, "react-burger-menu-btn")
@@ -18,4 +19,5 @@ class Menu:
         self.driver.find_element(*self.main_menu_button).click()
         slowdown()
         WebDriverWait(self.driver,2).until(EC.visibility_of_element_located(self.logout_button)).click()
+        # TODO Lektor - super je tu cekani ktere je potreba, one liner... a jen to logovani tu hybí...
         slowdown()
