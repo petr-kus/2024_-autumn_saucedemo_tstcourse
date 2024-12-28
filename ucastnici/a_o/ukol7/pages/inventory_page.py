@@ -16,7 +16,11 @@ class InventoryPage:
         dropdown.click()
         option = self.driver.find_element(By.XPATH, f"//option[@value='{filter_value}']")
         option.click()
+        #TODO Lektor - zde podle me musi spockat nez se uplatni dany filtr... protoze jde o dynamicky javascript.
+        #jinak ti hned dalsi funkce vrati spatne poradi coz se tak i ukazuje... .
+        #a protoze jsi si nezalogovala clee pole tak to neividis ze to tak je...
         logging.info(f"Filtr '{filter_value}' byl aplikován.")
 
     def get_product_names(self):
         return [product.text for product in self.driver.find_elements(*self.product_list)]
+        #TODO Lektor - to je moc krasny one liner ... .
