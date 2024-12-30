@@ -12,6 +12,12 @@ import POM
 import pytest
 import pathlib
 
+#TODO Lektor - z vetsiny je to totozne s predchozi odevzdanou ulohou. Takze vetsina komentaru je stale platna.
+# i zde by se dal vyuzit singleton pattern k predavani driveru.
+#pro logger neni asi treba mit zvlast fixture a hlavne nepredavat si ji zvlast... udelat ji autorun.
+#TODO Lektor - jeste vic logovani nakeho strukturovanejsiho by prospelo. Ale celkove neni spatne! 
+# ... ty screenhsoty a slozky. No to by chtelo udelat dynamicky.
+
 @pytest.fixture(scope='module')
 def test_logger():
     logger_name = 'pytest.log'

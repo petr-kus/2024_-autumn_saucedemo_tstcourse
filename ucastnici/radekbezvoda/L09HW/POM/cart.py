@@ -6,6 +6,7 @@ class Cart(LoggedInPage):
     cart_item_id = 'cart_item'
     remove_xpath = "//button[contains(text(),'Remove')]"
     continue_shopping_id = 'continue-shopping'
+    #TODO Lektor - chvalim pouziti property...
     def __init__(self, driver, screenshot_folder, logger) -> None:
         logger.info('at the cart page')
         super().__init__(driver, screenshot_folder, logger)
