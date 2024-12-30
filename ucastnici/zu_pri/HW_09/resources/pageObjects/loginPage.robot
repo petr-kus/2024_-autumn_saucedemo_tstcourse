@@ -22,3 +22,5 @@ Fill in password
     [Arguments]    ${PASSWORD}
     Fill Text    selector=${PASSWORD_FIELD}    txt=${PASSWORD}
 
+#TODO Lektor - krasa tak nak bych ocekaval vnitrni implementaci.
+

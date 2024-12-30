@@ -5,6 +5,9 @@ Resource                         ../resources/pageObjects/cart.robot
 Resource                         ../resources/pageObjects/header.robot
 Resource                         ../resources/pageObjects/inventoryPage.robot
 
+#TODO Lektor - kdyz by to byly libraries misto resources fungovalo by to taky a daly by se pouzit triky s python objekty...
+# ale ty triky by sli is promenyma globalnima... v rf
+
 *** Keywords ***
     
 Load Page
