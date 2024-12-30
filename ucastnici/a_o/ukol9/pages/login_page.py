@@ -6,6 +6,7 @@ class LoginPage:
     PASSWORD_INPUT = (By.ID, "password")
     LOGIN_BUTTON = (By.ID, "login-button")
     ERROR_MESSAGE = (By.CSS_SELECTOR, ".error-message-container")
+    #TODO Lektor - super ze ted jsou to uz property!
 
     def __init__(self, driver):
         self.driver = driver
@@ -17,6 +18,7 @@ class LoginPage:
         self.driver.find_element(*self.USERNAME_INPUT).send_keys(username)
         self.driver.find_element(*self.PASSWORD_INPUT).send_keys(password)
         self.driver.find_element(*self.LOGIN_BUTTON).click()
+        #TODO Lektor - krasne one linery!
 
     def get_error_message(self):
         return self.driver.find_element(*self.ERROR_MESSAGE).text
