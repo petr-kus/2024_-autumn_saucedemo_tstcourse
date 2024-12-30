@@ -8,3 +8,4 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 rfbrowser init
 playwright install
+#Lektor - super je ze jsi to sama rozsirila o ten playwright. Uz zacinas chapat vyznam tohto skriptu :-)

@@ -15,6 +15,8 @@ class LoginPage:
         self.page.fill("#password", password)
         self.page.click("#login-button")
         logger.info("User successfully logged in")
+        #TODO Lektor - ty ID by bylo fajn odelit jako property te tridy, 
+        # ale chapu ze kdyz se to znovu nidke nepouziva, tak te to k tomu netlaci.
 
 
 class InventoryPage:
@@ -24,10 +26,12 @@ class InventoryPage:
     def add_to_cart(self, item_button_id):
         self.page.click(f"#{item_button_id}")
         logger.info(f"Item \"{item_button_id}\" added to cart directly.")
+        #TODO Lektor - tip misto " jde pouzit ' a nemusis escapovat.
 
     def go_to_detail(self, item_link_id):
         self.page.click(f"#{item_link_id}")
         logger.info(f"Going to item \"{item_link_id}\" detail page.")
+        #TODO Lektor - moc se me libi parametrizace!
 
     def get_cart_badge_count(self):
         product_count = self.page.inner_text(".shopping_cart_badge")
@@ -108,6 +112,7 @@ class FinalPage:
         self.page.click("#back-to-products")
         logger.info("Going back to inventory page.")
 
+#TODO Lektor - ty tridy by bylo fajn oddelit nekam bokem do souborua pak je naimportovat.
 
 class OrderTest:
     def __init__(self, page):
@@ -119,6 +124,11 @@ class OrderTest:
         self.summary_page = SummaryPage(page)
         self.final_page = FinalPage(page)
         self.login_page.login("standard_user", "secret_sauce")
+        #TODO Lektor - user a password bych cekal parametrizovatelne z venku. Aby bylo prepouzitelne i pro jine testovani (treba pod jinym uctem).
+        #TODO Lektor - tohle je asi kvuli predavani page. 
+        # Page je nevhodny nazev uplne neni jasne ze je to vlastne stranka ale z prohlizece.
+        # take by bylo hodne fajn se te cele page zbavit. Coz jde prave treba pres importy v patternu singleton napriklad.
+        # a nebo tady u tebe to slo pres global variable, kdyz jsi v jednom souboru.
 
     def place_order(self, expected_product_count, expected_item_total_price):
         self.inventory_page.go_to_cart()
@@ -139,6 +149,9 @@ class OrderTest:
         assert actual_message == expected_message, "Order completion message mismatch."
 
         self.final_page.go_back_home()
+        #TODO Lektor - kdyz by jsi tam mela importy ze souboru zbavila by jsi se toho self a bylo by to citelnejsi.
+        #TODO Lektor - vetsina tohot zapisu jsou uz vlastne test casove stepy... ale ty jsi si vytvorila jeste jednu vrstvu. 
+        # dle me zbytecne. Tohle by slo uz zapisovat primo do testu... v pytestu.
 
     def add_items_to_cart_directly_and_place_order(self, item_button_ids, expected_item_total_price):
         for idx, item_button_id in enumerate(item_button_ids):
@@ -166,6 +179,11 @@ def browser():
         context = browser.new_context()
         page = context.new_page()
         page.goto("https://www.saucedemo.com/")
+        # TODO Lektor -to by urcite melo byt parametrizovatelne z venku... predstav si ze bude existovat testovaci instance webu a pak ostra.
+        # potrebovala by jsi to rychle prehodit pak...
+
+        #TODO Lektor - kdyby jsi page zde udelala globalem, tak diky tomu ze to mas v jednom souboru fungovalo by to.
+        # stejne tak kdyby jsi to udelal scopem modulu a dala tomu autouse=True ... 
         yield page
         context.close()
         browser.close()
@@ -177,7 +195,9 @@ def test_adding_items_to_cart_directly_and_placing_order(browser):
         "add-to-cart-test\\.allthethings\\(\\)-t-shirt-\\(red\\)",
         "add-to-cart-sauce-labs-fleece-jacket"
     ], 65.98)
-
+#TODO Lektor - parametry v teto urovni jsou moc "code based" cekal bych spis nazev produktu jako parametr. Cenu jeste chapu :-).
+# a melo by tu byt spis vic stepu nez jen jeden... pak se jedna jen o prejmenovani a zbytecne to nuti jit do dalsi urovne pri cteni. 
+# snizuej se tim srozumitelnost.
 
 def test_adding_items_to_cart_via_detail_page_and_placing_order(browser):
     order_test = OrderTest(browser)
@@ -186,3 +206,7 @@ def test_adding_items_to_cart_via_detail_page_and_placing_order(browser):
         "item_4_title_link",
         "item_0_title_link"
     ], 55.97)
+
+#TODO Lektor - celkove se me u tebe libi docela dost prace s jazykem (nazvy, logovani, errory...) ale ... zato mas trosku horsi struktury.
+#TODO Lektor - ocenuji ze jsi pouzila playwright a ze jsi se s tim naucila :-) vidis ze to je opravdu jen "dalsi driver" pro ovladani webu.
+#TODO Lektor - logovani se me docela libi. Mohlo by byt i podrobnjesi a mohlo by i obsahovat obrazky. V kazdem pade chybi tam timestamp coz je problem.
